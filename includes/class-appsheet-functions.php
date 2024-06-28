@@ -130,6 +130,15 @@ class Appsheet_Functions
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-post_types.php';
 
+	    /**
+		 * Exopite Simple Options Framework
+		 *
+		 * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
+		 * @author Joe Szalai
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
+
+
         $this->loader = new Appsheet_Functions_Loader();
 
     }
@@ -166,8 +175,8 @@ class Appsheet_Functions
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-
-        // ...
+		// Save/Update our plugin options
+		$this->loader->add_action( 'init', $plugin_admin, 'create_menu', 999 );
 
         $plugin_post_types = new Appsheet_Functions_Post_Types();
 
@@ -182,6 +191,8 @@ class Appsheet_Functions
          * @link https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/issues/261
          */
         $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
+
+		
 
     }
 

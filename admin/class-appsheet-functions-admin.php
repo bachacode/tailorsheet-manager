@@ -100,4 +100,89 @@ class Appsheet_Functions_Admin {
 
 	}
 
+	public function create_menu() {
+
+		/*
+		* To add a metabox.
+		* This normally go to your functions.php or another hook
+		*/
+		$config_metabox = array(
+	
+			/*
+			* METABOX
+			*/
+			'type'              => 'metabox',                       // Required, menu or metabox
+			'id'                => $this->plugin_name . '-meta',    // Required, meta box id, unique, for saving meta: id[field-id]
+			// 'post_types'        => array( 'page' ),                 // Post types to display meta box
+			'post_types'        => array( 'appsheet-functions' ),         // Post types to display meta box
+			'context'           => 'advanced',
+			'priority'          => 'default',
+			'title'             => 'Demo Metabox',                  // The name of this page
+			'capability'        => 'edit_posts',                    // The capability needed to view the page
+			'tabbed'            => true,
+	
+		);
+	
+		$fields[] = array(
+			'name'   => 'first',
+			'title'  => 'First',
+			'icon'   => 'dashicons-admin-generic',
+			'fields' => array(
+	
+				/**
+				 * Available fields:
+				 * - ACE field
+				 * - attached
+				 * - backup
+				 * - button
+				 * - botton_bar
+				 * - card
+				 * - checkbox
+				 * - color
+				 * - content
+				 * - date
+				 * - editor
+				 * - group
+				 * - hidden
+				 * - image
+				 * - image_select
+				 * - meta
+				 * - notice
+				 * - number
+				 * - password
+				 * - radio
+				 * - range
+				 * - select
+				 * - switcher
+				 * - tap_list
+				 * - text
+				 * - textarea
+				 * - upload
+				 * - video mp4/oembed
+				 *
+				 * Add your fields, eg.:
+				 */
+	
+				array(
+					'id'          => 'function-syntax',
+					'type'        => 'text',
+					'title'       => 'Text',
+					'attributes'    => array(
+						'rows'        => 10,
+						'cols'        => 5,
+						'placeholder' => 'e.g: Function ( value )',
+					),
+					'help'        => 'The syntax shown on the function description page',
+	
+				),
+			),
+		);
+	
+		/**
+		 * instantiate your admin page
+		 */
+		(new Exopite_Simple_Options_Framework( $config_metabox, $fields ));
+	
+	}
+
 }
