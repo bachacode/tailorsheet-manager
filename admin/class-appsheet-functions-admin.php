@@ -102,6 +102,52 @@ class Appsheet_Functions_Admin {
 
 	public function create_menu() {
 
+		$config_menu = array(
+			'type'              => 'menu',                                          // Required, menu or metabox
+			'id'                => $this->plugin_name . '-settings',                          // Required, meta box id, unique per page, to save: get_option( id )
+			'menu'              => 'admin.php',                                         // Required, sub page to your options page
+			'submenu'           => false,                                            // Required for submenu
+			'position'			=> 4,
+			'title'             => esc_html__( 'Settings', 'appsheet-functions' ),    //The name of this page
+			'menu_title'		=> esc_html__( 'Appsheet Functions', 'appsheet-functions' ), 
+			'capability'        => 'manage_options',                                // The capability needed to view the page
+			'plugin_basename'   => plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' ),
+			'tabbed'            => false,
+
+		);
+
+		$fields_menu[] = array(
+			'name'   => 'first',
+			'title'  => 'First',
+			'icon'   => 'dashicons-admin-generic',
+			'fields' => array(
+				array(
+					'id'          => 'text_1',
+					'type'        => 'text',
+					'title'       => 'Text',
+					'before'      => 'Text Before',
+					'after'       => 'Text After',
+					'class'       => 'text-class',
+					'attributes'  => 'data-test="test"',
+					'description' => 'Description',
+					'default'     => 'Default Text',
+					'attributes'    => array(
+						'rows'        => 10,
+						'cols'        => 5,
+						'placeholder' => 'do stuff',
+					),
+					'help'        => 'Help text',
+				),
+			),
+		);
+
+		/**
+		 * instantiate your admin page
+		 */
+    	(new Exopite_Simple_Options_Framework( $config_menu, $fields_menu ));
+	}
+
+	public function create_metaboxes() {
 		/*
 		* To add a metabox.
 		* This normally go to your functions.php or another hook
@@ -182,7 +228,5 @@ class Appsheet_Functions_Admin {
 		 * instantiate your admin page
 		 */
 		(new Exopite_Simple_Options_Framework( $config_metabox, $fields ));
-	
 	}
-
 }

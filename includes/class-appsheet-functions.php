@@ -175,8 +175,11 @@ class Appsheet_Functions
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+		
 		// Save/Update our plugin options
-		$this->loader->add_action( 'init', $plugin_admin, 'create_menu', 999 );
+		$this->loader->add_action( 'init', $plugin_admin, 'create_metaboxes', 999 );
+		// $this->loader->add_action( 'init', $plugin_admin, 'create_menu', 999 );
+
 
         $plugin_post_types = new Appsheet_Functions_Post_Types();
 
@@ -193,7 +196,7 @@ class Appsheet_Functions
         $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
 
 		
-
+		
     }
 
     /**
