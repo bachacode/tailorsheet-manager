@@ -1,18 +1,19 @@
-# Copyright (C) 2024 Cristhian Flores
-# This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Appsheet Functions 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-functions\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-"
+"functions\n"
+"POT-Creation-Date: 2024-07-18T23:14:14+02:00\n"
+"PO-Revision-Date: 2024-07-18 17:19-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-18T23:14:14+02:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
-"X-Domain: appsheet-functions\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPathExcluded-0: ../admin/exopite-simple-options\n"
 
 #. Plugin Name of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
@@ -21,183 +22,184 @@ msgstr ""
 #: includes/class-appsheet-functions-post_types.php:262
 #: includes/class-appsheet-functions-post_types.php:264
 msgid "Appsheet Functions"
-msgstr ""
+msgstr "Funciones de Appsheet"
 
 #. Plugin URI of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
 msgid "https://bachacode.com"
-msgstr ""
+msgstr "https://bachacode.com"
 
 #. Description of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
-msgid "Plugin for the management of Appsheet Functions and examples of their uses"
-msgstr ""
+msgid ""
+"Plugin for the management of Appsheet Functions and examples of their uses"
+msgstr "Plugin para la gestión de Expresiones AppSheet y ejemplos de sus usos"
 
 #. Author of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
 msgid "Cristhian Flores"
-msgstr ""
+msgstr "Cristhian Flores"
 
 #. Author URI of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
 msgid "https://bachacode.com/"
-msgstr ""
+msgstr "https://bachacode.com/"
 
 #: admin/class-appsheet-functions-admin.php:115
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
 
 #: admin/class-appsheet-functions-admin.php:221
 msgid "Example Syntax"
-msgstr ""
+msgstr "Ejemplo de uso"
 
 #: admin/class-appsheet-functions-admin.php:227
 msgid "The syntax shown on the function description page"
-msgstr ""
+msgstr "La sintaxis mostrada en la página de descripción de la función"
 
 #: admin/class-appsheet-functions-admin.php:234
 #: admin/class-appsheet-functions-admin.php:272
 #: admin/class-appsheet-functions-admin.php:295
 msgid "Expected Result"
-msgstr ""
+msgstr "Resultado esperado"
 
 #: admin/class-appsheet-functions-admin.php:240
 msgid "The type of data that is returned by the function"
-msgstr ""
+msgstr "Tipo de datos devueltos por la expresión"
 
 #: admin/class-appsheet-functions-admin.php:246
 msgid "Explanation"
-msgstr ""
+msgstr "Explicación"
 
 #: admin/class-appsheet-functions-admin.php:266
 #: admin/class-appsheet-functions-admin.php:288
 msgid "Example use"
-msgstr ""
+msgstr "Ejemplo de uso"
 
 #: includes/class-appsheet-functions-post_types.php:32
 msgid "New %s"
-msgstr ""
+msgstr "Nuevo %s"
 
 #: includes/class-appsheet-functions-post_types.php:33
 msgid "Add new %s"
-msgstr ""
+msgstr "Añadir nueva %s"
 
 #: includes/class-appsheet-functions-post_types.php:34
 #: includes/class-appsheet-functions-post_types.php:170
 msgid "Edit %s"
-msgstr ""
+msgstr "Editar %s"
 
 #: includes/class-appsheet-functions-post_types.php:35
 #: includes/class-appsheet-functions-post_types.php:36
 #: includes/class-appsheet-functions-post_types.php:171
 msgid "View %s"
-msgstr ""
+msgstr "Ver %s"
 
 #: includes/class-appsheet-functions-post_types.php:37
 #: includes/class-appsheet-functions-post_types.php:177
 msgid "Search %s"
-msgstr ""
+msgstr "Buscar %s"
 
 #: includes/class-appsheet-functions-post_types.php:38
 #: includes/class-appsheet-functions-post_types.php:182
 msgid "No %s found"
-msgstr ""
+msgstr "No se ha encontrado %s"
 
 #: includes/class-appsheet-functions-post_types.php:39
 msgid "No %s found in trash"
-msgstr ""
+msgstr "No se han encontrado %s en la papelera"
 
 #: includes/class-appsheet-functions-post_types.php:40
 #: includes/class-appsheet-functions-post_types.php:169
 msgid "All %s"
-msgstr ""
+msgstr "Todas %s"
 
 #: includes/class-appsheet-functions-post_types.php:41
 msgid "%s Archives"
-msgstr ""
+msgstr "Archivado de %s"
 
 #: includes/class-appsheet-functions-post_types.php:42
 msgid "%s Attributes"
-msgstr ""
+msgstr "Atributos de %s"
 
 #: includes/class-appsheet-functions-post_types.php:43
 msgid "Insert into %s"
-msgstr ""
+msgstr "Insertar en %s"
 
 #: includes/class-appsheet-functions-post_types.php:44
 msgid "Uploaded to this %s"
-msgstr ""
+msgstr "Subir a %s"
 
 #: includes/class-appsheet-functions-post_types.php:47
 #: includes/class-appsheet-functions-post_types.php:175
 msgid "Parent %s"
-msgstr ""
+msgstr "Padre de %s"
 
 #: includes/class-appsheet-functions-post_types.php:48
 #: includes/class-appsheet-functions-post_types.php:176
 msgid "Parent %s\\:"
-msgstr ""
+msgstr "Padre %s\\:"
 
 #: includes/class-appsheet-functions-post_types.php:172
 msgid "Update %s"
-msgstr ""
+msgstr "Actualizar %s"
 
 #: includes/class-appsheet-functions-post_types.php:173
 msgid "Add New %s"
-msgstr ""
+msgstr "Añadir nuevo %s"
 
 #: includes/class-appsheet-functions-post_types.php:174
 msgid "New %s Name"
-msgstr ""
+msgstr "Nuevo nombre de %s"
 
 #: includes/class-appsheet-functions-post_types.php:178
 msgid "Popular %s"
-msgstr ""
+msgstr "%s  popular"
 
 #: includes/class-appsheet-functions-post_types.php:179
 msgid "Separate %s with commas"
-msgstr ""
+msgstr "Separar %s con comas"
 
 #: includes/class-appsheet-functions-post_types.php:180
 msgid "Add or remove %s"
-msgstr ""
+msgstr "Añadir o quitar %s"
 
 #: includes/class-appsheet-functions-post_types.php:181
 msgid "Choose from the most used %s"
-msgstr ""
+msgstr "Escoger de los %s mas usados"
 
 #: includes/class-appsheet-functions-post_types.php:260
 msgid "Appsheet Function"
-msgstr ""
+msgstr "Formulas AppSheet"
 
 #: includes/class-appsheet-functions-post_types.php:292
 msgid "Function Categories"
-msgstr ""
+msgstr "Categorías de expresión"
 
 #: includes/class-appsheet-functions-post_types.php:293
 msgid "Function Category"
-msgstr ""
+msgstr "Categoría de expresión"
 
 #: includes/class-appsheet-functions-post_types.php:298
 msgid "Function Examples"
-msgstr ""
+msgstr "Ejemplos de expresión"
 
 #: includes/class-appsheet-functions-post_types.php:299
 msgid "Function Example"
-msgstr ""
+msgstr "Ejemplo de expresión"
 
 #: widgets/appsheet-functions-examples.php:12
 msgid "Appsheet Functions Examples"
-msgstr ""
+msgstr "Ejemplos de expresiones AppSheet"
 
 #: widgets/appsheet-functions-examples.php:59
 msgid "This function does not have examples!"
-msgstr ""
+msgstr "¡Esta función no tiene ejemplos!"
 
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
-msgstr ""
+msgstr "Ejemplos de las expresiones AppSheet"
 
 #: widgets/appsheet-functions-explanation.php:42
 msgid "This function does not have an explanation!"
-msgstr ""
+msgstr "¡Esta función no tiene explicación!"

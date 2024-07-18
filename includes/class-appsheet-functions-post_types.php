@@ -45,7 +45,7 @@ class Appsheet_Functions_Post_Types
 
             /* Labels for hierarchical post types only. */
             'parent_item'           => sprintf(__('Parent %s', 'appsheet-functions'), $fields['singular']),
-            'parent_item_colon'     => sprintf(__('Parent %s:', 'appsheet-functions'), $fields['singular']),
+            'parent_item_colon'     => sprintf(__('Parent %s\:', 'appsheet-functions'), $fields['singular']),
 
             /* Custom archive label.  Must filter 'post_type_archive_title' to use. */
             'archive_title'        => $fields['plural'],
@@ -173,7 +173,7 @@ class Appsheet_Functions_Post_Types
             'add_new_item'               => sprintf(__('Add New %s', 'appsheet-functions'), $tax_fields['single']),
             'new_item_name'              => sprintf(__('New %s Name', 'appsheet-functions'), $tax_fields['single']),
             'parent_item'                => sprintf(__('Parent %s', 'appsheet-functions'), $tax_fields['single']),
-            'parent_item_colon'          => sprintf(__('Parent %s:', 'appsheet-functions'), $tax_fields['single']),
+            'parent_item_colon'          => sprintf(__('Parent %s\:', 'appsheet-functions'), $tax_fields['single']),
             'search_items'               => sprintf(__('Search %s', 'appsheet-functions'), $tax_fields['plural']),
             'popular_items'              => sprintf(__('Popular %s', 'appsheet-functions'), $tax_fields['plural']),
             'separate_items_with_commas' => sprintf(__('Separate %s with commas', 'appsheet-functions'), $tax_fields['plural']),
@@ -256,16 +256,16 @@ class Appsheet_Functions_Post_Types
             array(
                 // Slug max. 20 characters, cannot contain capital letters or spaces!
                 // https://toolset.com/forums/topic/types-custom-post-type-slug-length-limited-to-20-characters/
-                'slug'                  => 'appsheet-functions',
-                'singular'              => 'Appsheet Function',
-                'plural'                => 'Appsheet Functions',
-                'menu_name'             => 'Appsheet Functions',
+                'slug'                  => 'expresiones-appsheet',
+                'singular'              => __('Appsheet Function', 'appsheet-functions'),
+                'plural'                => __('Appsheet Functions', 'appsheet-functions'),
+                'menu_name'             => __('Appsheet Functions', 'appsheet-functions'),
                 'menu_position'         => 3,
-                'description'           => 'Appsheet Functions',
-                'has_archive'           => false,
+                'description'           => __('Appsheet Functions', 'appsheet-functions'),
+                'has_archive'           => 'expresiones-appsheet',
                 'hierarchical'          => false,
                 'rewrite' => array(
-                    'slug'                  => 'appsheet-functions',
+                    'slug'                  => 'expresiones-appsheet',
                     'with_front'            => true,
                     'pages'                 => true,
                     'feeds'                 => true,
@@ -275,14 +275,11 @@ class Appsheet_Functions_Post_Types
                 'publicly_queryable'    => true,
                 'exclude_from_search'   => false,
                 'show_ui'               => true,
-                // 'show_in_menu'          => 'appsheet-functions-settings',
                 'query_var'             => true,
                 'supports'              => array(
                     'title',
                     'editor',
-                    'excerpt',
                     'thumbnail',
-                    'custom-fields',
                     'revisions',
                 ),
                 'custom_caps'           => true,
@@ -291,50 +288,18 @@ class Appsheet_Functions_Post_Types
                 ),
                 'taxonomies'            => array(
                     array(
-                        'taxonomy'          => 'function-category',
-                        'plural'            => 'Function Categories',
-                        'single'            => 'Function Category',
-                        'post_types'        => array( 'appsheet-functions' ),
+                        'taxonomy'          => 'categoria-de-expresion',
+                        'plural'            => __('Function Categories', 'appsheet-functions'),
+                        'single'            => __('Function Category', 'appsheet-functions'),
+                        'post_types'        => array( 'expresiones-appsheet' ),
                     ),
+                    array(
+                        'taxonomy'          => 'ejemplo-de-expresion',
+                        'plural'            => __('Function Examples', 'appsheet-functions'),
+                        'single'            => __('Function Example', 'appsheet-functions'),
+                        'post_types'        => array( 'expresiones-appsheet' ),
+                    )
                 ),
-            ),
-
-            // Function examples post type
-            array(
-                // Slug max. 20 characters, cannot contain capital letters or spaces!
-                // https://toolset.com/forums/topic/types-custom-post-type-slug-length-limited-to-20-characters/
-                'slug'                  => 'appsheet-examples',
-                'singular'              => 'Appsheet Example',
-                'plural'                => 'Appsheet Examples',
-                'menu_name'             => 'Appsheet Examples',
-                'description'           => 'Appsheet Examples',
-                'has_archive'           => true,
-                'hierarchical'          => false,
-                'menu_icon'             => 'dashicons-tag',
-                'rewrite' => array(
-                    'slug'                  => 'appsheet-examples',
-                    'with_front'            => true,
-                    'pages'                 => true,
-                    'feeds'                 => true,
-                    'ep_mask'               => EP_PERMALINK,
-                ),
-                'public'                => true,
-                'publicly_queryable'    => true,
-                'exclude_from_search'   => true,
-                'show_ui'               => true,
-                'show_in_menu'          => 'edit.php?post_type=appsheet-functions',
-                'query_var'             => true,
-                'supports'              => array(
-                    'title',
-                    'editor',
-                    'custom-fields',
-                    'revisions',
-                ),
-                'custom_caps'           => true,
-                'custom_caps_users'     => array(
-                    'administrator',
-                ),
-                'taxonomies'            => array( ),
             ),
         );
 

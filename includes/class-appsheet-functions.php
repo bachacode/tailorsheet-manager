@@ -130,13 +130,13 @@ class Appsheet_Functions
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-post_types.php';
 
-	    /**
-		 * Exopite Simple Options Framework
-		 *
-		 * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
-		 * @author Joe Szalai
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
+        /**
+         * Exopite Simple Options Framework
+         *
+         * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
+         * @author Joe Szalai
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
 
 
         $this->loader = new Appsheet_Functions_Loader();
@@ -175,10 +175,15 @@ class Appsheet_Functions
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-		
-		// Save/Update our plugin options
-		$this->loader->add_action( 'init', $plugin_admin, 'create_metaboxes', 999 );
-		// $this->loader->add_action( 'init', $plugin_admin, 'create_menu', 999 );
+
+        // Save/Update our plugin options
+        $this->loader->add_action('init', $plugin_admin, 'create_metaboxes', 999);
+
+        // Custom fields for function-example taxonomy on create, edit, and save hooks
+        $this->loader->add_action('ejemplo-de-expresion_add_form_fields', $plugin_admin, 'fe_add_fields', 10);
+        $this->loader->add_action('ejemplo-de-expresion_edit_form_fields', $plugin_admin, 'fe_edit_fields', 10, 2);
+        $this->loader->add_action('created_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
+        $this->loader->add_action('edited_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
 
 
         $plugin_post_types = new Appsheet_Functions_Post_Types();
@@ -195,8 +200,8 @@ class Appsheet_Functions
          */
         $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
 
-		
-		
+
+
     }
 
     /**
