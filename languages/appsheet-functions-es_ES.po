@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-"
 "functions\n"
-"POT-Creation-Date: 2024-07-18T23:14:14+02:00\n"
-"PO-Revision-Date: 2024-07-18 17:19-0400\n"
+"POT-Creation-Date: 2024-07-19T01:43:00+02:00\n"
+"PO-Revision-Date: 2024-07-18 20:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: includes/class-appsheet-functions-post_types.php:262
 #: includes/class-appsheet-functions-post_types.php:264
 msgid "Appsheet Functions"
-msgstr "Funciones de Appsheet"
+msgstr "Expresiones de AppSheet"
 
 #. Plugin URI of the plugin
 #: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
@@ -48,6 +48,14 @@ msgstr "https://bachacode.com/"
 #: admin/class-appsheet-functions-admin.php:115
 msgid "Settings"
 msgstr "Ajustes"
+
+#: admin/class-appsheet-functions-admin.php:172
+msgid "Extra fields"
+msgstr "Campos extra"
+
+#: admin/class-appsheet-functions-admin.php:180
+msgid "Appsheet Function fields"
+msgstr "Campos de Expresiones AppSheet"
 
 #: admin/class-appsheet-functions-admin.php:221
 msgid "Example Syntax"
@@ -170,7 +178,7 @@ msgstr "Escoger de los %s mas usados"
 
 #: includes/class-appsheet-functions-post_types.php:260
 msgid "Appsheet Function"
-msgstr "Formulas AppSheet"
+msgstr "Expresión AppSheet"
 
 #: includes/class-appsheet-functions-post_types.php:292
 msgid "Function Categories"
@@ -194,7 +202,7 @@ msgstr "Ejemplos de expresiones AppSheet"
 
 #: widgets/appsheet-functions-examples.php:59
 msgid "This function does not have examples!"
-msgstr "¡Esta función no tiene ejemplos!"
+msgstr "¡Esta expresión no tiene ejemplos!"
 
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
@@ -202,4 +210,4 @@ msgstr "Ejemplos de las expresiones AppSheet"
 
 #: widgets/appsheet-functions-explanation.php:42
 msgid "This function does not have an explanation!"
-msgstr "¡Esta función no tiene explicación!"
+msgstr "¡Esta expresión no tiene explicación!"

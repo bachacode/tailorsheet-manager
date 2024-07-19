@@ -169,7 +169,7 @@ class Appsheet_Functions_Admin
             'context'           => 'advanced',
             'options'			=> 'simple',
             'priority'          => 'default',
-            'title'             => 'Extra fields',                  // The name of this page
+            'title'             => __('Extra fields', 'appsheet-functions'),                  // The name of this page
             'capability'        => 'edit_posts',                    // The capability needed to view the page
             'tabbed'            => false,
 
@@ -177,7 +177,7 @@ class Appsheet_Functions_Admin
 
         $fields[] = array(
             'name'   => 'first',
-            'title'  => 'Appsheet Function fields',
+            'title'  => __('Appsheet Function fields', 'appsheet-functions'),
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
 
