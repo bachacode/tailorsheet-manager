@@ -19,7 +19,7 @@ class Elementor_Appsheet_Functions_Explanation extends \Elementor\Widget_Base
 
     public function get_categories()
     {
-        return [ 'basic' ];
+        return [ 'appsheet-functions' ];
     }
 
     public function get_keywords()
@@ -29,18 +29,19 @@ class Elementor_Appsheet_Functions_Explanation extends \Elementor\Widget_Base
 
     protected function render()
     {
+        if ( !function_exists( 'af_show_template' ) ) {
+            return;
+        }
+
         $queried_object = get_queried_object();
         if ($queried_object) {
             $post_id = $queried_object->ID;
             $explanation = get_post_meta($post_id,'explanation', true);
             if ($explanation && !is_wp_error($explanation)) {
-                ?>
-                <div class="explanation-wrapper">
-                    <?= $explanation; ?>
-                </div>
-             <?php } else { ?>
-                <p> <?= __('This function does not have an explanation!', 'appsheet-functions'); ?> </p>
-            <?php }
+                af_show_template( 'af-explanation', [ 'explanation' => $explanation ] );
+           } else { 
+                af_show_template( 'af-explanation-error' );
+           }
         }
     }
 
