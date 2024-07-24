@@ -99,7 +99,7 @@ class Appsheet_Functions_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/appsheet-functions-public.js', array( 'jquery' ), $this->version, false );
-		 
+		wp_register_script( 'alpinejs', plugin_dir_url( __FILE__ ) . 'js/alpinejs.min.js', array(), '3.14.1', true );
 		// Register searchbar JS Script
 		wp_register_script( $this->plugin_name . '-searchbar', plugin_dir_url( __FILE__ ) . 'js/appsheet-functions-searchbar.js', array( 'jquery' ), $this->version, false );
 	}

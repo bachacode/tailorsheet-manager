@@ -14,6 +14,7 @@ wp_localize_script($handle, 'wp_ajax', array(
 
 wp_enqueue_script($handle);
 wp_enqueue_style($handle);
+wp_enqueue_script('alpinejs');
 ?>
 
 <div class="appsheet-functions-searchbar__wrapper">
