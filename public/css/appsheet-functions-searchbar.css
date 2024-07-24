@@ -1,0 +1,30 @@
+.appsheet-functions-searchbar__wrapper .search,
+.appsheet-functions-searchbar__wrapper .search-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    color: black;
+}
+
+.appsheet-functions-searchbar__wrapper input[type='text'].search-input {
+    width: 100%;
+    border: 3px solid #267DEC;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black;
+}
+
+.appsheet-functions-searchbar__wrapper .search-button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #267DEC;
+    background: #267DEC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}

@@ -185,6 +185,8 @@ class Appsheet_Functions
         $this->loader->add_action('created_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
         $this->loader->add_action('edited_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
 
+        // Search posts by name using like wildcard syntax
+        $this->loader->add_filter('posts_where', $plugin_admin, 'search_posts_by_name_like', 10, 2);
 
         $plugin_post_types = new Appsheet_Functions_Post_Types();
 
@@ -199,8 +201,6 @@ class Appsheet_Functions
          * @link https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/issues/261
          */
         $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
-
-
 
     }
 
@@ -218,6 +218,9 @@ class Appsheet_Functions
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+        
+        $this->loader->add_action('wp_ajax_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
 
     }
 

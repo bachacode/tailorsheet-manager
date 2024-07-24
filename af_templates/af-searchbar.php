@@ -1,41 +1,28 @@
-<div class="search">
-    <input type="text" class="searchTerm" placeholder="Buscar una expresión">
-    <button type="submit" class="searchButton">
-    <i class="fa fa-search"></i>
-    </button>
+<?php
+$handle = 'appsheet-functions-searchbar';
+
+wp_localize_script($handle, 'wp_ajax', array(
+    'admin_ajax_url' => admin_url('admin-ajax.php'),
+    /**
+     * Create nonce for security.
+     *
+     * @link https://codex.wordpress.org/Function_Reference/wp_create_nonce
+     */
+    '_nonce' => wp_create_nonce('query_appsheet-functions'),
+
+));
+
+wp_enqueue_script($handle);
+wp_enqueue_style($handle);
+?>
+
+<div class="appsheet-functions-searchbar__wrapper">
+	<div class="search">
+		<form id="searchbarForm" class="search-form" action="" method="POST">
+			<input type="text" name="search_query" class="search-input" placeholder="Buscar una expresión">
+			<button type="submit" class="search-button">
+				<i class="fa fa-search"></i>
+			</button>
+		</form>
+	</div>
 </div>
-
-
-<style scoped>
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-    .search {
-    width: 100%;
-    position: relative;
-    display: flex;
-    color: black;
-    }
-
-    input[type='text'].searchTerm {
-    width: 100%;
-    border: 3px solid #00B4CC;
-    border-right: none;
-    padding: 5px;
-    height: 36px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: black;
-    }
-
-    .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-    }
-</style>

@@ -314,5 +314,21 @@ class Appsheet_Functions_Admin
         );
 
     }
+
+    public function search_posts_by_name_like($where, $q) {
+        if( $name__like = $q->get( '_name__like' ) )
+        {
+            global $wpdb;
+            $where .= $wpdb->prepare(
+                " AND {$wpdb->posts}.post_name LIKE %s ",
+                str_replace( 
+                    array( '**', '*' ), 
+                    array( '*',  '%' ),  
+                    mb_strtolower( $wpdb->esc_like( $name__like ) ) 
+                )
+            );
+        }       
+        return $where;
+    }
 }
 ?>
