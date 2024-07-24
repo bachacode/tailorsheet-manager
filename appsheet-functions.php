@@ -56,7 +56,6 @@ if( ! class_exists( 'Custom_Template_Loader' ) ) {
  */
 require_once  plugin_dir_path( __FILE__ ) . 'includes/elementor.php';
 
-
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-appsheet-functions-activator.php
@@ -101,29 +100,3 @@ function run_appsheet_functions()
     $plugin->run();
 }
 run_appsheet_functions();
-
-function add_elementor_widget_categories($elements_manager)
-{
-    $elements_manager->add_category(
-        'appsheet-functions',
-        [
-            'title' => esc_html__('AppSheet Functions', 'appsheet-functions'),
-        ]
-    );
-}
-add_action('elementor/elements/categories_registered', 'add_elementor_widget_categories');
-
-function register_elementor_widgets($widgets_manager)
-{
-
-    require_once(__DIR__ . '/widgets/appsheet-functions-examples.php');
-    require_once(__DIR__ . '/widgets/appsheet-functions-explanation.php');
-    require_once(__DIR__ . '/widgets/appsheet-functions-searchbar.php');
-
-    $widgets_manager->register(new \Elementor_Appsheet_Functions_Examples());
-    $widgets_manager->register(new \Elementor_Appsheet_Functions_Explanation());
-    $widgets_manager->register(new \Elementor_Appsheet_Functions_Searchbar());
-
-}
-
-add_action('elementor/widgets/register', 'register_elementor_widgets');

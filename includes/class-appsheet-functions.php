@@ -178,12 +178,16 @@ class Appsheet_Functions
 
         // Save/Update our plugin options
         $this->loader->add_action('init', $plugin_admin, 'create_metaboxes', 999);
-
         // Custom fields for function-example taxonomy on create, edit, and save hooks
         $this->loader->add_action('ejemplo-de-expresion_add_form_fields', $plugin_admin, 'fe_add_fields', 10);
         $this->loader->add_action('ejemplo-de-expresion_edit_form_fields', $plugin_admin, 'fe_edit_fields', 10, 2);
         $this->loader->add_action('created_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
         $this->loader->add_action('edited_ejemplo-de-expresion', $plugin_admin, 'fe_save_term_fields', 10);
+
+        // Elementor actions
+        $this->loader->add_action('elementor/widgets/register', $plugin_admin, 'register_elementor_widgets');
+        $this->loader->add_action('elementor/elements/categories_registered', $plugin_admin, 'register_elementor_appsheet_functions_category');
+
 
         // Search posts by name using like wildcard syntax
         $this->loader->add_filter('posts_where', $plugin_admin, 'search_posts_by_name_like', 10, 2);

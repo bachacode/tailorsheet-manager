@@ -313,5 +313,25 @@ class Appsheet_Functions_Admin
         }       
         return $where;
     }
+
+    public function register_elementor_widgets($widgets_manager) {
+
+        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-examples.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-explanation.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-searchbar.php';
+
+        $widgets_manager->register(new \Elementor_Appsheet_Functions_Examples());
+        $widgets_manager->register(new \Elementor_Appsheet_Functions_Explanation());
+        $widgets_manager->register(new \Elementor_Appsheet_Functions_Searchbar());
+    }
+
+    public function register_elementor_appsheet_functions_category($elements_manager) {
+        $elements_manager->add_category(
+            'appsheet-functions',
+            [
+                'title' => esc_html__('AppSheet Functions', 'appsheet-functions'),
+            ]
+        );
+    }
 }
 ?>
