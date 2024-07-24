@@ -260,43 +260,26 @@ class Appsheet_Functions_Admin
 
     public function fe_add_fields()
     {
-        ?>
-<div class="form-field">
-	<label
-		for="fe_syntax"><?php echo __('Example use', 'appsheet-functions') ?></label>
-	<input type="text" name="fe_syntax" id="fe_syntax" placeholder="e.j: FUNCTION (-1)" />
-</div>
+        if ( !function_exists( 'af_show_template' ) ) {
+            return;
+        }
 
-<div class="form-field">
-	<label
-		for="fe_expected"><?php echo __('Expected Result', 'appsheet-functions') ?></label>
-	<input type="text" name="fe_expected" id="fe_expected" placeholder="e.j: 1" />
-</div>
-<?php
+        af_show_template('af-admin-function-example-fields');
     }
 
     public function fe_edit_fields($term, $taxonomy)
     {
+        if ( !function_exists( 'af_show_template' ) ) {
+            return;
+        }
 
-        // Get meta data values
         $syntax = get_term_meta($term->term_id, 'fe_syntax', true);
         $expected = get_term_meta($term->term_id, 'fe_expected', true);
 
-        ?>
-<div class="form-field">
-	<label
-		for="fe_syntax"><?php echo __('Example use', 'appsheet-functions') ?></label>
-	<input type="text" name="fe_syntax" id="fe_syntax" placeholder="e.j: FUNCTION (-1)"
-		value="<?php echo esc_attr($syntax) ?>" />
-</div>
-
-<div class="form-field">
-	<label
-		for="fe_expected"><?php echo __('Expected Result', 'appsheet-functions') ?></label>
-	<input type="text" name="fe_expected" id="fe_expected" placeholder="e.j: 1"
-		value="<?php echo esc_attr($expected) ?>" />
-</div>
-<?php
+        af_show_template('af-admin-function-example-fields', array (
+            'syntax' => $syntax,
+            'expected' => $expected
+        ));
     }
 
     public function fe_save_term_fields($term_id)
