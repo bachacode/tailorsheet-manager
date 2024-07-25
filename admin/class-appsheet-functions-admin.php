@@ -333,5 +333,43 @@ class Appsheet_Functions_Admin
             ]
         );
     }
+
+    public function upgrader_process_complete( $upgrader_object, $options ) {
+
+        // If an update has taken place and the updated type is plugins and the plugins element exists
+        if( $options['action'] == 'update' && $options['type'] == 'plugin' && isset( $options['plugins'] ) ) {
+
+            // Iterate through the plugins being updated and check if ours is there
+            foreach( $options['plugins'] as $plugin ) {
+                if( $plugin == APPSHEET_FUNCTIONS_BASE_NAME ) {
+
+					// Your code here, eg display a message:
+
+                    // Set a transient to record that our plugin has just been updated
+					set_transient( $this->plugin_name . '_updated', 1 );
+					set_transient( $this->plugin_name . '_updated_message', esc_html__( 'Thanks for updating', 'exopite_sof' ) );
+
+                }
+            }
+        }
+    }
+    
+    public function display_update_notice() {
+
+        // Check the transient to see if we've just activated the plugin
+        if( get_transient( $this->plugin_name . '_updated' ) ) {
+
+			/**
+			 * Display a message.
+			 */
+            // @link https://digwp.com/2016/05/wordpress-admin-notices/
+			echo '<div class="notice notice-success is-dismissible"><p><strong>' . get_transient( 'exopite_sof_updated_message' ) . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
+
+            // Delete the transient so we don't keep displaying the activation message
+            delete_transient( $this->plugin_name . '_updated' );
+            delete_transient( $this->plugin_name . '_updated_message' );
+		}
+
+    }
 }
 ?>

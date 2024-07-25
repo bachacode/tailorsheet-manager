@@ -206,6 +206,20 @@ class Appsheet_Functions
          */
         $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
 
+
+        /**
+        * This function runs when WordPress completes its upgrade process
+        * It iterates through each plugin updated to see if ours is included
+        * @param $upgrader_object Array
+        * @param $options Array
+        */
+        $this->loader->add_action( 'upgrader_process_complete', $plugin_admin, 'upgrader_process_complete', 10, 2 );
+
+        /**
+        * Show a notice to anyone who has just updated this plugin
+        * This notice shouldn't display to anyone who has just installed the plugin for the first time
+        */
+        $this->loader->add_action( 'admin_notices', $plugin_admin, 'display_update_notice' );
     }
 
     /**
