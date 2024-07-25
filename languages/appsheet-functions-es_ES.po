@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-"
 "functions\n"
-"POT-Creation-Date: 2024-07-19T01:43:00+02:00\n"
-"PO-Revision-Date: 2024-07-18 20:01-0400\n"
+"POT-Creation-Date: 2024-07-25T03:33:34+02:00\n"
+"PO-Revision-Date: 2024-07-24 21:36-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -66,8 +66,8 @@ msgid "The syntax shown on the function description page"
 msgstr "La sintaxis mostrada en la página de descripción de la función"
 
 #: admin/class-appsheet-functions-admin.php:234
-#: admin/class-appsheet-functions-admin.php:272
-#: admin/class-appsheet-functions-admin.php:295
+#: af_templates/af-admin-function-example-fields.php:12
+#: af_templates/af-admin-function-example-fields.php:24
 msgid "Expected Result"
 msgstr "Resultado esperado"
 
@@ -79,10 +79,22 @@ msgstr "Tipo de datos devueltos por la expresión"
 msgid "Explanation"
 msgstr "Explicación"
 
-#: admin/class-appsheet-functions-admin.php:266
-#: admin/class-appsheet-functions-admin.php:288
+#: admin/class-appsheet-functions-admin.php:332
+msgid "AppSheet Functions"
+msgstr "Expresiones de AppSheet"
+
+#: af_templates/af-admin-function-example-fields.php:5
+#: af_templates/af-admin-function-example-fields.php:19
 msgid "Example use"
 msgstr "Ejemplo de uso"
+
+#: af_templates/af-examples-error.php:1
+msgid "This function does not have examples!"
+msgstr "¡Esta expresión no tiene ejemplos!"
+
+#: af_templates/af-explanation-error.php:1
+msgid "This function does not have an explanation!"
+msgstr "¡Esta expresión no tiene explicación!"
 
 #: includes/class-appsheet-functions-post_types.php:32
 msgid "New %s"
@@ -200,14 +212,10 @@ msgstr "Ejemplo de expresión"
 msgid "Appsheet Functions Examples"
 msgstr "Ejemplos de expresiones AppSheet"
 
-#: widgets/appsheet-functions-examples.php:59
-msgid "This function does not have examples!"
-msgstr "¡Esta expresión no tiene ejemplos!"
-
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr "Ejemplos de las expresiones AppSheet"
 
-#: widgets/appsheet-functions-explanation.php:42
-msgid "This function does not have an explanation!"
-msgstr "¡Esta expresión no tiene explicación!"
+#: widgets/appsheet-functions-searchbar.php:12
+msgid "Appsheet Functions Searchbar"
+msgstr "Barra de búsqueda de Expresiones AppSheet"
