@@ -75,8 +75,7 @@ class Appsheet_Functions_Public {
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/appsheet-functions-public.css', array(), $this->version, 'all' );
 
-		wp_enqueue_style( $this->plugin_name . '-searchbar', plugin_dir_url( __FILE__ ) . 'css/appsheet-functions-searchbar.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style( $this->plugin_name . '-main', plugin_dir_url( __FILE__ ) . 'css/appsheet-functions-main.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -99,12 +98,12 @@ class Appsheet_Functions_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/appsheet-functions-public.js', array( 'jquery' ), $this->version, false );
-		wp_register_script( 'alpinejs', plugin_dir_url( __FILE__ ) . 'js/alpinejs.min.js', array(), '3.14.1', true );
 		// Register searchbar JS Script
-		wp_register_script( $this->plugin_name . '-searchbar', plugin_dir_url( __FILE__ ) . 'js/appsheet-functions-searchbar.js', array( 'jquery' ), $this->version, false );
+		wp_register_script( $this->plugin_name . '-main', plugin_dir_url( __FILE__ ) . 'js/appsheet-functions-main.js', array( 'jquery' ), $this->version, false );
 	}
 
 	public function query_appsheet_functions() {
+	
 		/**
 		 * Check nonce for security
 		 */
@@ -112,17 +111,18 @@ class Appsheet_Functions_Public {
 			wp_send_json_error( 'Invalid security token sent.' );
 			die();
 		}
-	
+		
 		// The rest of the function that does actual work.
 
 		$ret = array();
 		
-		$search_query = sanitize_text_field($_POST['search_query']);
-
+		$search_query = rtrim(sanitize_text_field($_POST['search_query']), "()\n\r\t\v\0 ");
+	
 		// Eg.: custom Loop for Custom Post Type
 		$args = array(
 			'post_type' => 'expresiones-appsheet',
 			'posts_per_page' => '-1', // for all of them
+			'post_status' => 'publish',
 			'_name__like' => '*'.$search_query.'*'
 		);
 	
@@ -132,13 +132,73 @@ class Appsheet_Functions_Public {
 			$post_data = array (
 				'post_id'		=> get_the_ID(),
 				'post_title' 	=> get_the_title(),
+				'post_url' 		=> get_the_permalink(),
+				'post_categories' => get_the_terms(get_the_ID(), 'categoria-de-expresion')
 			);
 			array_push($ret, $post_data);
 		endwhile;
-	
+		
+		$template = af_load_template('af-appsheet-functions-list', array ( 'posts' => $ret ));
+		
 		wp_reset_query();
+
+		die( $template );
 	
-		die( json_encode( $ret ) );
+	}
+
+	public function query_appsheet_functions_by_category() {
+		
+		/**
+		 * Check nonce for security
+		 */
+		if ( ! check_ajax_referer( 'query_appsheet-functions', '_nonce', false ) ) {
+			wp_send_json_error( 'Invalid security token sent.' );
+			die();
+		}
+		
+		// The rest of the function that does actual work.
+
+		$ret = array();
+		
+		$categories = isset( $_POST['categories'] ) ? (array) $_POST['categories'] : array();
+		$categories = array_map( 'esc_attr', $categories );
+		$categories = array_map( 'intval', $categories );
+
+		// Eg.: custom Loop for Custom Post Type
+		$args = array(
+			'post_type' => 'expresiones-appsheet',
+			'posts_per_page' => '-1', // for all of them
+			'post_status' => 'publish',
+			
+		);
+
+		if(!($categories === [])) {
+			$args['tax_query'] = array (
+				array(
+					'taxonomy' => 'categoria-de-expresion',
+					'field'		=> 'term_id',
+					'terms'		=> $categories
+					)
+				);
+		}
+	
+		$loop = new WP_Query( $args );
+	
+		while( $loop->have_posts() ): $loop->the_post();
+			$post_data = array (
+				'post_id'		=> get_the_ID(),
+				'post_title' 	=> get_the_title(),
+				'post_url' 		=> get_the_permalink(),
+				'post_categories' => get_the_terms(get_the_ID(), 'categoria-de-expresion')
+			);
+			array_push($ret, $post_data);
+		endwhile;
+		
+		$template = af_load_template('af-appsheet-functions-list', array ( 'posts' => $ret ));
+		
+		wp_reset_query();
+
+		die( $template );
 	
 	}
 

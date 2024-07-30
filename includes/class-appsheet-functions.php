@@ -239,6 +239,9 @@ class Appsheet_Functions
         
         $this->loader->add_action('wp_ajax_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
         $this->loader->add_action('wp_ajax_nopriv_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
+        
+        $this->loader->add_action('wp_ajax_prefix_query_appsheet_functions_by_category', $plugin_public, 'query_appsheet_functions_by_category');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_appsheet_functions_by_category', $plugin_public, 'query_appsheet_functions_by_category');
 
     }
 

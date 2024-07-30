@@ -1,0 +1,290 @@
+.af-main__wrapper {
+    display: flex; 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; 
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%; 
+    height: auto; 
+}
+
+.af-main__wrapper .af-form-category {
+    display: flex; 
+    padding: 0.75rem; 
+    margin-right: 1rem;
+    flex-direction: column; 
+    border-radius: 0.375rem; 
+    border-width: 1px; 
+    border-color: #E5E7EB; 
+    height: 100%; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    min-width: 200px;
+}
+
+.af-form-category .af-form-category-container {
+    display: flex; 
+    padding-bottom: 0.75rem; 
+    margin-bottom: 0.75rem; 
+    flex-direction: column; 
+    border-bottom-width: 1px; 
+    border-color: #E5E7EB; 
+    width: 100%; 
+}
+
+.af-form-category-container .af-category-title {
+    padding-bottom: 0.25rem; 
+    align-items: center; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+}
+
+.af-form-category-container .af-category-list {
+    display: flex; 
+    padding-left: 0.75rem; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.af-category-list .af-category {
+    margin-top: 0.5rem; 
+    display: flex; 
+    align-items: center; 
+}
+
+.af-category .af-category-checkbox {
+    border-radius: 0.375rem; 
+    border-color: #D1D5DB; 
+    width: 1rem; 
+    height: 1rem; 
+    color: #2563EB; 
+    background-color: #F3F4F6; 
+}
+
+.af-category .af-category-label {
+    margin-bottom: 0; 
+    padding-left: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    color: #111827;
+}
+
+.af-form-category .af-category-buttons {
+    display: flex; 
+    margin-top: 0.5rem; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.af-category-buttons .af-btn-submit {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem; 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; 
+    margin-bottom: 0.5rem; 
+    border-radius: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    color: #ffffff; 
+    background-color: #1D4ED8; 
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+}
+
+.af-category-buttons .af-btn-submit:hover { 
+    background-color: #1E40AF;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+} 
+
+.af-category-buttons .af-btn-submit i,
+.af-searchbar-container .af-searchbar-button i {
+    width: 1rem; 
+    height: 1rem; 
+    animation: spin 1s linear infinite;
+}
+
+.af-category-buttons .af-btn-reset {
+    border-bottom-width: 1px; 
+    border-color: #000000; 
+    border-style: dotted; 
+    width: fit-content; 
+}
+
+.af-main__wrapper .af-posts-list {
+    display: flex; 
+    margin-top: 1.5rem; 
+    flex-direction: column; 
+    width: 100%; 
+    height: 100%;
+}
+
+.af-posts-list .af-searchbar__wrapper {
+    min-width: 20rem /* 320px */;
+    margin-bottom: 1.5rem; 
+    align-self: flex-start; 
+}
+
+.af-searchbar__wrapper .af-searchbar-form {
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 28rem; 
+}
+
+.af-searchbar-form .af-searchbar-label {
+    margin-bottom: 0.5rem; 
+    color: #111827; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0px;
+}
+
+.af-searchbar-form .af-searchbar-container {
+    position: relative;
+}
+
+.af-searchbar-container .af-searchbar-icon__wrapper {
+    display: flex; 
+    position: absolute; 
+    top: 0;
+    bottom: 0; 
+    align-items: center; 
+    pointer-events: none; 
+    inset-inline-start: 0px;
+    padding-inline-start: 0.75rem /* 12px */;
+}
+
+.af-searchbar-container .af-searchbar-icon__wrapper i {
+    width: 1rem; 
+    height: 1rem; 
+    color: #6B7280; 
+}
+
+.af-searchbar-container .af-searchbar-input {
+    display: block; 
+    padding: 1rem; 
+    border-radius: 0.5rem; 
+    border-width: 1px; 
+    border-color: #D1D5DB; 
+    width: 100%; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    color: #111827; 
+    background-color: #F9FAFB;
+    padding-inline-start: 2.5rem /* 40px */;
+}
+
+.af-searchbar-container .af-searchbar-button {
+    position: absolute; 
+    bottom: 0.625rem; 
+    inset-inline-end: 0.625rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    border-radius: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    color: #ffffff; 
+    background-color: #1D4ED8; 
+}
+
+.af-posts-list .af-posts-container {
+    display: grid;
+    position: relative; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 1rem; 
+    width: 100%; 
+}
+
+@media (min-width: 768px) { 
+    .af-posts-list .af-posts-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    } 
+}
+@media (min-width: 1024px) { 
+    .af-posts-list .af-posts-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    }
+}
+
+.appsheet-functions-list__overlay::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	
+	/* adjust overlay colour/transparency here */
+	background:rgba(255, 255, 255, 0.66); 
+}
+
+.af-card-link {
+    display: flex; 
+    margin-left: 0.5rem; 
+    border-radius: 0.375rem; 
+    border-width: 2px; 
+    border-color: #2563EB; 
+    width: 100%; 
+    max-height: 5rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+}
+
+@media (min-width: 1024px) { 
+    .af-card-link {
+        width: 15rem /* 240px */;
+    }
+}
+
+.af-card-link .af-link-img__wrapper {
+    height: 100%;
+}
+
+.af-link-img__wrapper .af-link-img {
+    padding: 0.75rem; 
+    border-radius: 0.375rem; 
+    max-height: 100%; 
+}
+
+.af-card-link .af-link-text__wrapper {
+    display: flex; 
+    flex-direction: column; 
+    padding-top: 0.5rem; 
+    padding-left: 0.5rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+}
+
+.af-link-text__wrapper .af-link-category {
+    padding-top: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.af-link-text__wrapper .af-link-category i {
+    margin-right: 0.25rem; 
+    width: 1rem; 
+    height: 1rem; 
+    color: #2563EB;
+}
+

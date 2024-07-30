@@ -21,6 +21,13 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 1.2.0 =
+* Removed alpinejs from dependencies
+* Created AppSheet Functions Main
+* Added filter functionality to AppSheet Functions Main widget
+* Added query by name functionality to AppSheet Functions Main widget
+* Added default image to AppSheet Functions Main widget
+
 = 1.1.2 =
 * Spanish localization
 

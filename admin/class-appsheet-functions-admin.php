@@ -318,11 +318,11 @@ class Appsheet_Functions_Admin
 
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-examples.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-explanation.php';
-        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-searchbar.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-main.php';
 
         $widgets_manager->register(new \Elementor_Appsheet_Functions_Examples());
         $widgets_manager->register(new \Elementor_Appsheet_Functions_Explanation());
-        $widgets_manager->register(new \Elementor_Appsheet_Functions_Searchbar());
+        $widgets_manager->register(new \Elementor_Appsheet_Functions());
     }
 
     public function register_elementor_appsheet_functions_category($elements_manager) {
