@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://bachacode.com
- * @since             1.2.3
+ * @since             1.2.4
  * @package           Appsheet_Functions
  *
  * @wordpress-plugin
  * Plugin Name:       Appsheet Functions
  * Plugin URI:        https://bachacode.com
  * Description:       Plugin for the management of Appsheet Functions and examples of their uses
- * Version:           1.2.3
+ * Version:           1.2.4
  * Author:            Cristhian Flores
  * Author URI:        https://bachacode.com/
  * License:           GPL-2.0+
@@ -33,10 +33,10 @@ if (! defined('WPINC')) {
 
 /**
  * Currently plugin version.
- * Start at version 1.2.3 and use SemVer - https://semver.org
+ * Start at version 1.2.4 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('APPSHEET_FUNCTIONS_VERSION', '1.2.3');
+define('APPSHEET_FUNCTIONS_VERSION', '1.2.4');
 
 /**
  * Store plugin base dir, for easier access later from other classes.
@@ -131,7 +131,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-appsheet-functions.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.2.3
+ * @since    1.2.4
  */
 function run_appsheet_functions()
 {
