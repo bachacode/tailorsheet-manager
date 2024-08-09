@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 1.2.2 =
+* Removed appsheet functions thumbnail
+* Added CSS to improve responsiveness of AppSheet Function Main Widget
+
 = 1.2.1 =
 * Normalized default styles in AppSheet Functions Main CSS
 
