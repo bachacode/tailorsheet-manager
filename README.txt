@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 1.2.5 =
+* Fixed category filter labels only selecting the first category
+
 = 1.2.4 =
 * Increased width of AppSheet Functions Main Cards to fix better the titles again
 

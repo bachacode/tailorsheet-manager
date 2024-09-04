@@ -27,10 +27,13 @@ wp_enqueue_style($handle);
 			<div class="af-category-list">
 				<?php foreach ($data->categories as $category): ?>
 				<div class="af-category">
-					<input id="af-category-checkbox" type="checkbox"
+					<input
+						id="<?php echo "af-category-checkbox-{$category->term_id}" ?>"
+						type="checkbox"
 						value="<?php echo $category->term_id ?>"
 						name="categories[]" class="af-category-checkbox">
-					<label for="af-category-checkbox"
+					<label
+						for="<?php echo "af-category-checkbox-{$category->term_id}" ?>"
 						class="af-category-label"><?php echo esc_html($category->name) ?></label>
 				</div>
 				<?php endforeach; ?>
@@ -53,17 +56,16 @@ wp_enqueue_style($handle);
 	<div class="af-posts-list">
 		<div class="af-searchbar__wrapper">
 			<form id="searchbarForm" class="af-searchbar-form" method="POST">
-				<label for="af-search-text" class="af-searchbar-label"><?php echo esc_html__('Search', 'appsheet-functions') ?></label>
+				<label for="af-search-text"
+					class="af-searchbar-label"><?php echo esc_html__('Search', 'appsheet-functions') ?></label>
 				<div class="af-searchbar-container">
 					<div class="af-searchbar-icon__wrapper">
 						<i class="fa fa-search"></i>
 					</div>
-					<input type="search" id="af-search-text"
-						class="af-searchbar-input"
+					<input type="search" id="af-search-text" class="af-searchbar-input"
 						placeholder="<?php echo esc_html__('Search functions...', 'appsheet-functions') ?>"
 						name="search_query" />
-					<button type="submit" id="searchbarSubmit"
-						class="af-searchbar-button">
+					<button type="submit" id="searchbarSubmit" class="af-searchbar-button">
 						<span><?php echo esc_html__('Search', 'appsheet-functions') ?></span>
 						<i class="fa fa-spinner"></i>
 					</button>
