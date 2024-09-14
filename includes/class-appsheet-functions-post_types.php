@@ -298,6 +298,7 @@ class Appsheet_Functions_Post_Types
                         'plural'            => __('Function Examples', 'appsheet-functions'),
                         'single'            => __('Function Example', 'appsheet-functions'),
                         'post_types'        => array( 'expresiones-appsheet' ),
+                        'public'            => false
                     )
                 ),
             ),
