@@ -112,9 +112,9 @@ class Tailorsheet_Manager_Admin
             'title'             => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
             'menu_title'        => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
             'submenu'           => false,
-            'position'          => 3,
+            'position'          => 6,
             'capability'        => 'manage_options',
-            'icon'              => 'dashicons-admin-generic',
+            'icon'              => 'dashicons-clipboard',
         );
 
         $fields_menu[] = array(
@@ -147,8 +147,56 @@ class Tailorsheet_Manager_Admin
          */
         (new Exopite_Simple_Options_Framework($config, $fields_menu));
 
-       
-       
+        $submenu_options = array(
+            array(
+                'page_title'        => 'Expresiones AppSheet',
+                'menu_title'        => 'Expresiones AppSheet',
+                'menu_slug'         => 'edit.php?post_type=expresiones-appsheet',
+            ),
+            array(
+                'page_title'        => 'Categorías de Expresión',
+                'menu_title'        => 'Categorías de Expresión',
+                'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-expresion',
+            ),
+            array(
+                'page_title'        => 'Ejemplos de Expresión',
+                'menu_title'        => 'Ejemplos de Expresión',
+                'menu_slug'         => 'edit-tags.php?taxonomy=ejemplo-de-expresion',
+            ),
+            array(
+                'page_title'        => 'Ejemplos AppSheet',
+                'menu_title'        => '<span class="ts-manager-settings-menu-title">Ejemplos AppSheet</span>',
+                'menu_slug'         => 'edit.php?post_type=ejemplos-appsheet',
+            ),
+            array(
+                'page_title'        => 'Categorías de Ejemplo',
+                'menu_title'        => 'Categorías de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-ejemplo',
+            ),
+            array(
+                'page_title'        => 'Etiquetas de Ejemplo',
+                'menu_title'        => 'Etiquetas de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=etiqueta-de-ejemplo',
+            ),
+        );
+
+        foreach ($submenu_options as $option) {
+            add_submenu_page(
+                'tailorsheet-manager-admin', // The slug of your top-level menu
+                $option['page_title'], // Page title
+                $option['menu_title'], // Menu title
+                'manage_options', // Capability
+                $option['menu_slug'] // Link to CPT
+            );
+        }
+
+        add_submenu_page(
+			'tailorsheet-manager-admin',
+			'TailorSheet Manager',
+			'<span class="ts-manager-settings-menu-title">Settings</span>',
+			'manage_options',
+			'tailorsheet-manager-admin'
+		);
     }
 
     public function create_metaboxes()
