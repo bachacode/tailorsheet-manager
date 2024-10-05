@@ -28,5 +28,18 @@
 	 * Although scripts in the WordPress core, Plugins and Themes may be
 	 * practising this, we should strive to set a better example in our own work.
 	 */
+	$( document ).ready(function() {
+		var classes = ['post-type-expresiones-appsheet', 'post-type-ejemplos-appsheet', 'taxonomy-categoria-de-expresion', 'taxonomy-ejemplo-de-expresion', 'taxonomy-categoria-de-ejemplo', 'taxonomy-etiqueta-de-ejemplo', 'toplevel_page_tailorsheet-manager-admin'];
+		var settings_parent = $('.ts-manager-settings-menu-title').closest('li');
+		console.log(settings_parent);
+		settings_parent.addClass('ts-manager-settings-option');
 
+		if ($('body').is("." + classes.join(', .'))) {
+			$('#adminmenu > li').removeClass('wp-has-current-submenu wp-menu-open').find('wp-sumenu').css({
+			  'margin-right': 0
+			});
+			$('#toplevel_page_tailorsheet-manager-admin').addClass('wp-has-current-submenu wp-menu-open').removeClass('wp-not-current-submenu');
+			$('.toplevel_page_tailorsheet-manager-admin').addClass('wp-has-current-submenu').removeClass('wp-not-current-submenu');
+		  }
+	});
 })( jQuery );
