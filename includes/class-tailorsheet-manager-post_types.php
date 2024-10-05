@@ -331,6 +331,59 @@ class Tailorsheet_Manager_Post_Types
                     )
                 ),
             ),
+
+            // Appsheet Examples post type
+            array(
+                // Slug max. 20 characters, cannot contain capital letters or spaces!
+                // https://toolset.com/forums/topic/types-custom-post-type-slug-length-limited-to-20-characters/
+                'slug'                  => __('appsheet-examples', 'tailorsheet-manager'),
+                'singular'              => __('AppSheet Example', 'tailorsheet-manager'),
+                'plural'                => __('AppSheet Examples', 'tailorsheet-manager'),
+                'menu_name'             => __('Appsheet Examples', 'tailorsheet-manager'),
+                'show_in_menu'          => false,
+                'menu_position'         => 4,
+                'description'           => __('AppSheet Examples', 'tailorsheet-manager'),
+                'has_archive'           => __('appsheet-examples', 'tailorsheet-manager'),
+                'hierarchical'          => false,
+                'rewrite' => array(
+                    'slug'                  =>  __('appsheet-examples', 'tailorsheet-manager'),
+                    'with_front'            => true,
+                    'pages'                 => true,
+                    'feeds'                 => true,
+                    'ep_mask'               => EP_PERMALINK,
+                ),
+                'public'                => true,
+                'publicly_queryable'    => true,
+                'exclude_from_search'   => false,
+                'show_ui'               => true,
+                'query_var'             => true,
+                'supports'              => array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'revisions',
+                ),
+                'custom_caps'           => true,
+                'custom_caps_users'     => array(
+                    'administrator',
+                ),
+                'taxonomies'            => array(
+                    array(
+                        'taxonomy'          => __('example-category', 'tailorsheet-manager'),
+                        'plural'            => __('Example Categories', 'tailorsheet-manager'),
+                        'single'            => __('Example Category', 'tailorsheet-manager'),
+                        'post_types'        => array( 'expresiones-appsheet' ),
+                        'public'            => false
+                    ),
+                    array(
+                        'taxonomy'          => __('example-tag', 'tailorsheet-manager'),
+                        'plural'            => __('Example Tags', 'tailorsheet-manager'),
+                        'single'            => __('Example Tag', 'tailorsheet-manager'),
+                        'post_types'        => array( 'expresiones-appsheet' ),
+                        'public'            => false
+                    )
+                ),
+            ),
         );
 
         foreach ($post_types_fields as $fields) {
