@@ -175,7 +175,7 @@ class Tailorsheet_Manager
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-
+        $this->loader->add_action('init', $plugin_admin, 'create_menu', 999);
         // Save/Update our plugin options
         $this->loader->add_action('init', $plugin_admin, 'create_metaboxes', 999);
         // Custom fields for function-example taxonomy on create, edit, and save hooks
@@ -204,7 +204,7 @@ class Tailorsheet_Manager
          *
          * @link https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/issues/261
          */
-        $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 999);
+        $this->loader->add_action('init', $plugin_post_types, 'create_custom_post_type', 900);
 
 
         /**

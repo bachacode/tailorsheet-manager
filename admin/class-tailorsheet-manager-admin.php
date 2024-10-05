@@ -105,19 +105,16 @@ class Tailorsheet_Manager_Admin
 
     public function create_menu()
     {
+        $config = array(
 
-        $config_menu = array(
-            'type'              => 'menu',                                          // Required, menu or metabox
-            'id'                => $this->plugin_name . '-settings',                          // Required, meta box id, unique per page, to save: get_option( id )
-            'menu'              => 'admin.php',                                         // Required, sub page to your options page
-            'submenu'           => false,                                            // Required for submenu
-            'position'			=> 4,
-            'title'             => esc_html__('Settings', 'tailorsheet-manager'),    //The name of this page
-            'menu_title'		=> esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
-            'capability'        => 'manage_options',                                // The capability needed to view the page
-            'plugin_basename'   => plugin_basename(plugin_dir_path(__DIR__) . $this->plugin_name . '.php'),
-            'tabbed'            => false,
-
+            'type'              => 'menu',
+            'id'                => "{$this->plugin_name}-admin",
+            'title'             => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
+            'menu_title'        => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
+            'submenu'           => false,
+            'position'          => 6,
+            'capability'        => 'manage_options',
+            'icon'              => 'dashicons-clipboard',
         );
 
         $fields_menu[] = array(
@@ -148,7 +145,58 @@ class Tailorsheet_Manager_Admin
         /**
          * instantiate your admin page
          */
-        (new Exopite_Simple_Options_Framework($config_menu, $fields_menu));
+        (new Exopite_Simple_Options_Framework($config, $fields_menu));
+
+        $submenu_options = array(
+            array(
+                'page_title'        => 'Expresiones AppSheet',
+                'menu_title'        => 'Expresiones AppSheet',
+                'menu_slug'         => 'edit.php?post_type=expresiones-appsheet',
+            ),
+            array(
+                'page_title'        => 'Categorías de Expresión',
+                'menu_title'        => 'Categorías de Expresión',
+                'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-expresion',
+            ),
+            array(
+                'page_title'        => 'Ejemplos de Expresión',
+                'menu_title'        => 'Ejemplos de Expresión',
+                'menu_slug'         => 'edit-tags.php?taxonomy=ejemplo-de-expresion',
+            ),
+            array(
+                'page_title'        => 'Ejemplos AppSheet',
+                'menu_title'        => '<span class="ts-manager-settings-menu-title">Ejemplos AppSheet</span>',
+                'menu_slug'         => 'edit.php?post_type=ejemplos-appsheet',
+            ),
+            array(
+                'page_title'        => 'Categorías de Ejemplo',
+                'menu_title'        => 'Categorías de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-ejemplo',
+            ),
+            array(
+                'page_title'        => 'Etiquetas de Ejemplo',
+                'menu_title'        => 'Etiquetas de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=etiqueta-de-ejemplo',
+            ),
+        );
+
+        foreach ($submenu_options as $option) {
+            add_submenu_page(
+                'tailorsheet-manager-admin', // The slug of your top-level menu
+                $option['page_title'], // Page title
+                $option['menu_title'], // Menu title
+                'manage_options', // Capability
+                $option['menu_slug'] // Link to CPT
+            );
+        }
+
+        add_submenu_page(
+			'tailorsheet-manager-admin',
+			'TailorSheet Manager',
+			'<span class="ts-manager-settings-menu-title">Settings</span>',
+			'manage_options',
+			'tailorsheet-manager-admin'
+		);
     }
 
     public function create_metaboxes()

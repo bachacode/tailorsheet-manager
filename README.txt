@@ -7,11 +7,11 @@ Tested up to: 6.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manage AppSheet Functions with CPT and custom taxonomies for ease of use and display with elementor widgets
+Custom made plugin for TailorSheet website used to manage AppSheet related content through CPTs and Custom Taxonomies
 
 == Description ==
 
-Manage AppSheet Functions with CPT and custom taxonomies for ease of use and display with elementor widgets
+Custom made plugin for TailorSheet website used to manage AppSheet related content through CPTs and Custom Taxonomies
 
 ### AppSheet Functions Post Type
 CPT for AppSheet Functions management in a single place.
@@ -20,6 +20,13 @@ CPT for AppSheet Functions management in a single place.
 Custom Elementor Widgets handmade to display AppSheet Functions and their examples with ease.
 
 == Changelog ==
+
+= 2.0.0 =
+* Added CPT "Ejemplos AppSheet"
+* Added Custom taxonomies "Categoría de Ejemplo" and "Etiqueta de Ejemplo" to CPT "Ejemplos AppSheet"
+* Added Plugin Menu Option and Settings Page for plugin
+* Added all CPT and custom taxonomies to Plugin Menu Option as submenus
+* Fixed Highlight bug with custom taxonomies under the Plugin Menu
 
 = 1.2.7 =
 * Changed plugin name from "Appsheet Functions" to "TailorSheet Manager"

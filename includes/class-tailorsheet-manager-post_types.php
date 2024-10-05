@@ -289,8 +289,7 @@ class Tailorsheet_Manager_Post_Types
                 'singular'              => __('Appsheet Function', 'tailorsheet-manager'),
                 'plural'                => __('Appsheet Functions', 'tailorsheet-manager'),
                 'menu_name'             => __('Appsheet Functions', 'tailorsheet-manager'),
-                'menu_position'         => 3,
-                'description'           => __('Appsheet Functions', 'tailorsheet-manager'),
+                'show_in_menu'          => 'admin.php?page=tailorsheet-manager-admin',
                 'has_archive'           => 'expresiones-appsheet',
                 'hierarchical'          => false,
                 'rewrite' => array(
@@ -320,14 +319,66 @@ class Tailorsheet_Manager_Post_Types
                         'taxonomy'          => 'categoria-de-expresion',
                         'plural'            => __('Function Categories', 'tailorsheet-manager'),
                         'single'            => __('Function Category', 'tailorsheet-manager'),
-                        'post_types'        => array( 'expresiones-appsheet' ),
+                        'post_types'        => 'expresiones-appsheet',
                     ),
                     array(
                         'taxonomy'          => 'ejemplo-de-expresion',
                         'plural'            => __('Function Examples', 'tailorsheet-manager'),
                         'single'            => __('Function Example', 'tailorsheet-manager'),
-                        'post_types'        => array( 'expresiones-appsheet' ),
+                        'post_types'        => 'expresiones-appsheet',
                         'public'            => false
+                    )
+                ),
+            ),
+
+            // Appsheet Examples post type
+            array(
+                // Slug max. 20 characters, cannot contain capital letters or spaces!
+                // https://toolset.com/forums/topic/types-custom-post-type-slug-length-limited-to-20-characters/
+                'slug'                  => 'ejemplos-appsheet',
+                'singular'              => __('AppSheet Example', 'tailorsheet-manager'),
+                'plural'                => __('AppSheet Examples', 'tailorsheet-manager'),
+                'menu_name'             => __('Appsheet Examples', 'tailorsheet-manager'),
+                'show_in_menu'          => 'admin.php?page=tailorsheet-manager-admin',
+                'description'           => __('AppSheet Examples', 'tailorsheet-manager'),
+                'has_archive'           => __('appsheet-examples', 'tailorsheet-manager'),
+                'hierarchical'          => false,
+                'rewrite' => array(
+                    'slug'                  => 'ejemplos-appsheet',
+                    'with_front'            => true,
+                    'pages'                 => true,
+                    'feeds'                 => true,
+                    'ep_mask'               => EP_PERMALINK,
+                ),
+                'public'                => true,
+                'publicly_queryable'    => true,
+                'exclude_from_search'   => false,
+                'show_ui'               => true,
+                'query_var'             => true,
+                'supports'              => array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'revisions',
+                ),
+                'custom_caps'           => true,
+                'custom_caps_users'     => array(
+                    'administrator',
+                ),
+                'taxonomies'            => array(
+                    array(
+                        'taxonomy'          => 'categoria-de-ejemplo',
+                        'plural'            => __('Example Categories', 'tailorsheet-manager'),
+                        'single'            => __('Example Category', 'tailorsheet-manager'),
+                        'post_types'        => 'ejemplos-appsheet',
+                        'public'            => false,
+                    ),
+                    array(
+                        'taxonomy'          => 'etiqueta-de-ejemplo',
+                        'plural'            => __('Example Tags', 'tailorsheet-manager'),
+                        'single'            => __('Example Tag', 'tailorsheet-manager'),
+                        'post_types'        => 'ejemplos-appsheet',
+                        'public'            => false,
                     )
                 ),
             ),
