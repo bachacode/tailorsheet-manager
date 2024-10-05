@@ -13,9 +13,9 @@
  * @package           Tailorsheet_Manager
  *
  * @wordpress-plugin
- * Plugin Name:       Appsheet Functions
+ * Plugin Name:       TailorSheet Manager
  * Plugin URI:        https://bachacode.com
- * Description:       Plugin for the management of Appsheet Functions and examples of their uses
+ * Description:       Custom plugin tailored for TailorSheet Website to manage AppSheet related features
  * Version:           1.2.7
  * Author:            Cristhian Flores
  * Author URI:        https://bachacode.com/
