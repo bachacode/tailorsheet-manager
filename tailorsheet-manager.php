@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://bachacode.com
- * @since             1.2.7
+ * @since             1.0.0
  * @package           Tailorsheet_Manager
  *
  * @wordpress-plugin
  * Plugin Name:       TailorSheet Manager
  * Plugin URI:        https://bachacode.com
  * Description:       Custom plugin tailored for TailorSheet Website to manage AppSheet related features
- * Version:           1.2.7
+ * Version:           2.0.0
  * Author:            Cristhian Flores
  * Author URI:        https://bachacode.com/
  * License:           GPL-2.0+
@@ -33,10 +33,10 @@ if (! defined('WPINC')) {
 
 /**
  * Currently plugin version.
- * Start at version 1.2.7 and use SemVer - https://semver.org
+ * Start at version 2.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('TAILORSHEET_MANAGER_VERSION', '1.2.7');
+define('TAILORSHEET_MANAGER_VERSION', '2.0.0');
 
 /**
  * Store plugin base dir, for easier access later from other classes.
@@ -132,7 +132,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.2.7
+ * @since    1.0.0
  */
 function run_tailorsheet_manager()
 {
