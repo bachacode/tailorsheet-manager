@@ -2,45 +2,41 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Appsheet Functions 1.2.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-manager\n"
+"Project-Id-Version: TailorSheet Manager 1.2.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-functions\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-25T22:27:12+02:00\n"
+"POT-Creation-Date: 2024-10-05T04:22:00+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: tailorsheet-manager\n"
 
 #. Plugin Name of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
 #: admin/class-tailorsheet-manager-admin.php:116
-#: includes/class-tailorsheet-manager-post_types.php:261
-#: includes/class-tailorsheet-manager-post_types.php:262
-#: includes/class-tailorsheet-manager-post_types.php:264
-#: widgets/tailorsheet-manager-main.php:12
-msgid "Appsheet Functions"
+msgid "TailorSheet Manager"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
 msgid "https://bachacode.com"
 msgstr ""
 
 #. Description of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
-msgid "Plugin for the management of Appsheet Functions and examples of their uses"
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+msgid "Custom plugin tailored for TailorSheet Website to manage AppSheet related features"
 msgstr ""
 
 #. Author of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
 msgid "Cristhian Flores"
 msgstr ""
 
 #. Author URI of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
 msgid "https://bachacode.com/"
 msgstr ""
 
@@ -78,7 +74,7 @@ msgstr ""
 msgid "Explanation"
 msgstr ""
 
-#: admin/class-tailorsheet-manager-admin.php:332
+#: admin/class-tailorsheet-manager-admin.php:334
 msgid "AppSheet Functions"
 msgstr ""
 
@@ -87,28 +83,25 @@ msgstr ""
 msgid "Example use"
 msgstr ""
 
-#: af_templates/af-appsheet-functions-list.php:10
-msgid "Category: "
-msgstr ""
-
-#: af_templates/af-appsheet-functions-main.php:25
+#: af_templates/af-appsheet-functions-main.php:24
 msgid "Category"
 msgstr ""
 
-#: af_templates/af-appsheet-functions-main.php:43
+#: af_templates/af-appsheet-functions-main.php:44
 msgid "Show results"
 msgstr ""
 
-#: af_templates/af-appsheet-functions-main.php:49
+#: af_templates/af-appsheet-functions-main.php:50
 msgid "Reset"
 msgstr ""
 
-#: af_templates/af-appsheet-functions-main.php:65
-msgid "Search functions..."
-msgstr ""
-
+#: af_templates/af-appsheet-functions-main.php:60
 #: af_templates/af-appsheet-functions-main.php:69
 msgid "Search"
+msgstr ""
+
+#: af_templates/af-appsheet-functions-main.php:66
+msgid "Search functions..."
 msgstr ""
 
 #: af_templates/af-examples-error.php:1
@@ -119,122 +112,150 @@ msgstr ""
 msgid "This function does not have an explanation!"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:32
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:33
 msgid "New %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:33
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:35
 msgid "Add new %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:34
-#: includes/class-tailorsheet-manager-post_types.php:170
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:37
+#: includes/class-tailorsheet-manager-post_types.php:187
 msgid "Edit %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:35
-#: includes/class-tailorsheet-manager-post_types.php:36
-#: includes/class-tailorsheet-manager-post_types.php:171
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:39
+#: includes/class-tailorsheet-manager-post_types.php:41
+#: includes/class-tailorsheet-manager-post_types.php:189
 msgid "View %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:37
-#: includes/class-tailorsheet-manager-post_types.php:177
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:43
+#: includes/class-tailorsheet-manager-post_types.php:201
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:38
-#: includes/class-tailorsheet-manager-post_types.php:182
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:45
+#: includes/class-tailorsheet-manager-post_types.php:211
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:39
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:47
 msgid "No %s found in trash"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:40
-#: includes/class-tailorsheet-manager-post_types.php:169
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:49
+#: includes/class-tailorsheet-manager-post_types.php:185
 msgid "All %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:41
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:51
 msgid "%s Archives"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:42
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:53
 msgid "%s Attributes"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:43
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:55
 msgid "Insert into %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:44
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:57
 msgid "Uploaded to this %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:47
-#: includes/class-tailorsheet-manager-post_types.php:175
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:61
+#: includes/class-tailorsheet-manager-post_types.php:197
 msgid "Parent %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:48
-#: includes/class-tailorsheet-manager-post_types.php:176
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:63
+#: includes/class-tailorsheet-manager-post_types.php:199
 msgid "Parent %s\\:"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:172
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:191
 msgid "Update %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:173
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:193
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:174
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:195
 msgid "New %s Name"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:178
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:203
 msgid "Popular %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:179
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:205
 msgid "Separate %s with commas"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:180
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:207
 msgid "Add or remove %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:181
+#. translators: %s: Post type name
+#: includes/class-tailorsheet-manager-post_types.php:209
 msgid "Choose from the most used %s"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:260
+#: includes/class-tailorsheet-manager-post_types.php:289
 msgid "Appsheet Function"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:292
+#: includes/class-tailorsheet-manager-post_types.php:290
+#: includes/class-tailorsheet-manager-post_types.php:291
+#: includes/class-tailorsheet-manager-post_types.php:293
+#: widgets/appsheet-functions-main.php:12
+msgid "Appsheet Functions"
+msgstr ""
+
+#: includes/class-tailorsheet-manager-post_types.php:321
 msgid "Function Categories"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:293
+#: includes/class-tailorsheet-manager-post_types.php:322
 msgid "Function Category"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:298
+#: includes/class-tailorsheet-manager-post_types.php:327
 msgid "Function Examples"
 msgstr ""
 
-#: includes/class-tailorsheet-manager-post_types.php:299
+#: includes/class-tailorsheet-manager-post_types.php:328
 msgid "Function Example"
 msgstr ""
 
-#: widgets/tailorsheet-manager-examples.php:12
+#: widgets/appsheet-functions-examples.php:12
 msgid "Appsheet Functions Examples"
 msgstr ""
 
-#: widgets/tailorsheet-manager-explanation.php:12
+#: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr ""
