@@ -29,22 +29,37 @@ class Tailorsheet_Manager_Post_Types
             'name'                  => $fields['plural'],
             'singular_name'         => $fields['singular'],
             'menu_name'             => $fields['menu_name'],
+            /* translators: %s: Post type name */
             'new_item'              => sprintf(__('New %s', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'add_new_item'          => sprintf(__('Add new %s', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'edit_item'             => sprintf(__('Edit %s', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'view_item'             => sprintf(__('View %s', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'view_items'            => sprintf(__('View %s', 'tailorsheet-manager'), $fields['plural']),
+            /* translators: %s: Post type name */
             'search_items'          => sprintf(__('Search %s', 'tailorsheet-manager'), $fields['plural']),
+            /* translators: %s: Post type name */
             'not_found'             => sprintf(__('No %s found', 'tailorsheet-manager'), strtolower($fields['plural'])),
+            /* translators: %s: Post type name */
             'not_found_in_trash'    => sprintf(__('No %s found in trash', 'tailorsheet-manager'), strtolower($fields['plural'])),
+            /* translators: %s: Post type name */
             'all_items'             => sprintf(__('All %s', 'tailorsheet-manager'), $fields['plural']),
+            /* translators: %s: Post type name */
             'archives'              => sprintf(__('%s Archives', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'attributes'            => sprintf(__('%s Attributes', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'insert_into_item'      => sprintf(__('Insert into %s', 'tailorsheet-manager'), strtolower($fields['singular'])),
+            /* translators: %s: Post type name */
             'uploaded_to_this_item' => sprintf(__('Uploaded to this %s', 'tailorsheet-manager'), strtolower($fields['singular'])),
 
             /* Labels for hierarchical post types only. */
+            /* translators: %s: Post type name */
             'parent_item'           => sprintf(__('Parent %s', 'tailorsheet-manager'), $fields['singular']),
+            /* translators: %s: Post type name */
             'parent_item_colon'     => sprintf(__('Parent %s\:', 'tailorsheet-manager'), $fields['singular']),
 
             /* Custom archive label.  Must filter 'post_type_archive_title' to use. */
@@ -166,19 +181,33 @@ class Tailorsheet_Manager_Post_Types
             'name'                       => $tax_fields['plural'],
             'singular_name'              => $tax_fields['single'],
             'menu_name'                  => $tax_fields['plural'],
+            /* translators: %s: Post type name */
             'all_items'                  => sprintf(__('All %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'edit_item'                  => sprintf(__('Edit %s', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'view_item'                  => sprintf(__('View %s', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'update_item'                => sprintf(__('Update %s', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'add_new_item'               => sprintf(__('Add New %s', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'new_item_name'              => sprintf(__('New %s Name', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'parent_item'                => sprintf(__('Parent %s', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'parent_item_colon'          => sprintf(__('Parent %s\:', 'tailorsheet-manager'), $tax_fields['single']),
+            /* translators: %s: Post type name */
             'search_items'               => sprintf(__('Search %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'popular_items'              => sprintf(__('Popular %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'separate_items_with_commas' => sprintf(__('Separate %s with commas', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'add_or_remove_items'        => sprintf(__('Add or remove %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'choose_from_most_used'      => sprintf(__('Choose from the most used %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            /* translators: %s: Post type name */
             'not_found'                  => sprintf(__('No %s found', 'tailorsheet-manager'), $tax_fields['plural']),
         );
 
