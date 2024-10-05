@@ -8,8 +8,8 @@
  * @link       https://bachacode.com
  * @since      1.0.0
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/public/partials
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/public/partials
  */
 ?>
 

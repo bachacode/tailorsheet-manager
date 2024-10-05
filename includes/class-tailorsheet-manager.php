@@ -9,8 +9,8 @@
  * @link       https://bachacode.com
  * @since      1.0.0
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/includes
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/includes
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/includes
  * @author     Cristhian Flores <bachacode@gmail.com>
  */
-class Appsheet_Functions
+class Tailorsheet_Manager
 {
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Appsheet_Functions
      *
      * @since    1.0.0
      * @access   protected
-     * @var      Appsheet_Functions_Loader    $loader    Maintains and registers all hooks for the plugin.
+     * @var      Tailorsheet_Manager_Loader    $loader    Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -68,12 +68,12 @@ class Appsheet_Functions
      */
     public function __construct()
     {
-        if (defined('APPSHEET_FUNCTIONS_VERSION')) {
-            $this->version = APPSHEET_FUNCTIONS_VERSION;
+        if (defined('TAILORSHEET_MANAGER_VERSION')) {
+            $this->version = TAILORSHEET_MANAGER_VERSION;
         } else {
             $this->version = '1.0.0';
         }
-        $this->plugin_name = 'appsheet-functions';
+        $this->plugin_name = 'tailorsheet-manager';
 
         $this->load_dependencies();
         $this->set_locale();
@@ -87,10 +87,10 @@ class Appsheet_Functions
      *
      * Include the following files that make up the plugin:
      *
-     * - Appsheet_Functions_Loader. Orchestrates the hooks of the plugin.
-     * - Appsheet_Functions_i18n. Defines internationalization functionality.
-     * - Appsheet_Functions_Admin. Defines all hooks for the admin area.
-     * - Appsheet_Functions_Public. Defines all hooks for the public side of the site.
+     * - Tailorsheet_Manager_Loader. Orchestrates the hooks of the plugin.
+     * - Tailorsheet_Manager_i18n. Defines internationalization functionality.
+     * - Tailorsheet_Manager_Admin. Defines all hooks for the admin area.
+     * - Tailorsheet_Manager_Public. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -105,30 +105,30 @@ class Appsheet_Functions
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-loader.php';
 
         /**
          * The class responsible for defining internationalization functionality
          * of the plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-i18n.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-i18n.php';
 
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-appsheet-functions-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-tailorsheet-manager-admin.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-appsheet-functions-public.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-tailorsheet-manager-public.php';
 
         /**
          * Appsheet Functions custom post types
          * Functions and examples of them
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-post_types.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-post_types.php';
 
         /**
          * Exopite Simple Options Framework
@@ -139,14 +139,14 @@ class Appsheet_Functions
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
 
 
-        $this->loader = new Appsheet_Functions_Loader();
+        $this->loader = new Tailorsheet_Manager_Loader();
 
     }
 
     /**
      * Define the locale for this plugin for internationalization.
      *
-     * Uses the Appsheet_Functions_i18n class in order to set the domain and to register the hook
+     * Uses the Tailorsheet_Manager_i18n class in order to set the domain and to register the hook
      * with WordPress.
      *
      * @since    1.0.0
@@ -155,7 +155,7 @@ class Appsheet_Functions
     private function set_locale()
     {
 
-        $plugin_i18n = new Appsheet_Functions_i18n();
+        $plugin_i18n = new Tailorsheet_Manager_i18n();
 
         $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
 
@@ -171,7 +171,7 @@ class Appsheet_Functions
     private function define_admin_hooks()
     {
 
-        $plugin_admin = new Appsheet_Functions_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new Tailorsheet_Manager_Admin($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
@@ -186,13 +186,13 @@ class Appsheet_Functions
 
         // Elementor actions
         $this->loader->add_action('elementor/widgets/register', $plugin_admin, 'register_elementor_widgets');
-        $this->loader->add_action('elementor/elements/categories_registered', $plugin_admin, 'register_elementor_appsheet_functions_category');
+        $this->loader->add_action('elementor/elements/categories_registered', $plugin_admin, 'register_elementor_tailorsheet_manager_category');
 
 
         // Search posts by name using like wildcard syntax
         $this->loader->add_filter('posts_where', $plugin_admin, 'search_posts_by_name_like', 10, 2);
 
-        $plugin_post_types = new Appsheet_Functions_Post_Types();
+        $plugin_post_types = new Tailorsheet_Manager_Post_Types();
 
         /**
          * The problem with the initial activation code is that when the activation hook runs, it's after the init hook has run,
@@ -213,13 +213,13 @@ class Appsheet_Functions
         * @param $upgrader_object Array
         * @param $options Array
         */
-        $this->loader->add_action( 'upgrader_process_complete', $plugin_admin, 'upgrader_process_complete', 10, 2 );
+        $this->loader->add_action('upgrader_process_complete', $plugin_admin, 'upgrader_process_complete', 10, 2);
 
         /**
         * Show a notice to anyone who has just updated this plugin
         * This notice shouldn't display to anyone who has just installed the plugin for the first time
         */
-        $this->loader->add_action( 'admin_notices', $plugin_admin, 'display_update_notice' );
+        $this->loader->add_action('admin_notices', $plugin_admin, 'display_update_notice');
     }
 
     /**
@@ -232,16 +232,16 @@ class Appsheet_Functions
     private function define_public_hooks()
     {
 
-        $plugin_public = new Appsheet_Functions_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new Tailorsheet_Manager_Public($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
-        
-        $this->loader->add_action('wp_ajax_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
-        $this->loader->add_action('wp_ajax_nopriv_prefix_query_appsheet_functions', $plugin_public, 'query_appsheet_functions');
-        
-        $this->loader->add_action('wp_ajax_prefix_query_appsheet_functions_by_category', $plugin_public, 'query_appsheet_functions_by_category');
-        $this->loader->add_action('wp_ajax_nopriv_prefix_query_appsheet_functions_by_category', $plugin_public, 'query_appsheet_functions_by_category');
+
+        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager', $plugin_public, 'query_tailorsheet_manager');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager', $plugin_public, 'query_tailorsheet_manager');
+
+        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager_by_category', $plugin_public, 'query_tailorsheet_manager_by_category');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager_by_category', $plugin_public, 'query_tailorsheet_manager_by_category');
 
     }
 
@@ -271,7 +271,7 @@ class Appsheet_Functions
      * The reference to the class that orchestrates the hooks with the plugin.
      *
      * @since     1.0.0
-     * @return    Appsheet_Functions_Loader    Orchestrates the hooks of the plugin.
+     * @return    Tailorsheet_Manager_Loader    Orchestrates the hooks of the plugin.
      */
     public function get_loader()
     {

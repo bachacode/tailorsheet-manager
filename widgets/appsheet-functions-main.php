@@ -9,7 +9,7 @@ class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Appsheet Functions', 'appsheet-functions');
+        return esc_html__('Appsheet Functions', 'tailorsheet-manager');
     }
 
     public function get_icon()

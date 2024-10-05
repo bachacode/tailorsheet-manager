@@ -16,71 +16,71 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: ../admin/exopite-simple-options\n"
 
 #. Plugin Name of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
-#: admin/class-appsheet-functions-admin.php:116
-#: includes/class-appsheet-functions-post_types.php:261
-#: includes/class-appsheet-functions-post_types.php:262
-#: includes/class-appsheet-functions-post_types.php:264
-#: widgets/appsheet-functions-main.php:12
+#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: admin/class-tailorsheet-manager-admin.php:116
+#: includes/class-tailorsheet-manager-post_types.php:261
+#: includes/class-tailorsheet-manager-post_types.php:262
+#: includes/class-tailorsheet-manager-post_types.php:264
+#: widgets/tailorsheet-manager-main.php:12
 msgid "Appsheet Functions"
 msgstr "Expresiones de AppSheet"
 
 #. Plugin URI of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
+#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "https://bachacode.com"
 msgstr "https://bachacode.com"
 
 #. Description of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
+#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid ""
 "Plugin for the management of Appsheet Functions and examples of their uses"
 msgstr "Plugin para la gestión de Expresiones AppSheet y ejemplos de sus usos"
 
 #. Author of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
+#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "Cristhian Flores"
 msgstr "Cristhian Flores"
 
 #. Author URI of the plugin
-#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/appsheet-functions/appsheet-functions.php
+#: D:/xampp/htdocs/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "https://bachacode.com/"
 msgstr "https://bachacode.com/"
 
-#: admin/class-appsheet-functions-admin.php:115
+#: admin/class-tailorsheet-manager-admin.php:115
 msgid "Settings"
 msgstr "Ajustes"
 
-#: admin/class-appsheet-functions-admin.php:172
+#: admin/class-tailorsheet-manager-admin.php:172
 msgid "Extra fields"
 msgstr "Campos extra"
 
-#: admin/class-appsheet-functions-admin.php:180
+#: admin/class-tailorsheet-manager-admin.php:180
 msgid "Appsheet Function fields"
 msgstr "Campos de Expresiones AppSheet"
 
-#: admin/class-appsheet-functions-admin.php:221
+#: admin/class-tailorsheet-manager-admin.php:221
 msgid "Example Syntax"
 msgstr "Ejemplo de uso"
 
-#: admin/class-appsheet-functions-admin.php:227
+#: admin/class-tailorsheet-manager-admin.php:227
 msgid "The syntax shown on the function description page"
 msgstr "La sintaxis mostrada en la página de descripción de la función"
 
-#: admin/class-appsheet-functions-admin.php:234
+#: admin/class-tailorsheet-manager-admin.php:234
 #: af_templates/af-admin-function-example-fields.php:12
 #: af_templates/af-admin-function-example-fields.php:24
 msgid "Expected Result"
 msgstr "Resultado esperado"
 
-#: admin/class-appsheet-functions-admin.php:240
+#: admin/class-tailorsheet-manager-admin.php:240
 msgid "The type of data that is returned by the function"
 msgstr "Tipo de datos devueltos por la expresión"
 
-#: admin/class-appsheet-functions-admin.php:246
+#: admin/class-tailorsheet-manager-admin.php:246
 msgid "Explanation"
 msgstr "Explicación"
 
-#: admin/class-appsheet-functions-admin.php:332
+#: admin/class-tailorsheet-manager-admin.php:332
 msgid "AppSheet Functions"
 msgstr "Expresiones de AppSheet"
 
@@ -121,123 +121,123 @@ msgstr "¡Esta expresión no tiene ejemplos!"
 msgid "This function does not have an explanation!"
 msgstr "¡Esta expresión no tiene explicación!"
 
-#: includes/class-appsheet-functions-post_types.php:32
+#: includes/class-tailorsheet-manager-post_types.php:32
 msgid "New %s"
 msgstr "Nuevo %s"
 
-#: includes/class-appsheet-functions-post_types.php:33
+#: includes/class-tailorsheet-manager-post_types.php:33
 msgid "Add new %s"
 msgstr "Añadir nueva %s"
 
-#: includes/class-appsheet-functions-post_types.php:34
-#: includes/class-appsheet-functions-post_types.php:170
+#: includes/class-tailorsheet-manager-post_types.php:34
+#: includes/class-tailorsheet-manager-post_types.php:170
 msgid "Edit %s"
 msgstr "Editar %s"
 
-#: includes/class-appsheet-functions-post_types.php:35
-#: includes/class-appsheet-functions-post_types.php:36
-#: includes/class-appsheet-functions-post_types.php:171
+#: includes/class-tailorsheet-manager-post_types.php:35
+#: includes/class-tailorsheet-manager-post_types.php:36
+#: includes/class-tailorsheet-manager-post_types.php:171
 msgid "View %s"
 msgstr "Ver %s"
 
-#: includes/class-appsheet-functions-post_types.php:37
-#: includes/class-appsheet-functions-post_types.php:177
+#: includes/class-tailorsheet-manager-post_types.php:37
+#: includes/class-tailorsheet-manager-post_types.php:177
 msgid "Search %s"
 msgstr "Buscar %s"
 
-#: includes/class-appsheet-functions-post_types.php:38
-#: includes/class-appsheet-functions-post_types.php:182
+#: includes/class-tailorsheet-manager-post_types.php:38
+#: includes/class-tailorsheet-manager-post_types.php:182
 msgid "No %s found"
 msgstr "No se ha encontrado %s"
 
-#: includes/class-appsheet-functions-post_types.php:39
+#: includes/class-tailorsheet-manager-post_types.php:39
 msgid "No %s found in trash"
 msgstr "No se han encontrado %s en la papelera"
 
-#: includes/class-appsheet-functions-post_types.php:40
-#: includes/class-appsheet-functions-post_types.php:169
+#: includes/class-tailorsheet-manager-post_types.php:40
+#: includes/class-tailorsheet-manager-post_types.php:169
 msgid "All %s"
 msgstr "Todas %s"
 
-#: includes/class-appsheet-functions-post_types.php:41
+#: includes/class-tailorsheet-manager-post_types.php:41
 msgid "%s Archives"
 msgstr "Archivado de %s"
 
-#: includes/class-appsheet-functions-post_types.php:42
+#: includes/class-tailorsheet-manager-post_types.php:42
 msgid "%s Attributes"
 msgstr "Atributos de %s"
 
-#: includes/class-appsheet-functions-post_types.php:43
+#: includes/class-tailorsheet-manager-post_types.php:43
 msgid "Insert into %s"
 msgstr "Insertar en %s"
 
-#: includes/class-appsheet-functions-post_types.php:44
+#: includes/class-tailorsheet-manager-post_types.php:44
 msgid "Uploaded to this %s"
 msgstr "Subir a %s"
 
-#: includes/class-appsheet-functions-post_types.php:47
-#: includes/class-appsheet-functions-post_types.php:175
+#: includes/class-tailorsheet-manager-post_types.php:47
+#: includes/class-tailorsheet-manager-post_types.php:175
 msgid "Parent %s"
 msgstr "Padre de %s"
 
-#: includes/class-appsheet-functions-post_types.php:48
-#: includes/class-appsheet-functions-post_types.php:176
+#: includes/class-tailorsheet-manager-post_types.php:48
+#: includes/class-tailorsheet-manager-post_types.php:176
 msgid "Parent %s\\:"
 msgstr "Padre %s\\:"
 
-#: includes/class-appsheet-functions-post_types.php:172
+#: includes/class-tailorsheet-manager-post_types.php:172
 msgid "Update %s"
 msgstr "Actualizar %s"
 
-#: includes/class-appsheet-functions-post_types.php:173
+#: includes/class-tailorsheet-manager-post_types.php:173
 msgid "Add New %s"
 msgstr "Añadir nuevo %s"
 
-#: includes/class-appsheet-functions-post_types.php:174
+#: includes/class-tailorsheet-manager-post_types.php:174
 msgid "New %s Name"
 msgstr "Nuevo nombre de %s"
 
-#: includes/class-appsheet-functions-post_types.php:178
+#: includes/class-tailorsheet-manager-post_types.php:178
 msgid "Popular %s"
 msgstr "%s  popular"
 
-#: includes/class-appsheet-functions-post_types.php:179
+#: includes/class-tailorsheet-manager-post_types.php:179
 msgid "Separate %s with commas"
 msgstr "Separar %s con comas"
 
-#: includes/class-appsheet-functions-post_types.php:180
+#: includes/class-tailorsheet-manager-post_types.php:180
 msgid "Add or remove %s"
 msgstr "Añadir o quitar %s"
 
-#: includes/class-appsheet-functions-post_types.php:181
+#: includes/class-tailorsheet-manager-post_types.php:181
 msgid "Choose from the most used %s"
 msgstr "Escoger de los %s mas usados"
 
-#: includes/class-appsheet-functions-post_types.php:260
+#: includes/class-tailorsheet-manager-post_types.php:260
 msgid "Appsheet Function"
 msgstr "Expresión AppSheet"
 
-#: includes/class-appsheet-functions-post_types.php:292
+#: includes/class-tailorsheet-manager-post_types.php:292
 msgid "Function Categories"
 msgstr "Categorías de expresión"
 
-#: includes/class-appsheet-functions-post_types.php:293
+#: includes/class-tailorsheet-manager-post_types.php:293
 msgid "Function Category"
 msgstr "Categoría de expresión"
 
-#: includes/class-appsheet-functions-post_types.php:298
+#: includes/class-tailorsheet-manager-post_types.php:298
 msgid "Function Examples"
 msgstr "Ejemplos de expresión"
 
-#: includes/class-appsheet-functions-post_types.php:299
+#: includes/class-tailorsheet-manager-post_types.php:299
 msgid "Function Example"
 msgstr "Ejemplo de expresión"
 
-#: widgets/appsheet-functions-examples.php:12
+#: widgets/tailorsheet-manager-examples.php:12
 msgid "Appsheet Functions Examples"
 msgstr "Ejemplos de expresiones AppSheet"
 
-#: widgets/appsheet-functions-explanation.php:12
+#: widgets/tailorsheet-manager-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr "Ejemplos de las expresiones AppSheet"
 

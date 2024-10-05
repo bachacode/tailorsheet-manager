@@ -6,8 +6,8 @@
  * @link       https://bachacode.com
  * @since      1.0.0
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/admin
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/admin
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/admin
  * @author     Cristhian Flores <bachacode@gmail.com>
  */
-class Appsheet_Functions_Admin
+class Tailorsheet_Manager_Admin
 {
     /**
      * The ID of this plugin.
@@ -67,15 +67,15 @@ class Appsheet_Functions_Admin
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Appsheet_Functions_Loader as all of the hooks are defined
+         * defined in Tailorsheet_Manager_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Appsheet_Functions_Loader will then create the relationship
+         * The Tailorsheet_Manager_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/appsheet-functions-admin.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-admin.css', array(), $this->version, 'all');
 
     }
 
@@ -91,15 +91,15 @@ class Appsheet_Functions_Admin
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Appsheet_Functions_Loader as all of the hooks are defined
+         * defined in Tailorsheet_Manager_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Appsheet_Functions_Loader will then create the relationship
+         * The Tailorsheet_Manager_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/appsheet-functions-admin.js', array( 'jquery' ), $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-admin.js', array( 'jquery' ), $this->version, false);
 
     }
 
@@ -112,8 +112,8 @@ class Appsheet_Functions_Admin
             'menu'              => 'admin.php',                                         // Required, sub page to your options page
             'submenu'           => false,                                            // Required for submenu
             'position'			=> 4,
-            'title'             => esc_html__('Settings', 'appsheet-functions'),    //The name of this page
-            'menu_title'		=> esc_html__('Appsheet Functions', 'appsheet-functions'),
+            'title'             => esc_html__('Settings', 'tailorsheet-manager'),    //The name of this page
+            'menu_title'		=> esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
             'capability'        => 'manage_options',                                // The capability needed to view the page
             'plugin_basename'   => plugin_basename(plugin_dir_path(__DIR__) . $this->plugin_name . '.php'),
             'tabbed'            => false,
@@ -169,7 +169,7 @@ class Appsheet_Functions_Admin
             'context'           => 'advanced',
             'options'			=> 'simple',
             'priority'          => 'default',
-            'title'             => __('Extra fields', 'appsheet-functions'),                  // The name of this page
+            'title'             => __('Extra fields', 'tailorsheet-manager'),                  // The name of this page
             'capability'        => 'edit_posts',                    // The capability needed to view the page
             'tabbed'            => false,
 
@@ -177,7 +177,7 @@ class Appsheet_Functions_Admin
 
         $fields[] = array(
             'name'   => 'first',
-            'title'  => __('Appsheet Function fields', 'appsheet-functions'),
+            'title'  => __('Appsheet Function fields', 'tailorsheet-manager'),
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
 
@@ -218,32 +218,32 @@ class Appsheet_Functions_Admin
                 array(
                     'id'          => 'function_syntax',
                     'type'        => 'text',
-                    'title'       => __('Example Syntax', 'appsheet-functions'),
+                    'title'       => __('Example Syntax', 'tailorsheet-manager'),
                     'attributes'    => array(
                         'rows'        => 10,
                         'cols'        => 5,
                         'placeholder' => 'e.g: Function ( number1, number2 )',
                     ),
-                    'help'        => __('The syntax shown on the function description page', 'appsheet-functions'),
+                    'help'        => __('The syntax shown on the function description page', 'tailorsheet-manager'),
 
                 ),
 
                 array(
                     'id'          => 'expected_result',
                     'type'        => 'text',
-                    'title'       => __('Expected Result', 'appsheet-functions'),
+                    'title'       => __('Expected Result', 'tailorsheet-manager'),
                     'attributes'    => array(
                         'rows'        => 10,
                         'cols'        => 5,
                         'placeholder' => 'e.g: Number or Decimal',
                     ),
-					'help' 		=> __('The type of data that is returned by the function', 'appsheet-functions'),
+                    'help' 		=> __('The type of data that is returned by the function', 'tailorsheet-manager'),
                 ),
 
                 array(
                     'id'          => 'explanation',
                     'type'        => 'editor',
-                    'title'       => __('Explanation', 'appsheet-functions'),
+                    'title'       => __('Explanation', 'tailorsheet-manager'),
                     'attributes'    => array(
                         'rows'        => 10,
                         'cols'        => 5,
@@ -260,7 +260,7 @@ class Appsheet_Functions_Admin
 
     public function fe_add_fields()
     {
-        if ( !function_exists( 'af_show_template' ) ) {
+        if (!function_exists('af_show_template')) {
             return;
         }
 
@@ -269,14 +269,14 @@ class Appsheet_Functions_Admin
 
     public function fe_edit_fields($term, $taxonomy)
     {
-        if ( !function_exists( 'af_show_template' ) ) {
+        if (!function_exists('af_show_template')) {
             return;
         }
 
         $syntax = get_term_meta($term->term_id, 'fe_syntax', true);
         $expected = get_term_meta($term->term_id, 'fe_expected', true);
 
-        af_show_template('af-admin-function-example-fields', array (
+        af_show_template('af-admin-function-example-fields', array(
             'syntax' => $syntax,
             'expected' => $expected
         ));
@@ -298,23 +298,24 @@ class Appsheet_Functions_Admin
 
     }
 
-    public function search_posts_by_name_like($where, $q) {
-        if( $name__like = $q->get( '_name__like' ) )
-        {
+    public function search_posts_by_name_like($where, $q)
+    {
+        if ($name__like = $q->get('_name__like')) {
             global $wpdb;
             $where .= $wpdb->prepare(
                 " AND {$wpdb->posts}.post_name LIKE %s ",
-                str_replace( 
-                    array( '**', '*' ), 
-                    array( '*',  '%' ),  
-                    mb_strtolower( $wpdb->esc_like( $name__like ) ) 
+                str_replace(
+                    array( '**', '*' ),
+                    array( '*',  '%' ),
+                    mb_strtolower($wpdb->esc_like($name__like))
                 )
             );
-        }       
+        }
         return $where;
     }
 
-    public function register_elementor_widgets($widgets_manager) {
+    public function register_elementor_widgets($widgets_manager)
+    {
 
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-examples.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-explanation.php';
@@ -325,51 +326,53 @@ class Appsheet_Functions_Admin
         $widgets_manager->register(new \Elementor_Appsheet_Functions());
     }
 
-    public function register_elementor_appsheet_functions_category($elements_manager) {
+    public function register_elementor_tailorsheet_manager_category($elements_manager)
+    {
         $elements_manager->add_category(
             'appsheet-functions',
             [
-                'title' => esc_html__('AppSheet Functions', 'appsheet-functions'),
+                'title' => esc_html__('AppSheet Functions', 'tailorsheet-manager'),
             ]
         );
     }
 
-    public function upgrader_process_complete( $upgrader_object, $options ) {
+    public function upgrader_process_complete($upgrader_object, $options)
+    {
 
         // If an update has taken place and the updated type is plugins and the plugins element exists
-        if( $options['action'] == 'update' && $options['type'] == 'plugin' && isset( $options['plugins'] ) ) {
+        if ($options['action'] == 'update' && $options['type'] == 'plugin' && isset($options['plugins'])) {
 
             // Iterate through the plugins being updated and check if ours is there
-            foreach( $options['plugins'] as $plugin ) {
-                if( $plugin == APPSHEET_FUNCTIONS_BASE_NAME ) {
+            foreach ($options['plugins'] as $plugin) {
+                if ($plugin == TAILORSHEET_MANAGER_BASE_NAME) {
 
-					// Your code here, eg display a message:
+                    // Your code here, eg display a message:
 
                     // Set a transient to record that our plugin has just been updated
-					set_transient( $this->plugin_name . '_updated', 1 );
-					set_transient( $this->plugin_name . '_updated_message', esc_html__( 'Thanks for updating', 'exopite_sof' ) );
+                    set_transient($this->plugin_name . '_updated', 1);
+                    set_transient($this->plugin_name . '_updated_message', esc_html__('Thanks for updating', 'exopite_sof'));
 
                 }
             }
         }
     }
-    
-    public function display_update_notice() {
+
+    public function display_update_notice()
+    {
 
         // Check the transient to see if we've just activated the plugin
-        if( get_transient( $this->plugin_name . '_updated' ) ) {
+        if (get_transient($this->plugin_name . '_updated')) {
 
-			/**
-			 * Display a message.
-			 */
+            /**
+             * Display a message.
+             */
             // @link https://digwp.com/2016/05/wordpress-admin-notices/
-			echo '<div class="notice notice-success is-dismissible"><p><strong>' . get_transient( 'exopite_sof_updated_message' ) . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
+            echo '<div class="notice notice-success is-dismissible"><p><strong>' . get_transient('exopite_sof_updated_message') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
 
             // Delete the transient so we don't keep displaying the activation message
-            delete_transient( $this->plugin_name . '_updated' );
-            delete_transient( $this->plugin_name . '_updated_message' );
-		}
+            delete_transient($this->plugin_name . '_updated');
+            delete_transient($this->plugin_name . '_updated_message');
+        }
 
     }
 }
-?>

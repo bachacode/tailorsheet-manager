@@ -6,8 +6,8 @@
  * @link       https://bachacode.com
  * @since      1.0.0
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/includes
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/includes
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/includes
  * @author     Cristhian Flores <bachacode@gmail.com>
  */
-class Appsheet_Functions_Activator
+class Tailorsheet_Manager_Activator
 {
     /**
      * Short Description. (use period)
@@ -36,8 +36,8 @@ class Appsheet_Functions_Activator
         /**
          * Custom Post Types
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-appsheet-functions-post_types.php';
-        $plugin_post_types = new Appsheet_Functions_Post_Types();
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-post_types.php';
+        $plugin_post_types = new Tailorsheet_Manager_Post_Types();
 
         /**
          * The problem with the initial activation code is that when the activation hook runs, it's after the init hook has run,

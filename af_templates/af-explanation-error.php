@@ -1,1 +1,1 @@
-<p> <?= __('This function does not have an explanation!', 'appsheet-functions'); ?> </p>
+<p> <?= __('This function does not have an explanation!', 'tailorsheet-manager'); ?> </p>

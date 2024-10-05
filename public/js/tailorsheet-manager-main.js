@@ -32,7 +32,7 @@
             const afContainer = $('#appsheetFunctionsList');
 
             const formData = new FormData( form );
-            formData.append( 'action', 'prefix_query_appsheet_functions' );
+            formData.append( 'action', 'prefix_query_tailorsheet_manager' );
             formData.append( '_wpnonce', wp_ajax._nonce );
        
             $.ajax({
@@ -66,7 +66,7 @@
             const afContainer = $('#appsheetFunctionsList');
 
             const formData = new FormData( form );
-            formData.append( 'action', 'prefix_query_appsheet_functions_by_category' );
+            formData.append( 'action', 'prefix_query_tailorsheet_manager_by_category' );
             formData.append( '_wpnonce', wp_ajax._nonce );
        
             $.ajax({
@@ -100,7 +100,7 @@
             const afContainer = $('#appsheetFunctionsList');
 
             const formData = new FormData( form );
-            formData.append( 'action', 'prefix_query_appsheet_functions_by_category' );
+            formData.append( 'action', 'prefix_query_tailorsheet_manager_by_category' );
             formData.append( '_wpnonce', wp_ajax._nonce );
        
             $.ajax({

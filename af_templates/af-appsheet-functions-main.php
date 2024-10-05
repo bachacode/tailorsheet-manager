@@ -1,5 +1,5 @@
 <?php
-$handle = 'appsheet-functions-main';
+$handle = 'tailorsheet-manager-main';
 
 wp_localize_script($handle, 'wp_ajax', array(
     'admin_ajax_url' => admin_url('admin-ajax.php'),
@@ -8,7 +8,7 @@ wp_localize_script($handle, 'wp_ajax', array(
      *
      * @link https://codex.wordpress.org/Function_Reference/wp_create_nonce
      */
-    '_nonce' => wp_create_nonce('query_appsheet-functions'),
+    '_nonce' => wp_create_nonce('query_tailorsheet-manager'),
 
 ));
 
@@ -21,7 +21,7 @@ wp_enqueue_style($handle);
 	<form id="categoryForm" class="af-form-category" method="POST">
 		<div class="af-form-category-container">
 			<h3 class="af-category-title">
-				<?php echo esc_html__('Category', 'appsheet-functions') ?>
+				<?php echo esc_html__('Category', 'tailorsheet-manager') ?>
 			</h3>
 
 			<div class="af-category-list">
@@ -41,13 +41,13 @@ wp_enqueue_style($handle);
 		</div>
 		<div class="af-category-buttons">
 			<button type="submit" id="categorySubmit" class="af-btn-submit">
-				<span><?php echo esc_html__('Show results', 'appsheet-functions') ?></span>
+				<span><?php echo esc_html__('Show results', 'tailorsheet-manager') ?></span>
 				<i class="fa fa-spinner"></i>
 			</button>
 
 			<button id="categoryReset" class="af-btn-reset" type="reset">
 				<i class="fa fa-undo"></i>
-				<span><?php echo esc_html__('Reset', 'appsheet-functions') ?></span>
+				<span><?php echo esc_html__('Reset', 'tailorsheet-manager') ?></span>
 			</button>
 		</div>
 	</form>
@@ -57,16 +57,16 @@ wp_enqueue_style($handle);
 		<div class="af-searchbar__wrapper">
 			<form id="searchbarForm" class="af-searchbar-form" method="POST">
 				<label for="af-search-text"
-					class="af-searchbar-label"><?php echo esc_html__('Search', 'appsheet-functions') ?></label>
+					class="af-searchbar-label"><?php echo esc_html__('Search', 'tailorsheet-manager') ?></label>
 				<div class="af-searchbar-container">
 					<div class="af-searchbar-icon__wrapper">
 						<i class="fa fa-search"></i>
 					</div>
 					<input type="search" id="af-search-text" class="af-searchbar-input"
-						placeholder="<?php echo esc_html__('Search functions...', 'appsheet-functions') ?>"
+						placeholder="<?php echo esc_html__('Search functions...', 'tailorsheet-manager') ?>"
 						name="search_query" />
 					<button type="submit" id="searchbarSubmit" class="af-searchbar-button">
-						<span><?php echo esc_html__('Search', 'appsheet-functions') ?></span>
+						<span><?php echo esc_html__('Search', 'tailorsheet-manager') ?></span>
 						<i class="fa fa-spinner"></i>
 					</button>
 				</div>

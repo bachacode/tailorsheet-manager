@@ -6,11 +6,11 @@
  * @link       https://bachacode.com
  * @since      1.0.0
  *
- * @package    Appsheet_Functions
- * @subpackage Appsheet_Functions/includes
+ * @package    Tailorsheet_Manager
+ * @subpackage Tailorsheet_Manager/includes
  */
 
-class Appsheet_Functions_Post_Types
+class Tailorsheet_Manager_Post_Types
 {
     /**
     * Register custom post type
@@ -29,23 +29,23 @@ class Appsheet_Functions_Post_Types
             'name'                  => $fields['plural'],
             'singular_name'         => $fields['singular'],
             'menu_name'             => $fields['menu_name'],
-            'new_item'              => sprintf(__('New %s', 'appsheet-functions'), $fields['singular']),
-            'add_new_item'          => sprintf(__('Add new %s', 'appsheet-functions'), $fields['singular']),
-            'edit_item'             => sprintf(__('Edit %s', 'appsheet-functions'), $fields['singular']),
-            'view_item'             => sprintf(__('View %s', 'appsheet-functions'), $fields['singular']),
-            'view_items'            => sprintf(__('View %s', 'appsheet-functions'), $fields['plural']),
-            'search_items'          => sprintf(__('Search %s', 'appsheet-functions'), $fields['plural']),
-            'not_found'             => sprintf(__('No %s found', 'appsheet-functions'), strtolower($fields['plural'])),
-            'not_found_in_trash'    => sprintf(__('No %s found in trash', 'appsheet-functions'), strtolower($fields['plural'])),
-            'all_items'             => sprintf(__('All %s', 'appsheet-functions'), $fields['plural']),
-            'archives'              => sprintf(__('%s Archives', 'appsheet-functions'), $fields['singular']),
-            'attributes'            => sprintf(__('%s Attributes', 'appsheet-functions'), $fields['singular']),
-            'insert_into_item'      => sprintf(__('Insert into %s', 'appsheet-functions'), strtolower($fields['singular'])),
-            'uploaded_to_this_item' => sprintf(__('Uploaded to this %s', 'appsheet-functions'), strtolower($fields['singular'])),
+            'new_item'              => sprintf(__('New %s', 'tailorsheet-manager'), $fields['singular']),
+            'add_new_item'          => sprintf(__('Add new %s', 'tailorsheet-manager'), $fields['singular']),
+            'edit_item'             => sprintf(__('Edit %s', 'tailorsheet-manager'), $fields['singular']),
+            'view_item'             => sprintf(__('View %s', 'tailorsheet-manager'), $fields['singular']),
+            'view_items'            => sprintf(__('View %s', 'tailorsheet-manager'), $fields['plural']),
+            'search_items'          => sprintf(__('Search %s', 'tailorsheet-manager'), $fields['plural']),
+            'not_found'             => sprintf(__('No %s found', 'tailorsheet-manager'), strtolower($fields['plural'])),
+            'not_found_in_trash'    => sprintf(__('No %s found in trash', 'tailorsheet-manager'), strtolower($fields['plural'])),
+            'all_items'             => sprintf(__('All %s', 'tailorsheet-manager'), $fields['plural']),
+            'archives'              => sprintf(__('%s Archives', 'tailorsheet-manager'), $fields['singular']),
+            'attributes'            => sprintf(__('%s Attributes', 'tailorsheet-manager'), $fields['singular']),
+            'insert_into_item'      => sprintf(__('Insert into %s', 'tailorsheet-manager'), strtolower($fields['singular'])),
+            'uploaded_to_this_item' => sprintf(__('Uploaded to this %s', 'tailorsheet-manager'), strtolower($fields['singular'])),
 
             /* Labels for hierarchical post types only. */
-            'parent_item'           => sprintf(__('Parent %s', 'appsheet-functions'), $fields['singular']),
-            'parent_item_colon'     => sprintf(__('Parent %s\:', 'appsheet-functions'), $fields['singular']),
+            'parent_item'           => sprintf(__('Parent %s', 'tailorsheet-manager'), $fields['singular']),
+            'parent_item_colon'     => sprintf(__('Parent %s\:', 'tailorsheet-manager'), $fields['singular']),
 
             /* Custom archive label.  Must filter 'post_type_archive_title' to use. */
             'archive_title'        => $fields['plural'],
@@ -166,20 +166,20 @@ class Appsheet_Functions_Post_Types
             'name'                       => $tax_fields['plural'],
             'singular_name'              => $tax_fields['single'],
             'menu_name'                  => $tax_fields['plural'],
-            'all_items'                  => sprintf(__('All %s', 'appsheet-functions'), $tax_fields['plural']),
-            'edit_item'                  => sprintf(__('Edit %s', 'appsheet-functions'), $tax_fields['single']),
-            'view_item'                  => sprintf(__('View %s', 'appsheet-functions'), $tax_fields['single']),
-            'update_item'                => sprintf(__('Update %s', 'appsheet-functions'), $tax_fields['single']),
-            'add_new_item'               => sprintf(__('Add New %s', 'appsheet-functions'), $tax_fields['single']),
-            'new_item_name'              => sprintf(__('New %s Name', 'appsheet-functions'), $tax_fields['single']),
-            'parent_item'                => sprintf(__('Parent %s', 'appsheet-functions'), $tax_fields['single']),
-            'parent_item_colon'          => sprintf(__('Parent %s\:', 'appsheet-functions'), $tax_fields['single']),
-            'search_items'               => sprintf(__('Search %s', 'appsheet-functions'), $tax_fields['plural']),
-            'popular_items'              => sprintf(__('Popular %s', 'appsheet-functions'), $tax_fields['plural']),
-            'separate_items_with_commas' => sprintf(__('Separate %s with commas', 'appsheet-functions'), $tax_fields['plural']),
-            'add_or_remove_items'        => sprintf(__('Add or remove %s', 'appsheet-functions'), $tax_fields['plural']),
-            'choose_from_most_used'      => sprintf(__('Choose from the most used %s', 'appsheet-functions'), $tax_fields['plural']),
-            'not_found'                  => sprintf(__('No %s found', 'appsheet-functions'), $tax_fields['plural']),
+            'all_items'                  => sprintf(__('All %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            'edit_item'                  => sprintf(__('Edit %s', 'tailorsheet-manager'), $tax_fields['single']),
+            'view_item'                  => sprintf(__('View %s', 'tailorsheet-manager'), $tax_fields['single']),
+            'update_item'                => sprintf(__('Update %s', 'tailorsheet-manager'), $tax_fields['single']),
+            'add_new_item'               => sprintf(__('Add New %s', 'tailorsheet-manager'), $tax_fields['single']),
+            'new_item_name'              => sprintf(__('New %s Name', 'tailorsheet-manager'), $tax_fields['single']),
+            'parent_item'                => sprintf(__('Parent %s', 'tailorsheet-manager'), $tax_fields['single']),
+            'parent_item_colon'          => sprintf(__('Parent %s\:', 'tailorsheet-manager'), $tax_fields['single']),
+            'search_items'               => sprintf(__('Search %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            'popular_items'              => sprintf(__('Popular %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            'separate_items_with_commas' => sprintf(__('Separate %s with commas', 'tailorsheet-manager'), $tax_fields['plural']),
+            'add_or_remove_items'        => sprintf(__('Add or remove %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            'choose_from_most_used'      => sprintf(__('Choose from the most used %s', 'tailorsheet-manager'), $tax_fields['plural']),
+            'not_found'                  => sprintf(__('No %s found', 'tailorsheet-manager'), $tax_fields['plural']),
         );
 
         $args = array(
@@ -257,11 +257,11 @@ class Appsheet_Functions_Post_Types
                 // Slug max. 20 characters, cannot contain capital letters or spaces!
                 // https://toolset.com/forums/topic/types-custom-post-type-slug-length-limited-to-20-characters/
                 'slug'                  => 'expresiones-appsheet',
-                'singular'              => __('Appsheet Function', 'appsheet-functions'),
-                'plural'                => __('Appsheet Functions', 'appsheet-functions'),
-                'menu_name'             => __('Appsheet Functions', 'appsheet-functions'),
+                'singular'              => __('Appsheet Function', 'tailorsheet-manager'),
+                'plural'                => __('Appsheet Functions', 'tailorsheet-manager'),
+                'menu_name'             => __('Appsheet Functions', 'tailorsheet-manager'),
                 'menu_position'         => 3,
-                'description'           => __('Appsheet Functions', 'appsheet-functions'),
+                'description'           => __('Appsheet Functions', 'tailorsheet-manager'),
                 'has_archive'           => 'expresiones-appsheet',
                 'hierarchical'          => false,
                 'rewrite' => array(
@@ -289,14 +289,14 @@ class Appsheet_Functions_Post_Types
                 'taxonomies'            => array(
                     array(
                         'taxonomy'          => 'categoria-de-expresion',
-                        'plural'            => __('Function Categories', 'appsheet-functions'),
-                        'single'            => __('Function Category', 'appsheet-functions'),
+                        'plural'            => __('Function Categories', 'tailorsheet-manager'),
+                        'single'            => __('Function Category', 'tailorsheet-manager'),
                         'post_types'        => array( 'expresiones-appsheet' ),
                     ),
                     array(
                         'taxonomy'          => 'ejemplo-de-expresion',
-                        'plural'            => __('Function Examples', 'appsheet-functions'),
-                        'single'            => __('Function Example', 'appsheet-functions'),
+                        'plural'            => __('Function Examples', 'tailorsheet-manager'),
+                        'single'            => __('Function Example', 'tailorsheet-manager'),
                         'post_types'        => array( 'expresiones-appsheet' ),
                         'public'            => false
                     )
