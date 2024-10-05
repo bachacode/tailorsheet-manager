@@ -175,7 +175,7 @@ class Tailorsheet_Manager
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-
+        $this->loader->add_action('init', $plugin_admin, 'create_menu', 999);
         // Save/Update our plugin options
         $this->loader->add_action('init', $plugin_admin, 'create_metaboxes', 999);
         // Custom fields for function-example taxonomy on create, edit, and save hooks

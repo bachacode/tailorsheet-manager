@@ -105,19 +105,16 @@ class Tailorsheet_Manager_Admin
 
     public function create_menu()
     {
+        $config = array(
 
-        $config_menu = array(
-            'type'              => 'menu',                                          // Required, menu or metabox
-            'id'                => $this->plugin_name . '-settings',                          // Required, meta box id, unique per page, to save: get_option( id )
-            'menu'              => 'admin.php',                                         // Required, sub page to your options page
-            'submenu'           => false,                                            // Required for submenu
-            'position'			=> 4,
-            'title'             => esc_html__('Settings', 'tailorsheet-manager'),    //The name of this page
-            'menu_title'		=> esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
-            'capability'        => 'manage_options',                                // The capability needed to view the page
-            'plugin_basename'   => plugin_basename(plugin_dir_path(__DIR__) . $this->plugin_name . '.php'),
-            'tabbed'            => false,
-
+            'type'              => 'menu',
+            'id'                => "{$this->plugin_name}-admin",
+            'title'             => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
+            'menu_title'        => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
+            'submenu'           => false,
+            'position'          => 3,
+            'capability'        => 'manage_options',
+            'icon'              => 'dashicons-admin-generic',
         );
 
         $fields_menu[] = array(
@@ -148,7 +145,10 @@ class Tailorsheet_Manager_Admin
         /**
          * instantiate your admin page
          */
-        (new Exopite_Simple_Options_Framework($config_menu, $fields_menu));
+        (new Exopite_Simple_Options_Framework($config, $fields_menu));
+
+       
+       
     }
 
     public function create_metaboxes()
