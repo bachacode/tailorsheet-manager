@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 1.2.7 =
+* Changed plugin name from "Appsheet Functions" to "TailorSheet Manager"
+
 = 1.2.6 =
 * Disabled public visibility of "ejemplos de appsheet"
 
