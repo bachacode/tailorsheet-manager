@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.0.1 =
+* Cleaning up unused files
+
 = 2.0.0 =
 * Added CPT "Ejemplos AppSheet"
 * Added Custom taxonomies "Categoría de Ejemplo" and "Etiqueta de Ejemplo" to CPT "Ejemplos AppSheet"
