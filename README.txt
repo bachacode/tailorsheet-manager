@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.1.0 =
+* Added metadata to "Ejemplos AppSheet"
+
+
 = 2.0.1 =
 * Cleaning up unused files
 
