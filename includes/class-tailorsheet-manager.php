@@ -178,6 +178,7 @@ class Tailorsheet_Manager
         $this->loader->add_action('init', $plugin_admin, 'create_menu', 999);
         // Save/Update our plugin options
         $this->loader->add_action('init', $plugin_admin, 'create_metaboxes', 999);
+        $this->loader->add_action('init', $plugin_admin, 'create_metaboxes_examples_appsheet', 999);
         // Custom fields for function-example taxonomy on create, edit, and save hooks
         $this->loader->add_action('ejemplo-de-expresion_add_form_fields', $plugin_admin, 'fe_add_fields', 10);
         $this->loader->add_action('ejemplo-de-expresion_edit_form_fields', $plugin_admin, 'fe_edit_fields', 10, 2);

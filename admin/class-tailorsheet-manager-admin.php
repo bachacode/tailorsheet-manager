@@ -191,12 +191,12 @@ class Tailorsheet_Manager_Admin
         }
 
         add_submenu_page(
-			'tailorsheet-manager-admin',
-			'TailorSheet Manager',
-			'<span class="ts-manager-settings-menu-title">Settings</span>',
-			'manage_options',
-			'tailorsheet-manager-admin'
-		);
+            'tailorsheet-manager-admin',
+            'TailorSheet Manager',
+            '<span class="ts-manager-settings-menu-title">Ajustes</span>',
+            'manage_options',
+            'tailorsheet-manager-admin'
+        );
     }
 
     public function create_metaboxes()
@@ -292,6 +292,90 @@ class Tailorsheet_Manager_Admin
                     'id'          => 'explanation',
                     'type'        => 'editor',
                     'title'       => __('Explanation', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                    ),
+                ),
+            ),
+        );
+
+        /**
+         * instantiate your admin page
+         */
+        (new Exopite_Simple_Options_Framework($config_metabox, $fields));
+    }
+
+    public function create_metaboxes_examples_appsheet()
+    {
+        $config_metabox = array(
+            'type'              => 'metabox',
+            'id'                => 'examples-appsheet-meta',
+            'post_types'        => array( 'ejemplos-appsheet' ),
+            'context'           => 'advanced',
+            'options'			=> 'simple',
+            'priority'          => 'default',
+            'title'             => __('Extra fields', 'tailorsheet-manager'),
+            'capability'        => 'edit_posts', 
+            'tabbed'            => true,
+        );
+
+        $fields[] = array(
+            'name'   => 'first',
+            'title'  => __('External Fields', 'tailorsheet-manager'),
+            'icon'   => 'dashicons-admin-generic',
+            'fields' => array(
+                array(
+                    'id'          => 'presentation_video',
+                    'type'        => 'text',
+                    'title'       => __('Presentation video', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                        'placeholder' => 'https://youtube.com...',
+                    ),
+                ),
+                array(
+                    'id'          => 'whatsapp_message',
+                    'type'        => 'text',
+                    'title'       => __('WhatsApp message', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                        'placeholder' => 'Introduce el mensaje que enviará el botón de la página.',
+                    ),
+                ),
+                array(
+                    'id'          => 'iframe_code',
+                    'type'        => 'text',
+                    'title'       => __('Iframe code', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                        'placeholder' => 'Codigo del iframe de la app',
+                    ),
+                ),
+            ),
+        );
+
+        $fields[] = array(
+            'name'   => 'second',
+            'title'  => __('Descriptive Tabs', 'tailorsheet-manager'),
+            'icon'   => 'dashicons-admin-generic',
+            'fields' => array(
+                array(
+                    'id'          => 'sections',
+                    'type'        => 'editor',
+                    'title'       => __('Sections', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                    ),
+                ),
+                array(
+                    'id'          => 'automatizations',
+                    'type'        => 'editor',
+                    'title'       => __('Automatizations', 'tailorsheet-manager'),
                     'attributes'    => array(
                         'rows'        => 10,
                         'cols'        => 5,
