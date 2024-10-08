@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.2.0 =
+* Added excerpt and app information field to "Ejemplos AppSheet"
+
 = 2.1.0 =
 * Added metadata to "Ejemplos AppSheet"
 
