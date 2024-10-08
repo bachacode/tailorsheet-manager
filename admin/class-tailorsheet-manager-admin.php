@@ -364,6 +364,15 @@ class Tailorsheet_Manager_Admin
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
                 array(
+                    'id'          => 'app_information',
+                    'type'        => 'editor',
+                    'title'       => __('App Information', 'tailorsheet-manager'),
+                    'attributes'    => array(
+                        'rows'        => 10,
+                        'cols'        => 5,
+                    ),
+                ),
+                array(
                     'id'          => 'sections',
                     'type'        => 'editor',
                     'title'       => __('Sections', 'tailorsheet-manager'),

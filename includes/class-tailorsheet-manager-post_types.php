@@ -358,6 +358,7 @@ class Tailorsheet_Manager_Post_Types
                 'supports'              => array(
                     'title',
                     'editor',
+                    'excerpt',
                     'thumbnail',
                     'revisions',
                 ),
