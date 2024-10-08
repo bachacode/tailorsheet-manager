@@ -16,7 +16,7 @@
  * Plugin Name:       TailorSheet Manager
  * Plugin URI:        https://bachacode.com
  * Description:       Custom plugin tailored for TailorSheet Website to manage AppSheet related features
- * Version:           2.1.0
+ * Version:           2.2.0
  * Author:            Cristhian Flores
  * Author URI:        https://bachacode.com/
  * License:           GPL-2.0+
@@ -33,10 +33,8 @@ if (! defined('WPINC')) {
 
 /**
  * Currently plugin version.
- * Start at version 2.1.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
  */
-define('TAILORSHEET_MANAGER_VERSION', '2.1.0');
+define('TAILORSHEET_MANAGER_VERSION', '2.2.0');
 
 /**
  * Store plugin base dir, for easier access later from other classes.
