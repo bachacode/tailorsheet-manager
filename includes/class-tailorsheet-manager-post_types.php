@@ -341,7 +341,7 @@ class Tailorsheet_Manager_Post_Types
                 'menu_name'             => __('Appsheet Examples', 'tailorsheet-manager'),
                 'show_in_menu'          => 'admin.php?page=tailorsheet-manager-admin',
                 'description'           => __('AppSheet Examples', 'tailorsheet-manager'),
-                'has_archive'           => __('appsheet-examples', 'tailorsheet-manager'),
+                'has_archive'           => false,
                 'hierarchical'          => false,
                 'rewrite' => array(
                     'slug'                  => 'ejemplos-appsheet',
