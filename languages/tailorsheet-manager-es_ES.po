@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/appsheet-"
-"functions\n"
-"POT-Creation-Date: 2024-10-08T02:36:24+02:00\n"
-"PO-Revision-Date: 2024-10-07 21:04-0400\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-"
+"manager\n"
+"POT-Creation-Date: 2024-10-08T20:46:13+02:00\n"
+"PO-Revision-Date: 2024-10-08 14:49-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -16,19 +16,19 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: ../admin/exopite-simple-options\n"
 
 #. Plugin Name of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 #: admin/class-tailorsheet-manager-admin.php:112
 #: admin/class-tailorsheet-manager-admin.php:113
 msgid "TailorSheet Manager"
 msgstr "Gestor TailorSheet"
 
 #. Plugin URI of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "https://bachacode.com"
 msgstr "https://bachacode.com"
 
 #. Description of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid ""
 "Custom plugin tailored for TailorSheet Website to manage AppSheet related "
 "features"
@@ -37,12 +37,12 @@ msgstr ""
 "funciones relacionadas con AppSheet"
 
 #. Author of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "Cristhian Flores"
 msgstr "Cristhian Flores"
 
 #. Author URI of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/appsheet-functions/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "https://bachacode.com/"
 msgstr "https://bachacode.com/"
 
@@ -98,14 +98,18 @@ msgid "Descriptive Tabs"
 msgstr "Fichas descriptivas"
 
 #: admin/class-tailorsheet-manager-admin.php:369
+msgid "App Information"
+msgstr "Información de la App"
+
+#: admin/class-tailorsheet-manager-admin.php:378
 msgid "Sections"
 msgstr "Secciones"
 
-#: admin/class-tailorsheet-manager-admin.php:378
+#: admin/class-tailorsheet-manager-admin.php:387
 msgid "Automatizations"
 msgstr "Automatizaciones"
 
-#: admin/class-tailorsheet-manager-admin.php:466
+#: admin/class-tailorsheet-manager-admin.php:475
 msgid "AppSheet Functions"
 msgstr "Expresiones de AppSheet"
 
@@ -295,19 +299,19 @@ msgstr "Ejemplos de App"
 msgid "Appsheet Examples"
 msgstr "Ejemplos de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:371
+#: includes/class-tailorsheet-manager-post_types.php:372
 msgid "Example Categories"
 msgstr "Categorías de Ejemplo"
 
-#: includes/class-tailorsheet-manager-post_types.php:372
+#: includes/class-tailorsheet-manager-post_types.php:373
 msgid "Example Category"
 msgstr "Categoría de Ejemplo"
 
-#: includes/class-tailorsheet-manager-post_types.php:378
+#: includes/class-tailorsheet-manager-post_types.php:379
 msgid "Example Tags"
 msgstr "Etiquetas de Ejemplo"
 
-#: includes/class-tailorsheet-manager-post_types.php:379
+#: includes/class-tailorsheet-manager-post_types.php:380
 msgid "Example Tag"
 msgstr "Etiqueta de Ejemplo"
 
