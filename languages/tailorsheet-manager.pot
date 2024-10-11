@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-08T20:46:13+02:00\n"
+"POT-Creation-Date: 2024-10-11T19:09:58+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: tailorsheet-manager\n"
@@ -101,7 +101,7 @@ msgid "Sections"
 msgstr ""
 
 #: admin/class-tailorsheet-manager-admin.php:387
-msgid "Automatizations"
+msgid "Functionality"
 msgstr ""
 
 #: admin/class-tailorsheet-manager-admin.php:475

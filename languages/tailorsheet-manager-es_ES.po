@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-"
 "manager\n"
-"POT-Creation-Date: 2024-10-08T20:46:13+02:00\n"
-"PO-Revision-Date: 2024-10-08 14:49-0400\n"
+"POT-Creation-Date: 2024-10-11T19:09:58+02:00\n"
+"PO-Revision-Date: 2024-10-11 13:13-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -106,8 +106,8 @@ msgid "Sections"
 msgstr "Secciones"
 
 #: admin/class-tailorsheet-manager-admin.php:387
-msgid "Automatizations"
-msgstr "Automatizaciones"
+msgid "Functionality"
+msgstr "Funcionalidades"
 
 #: admin/class-tailorsheet-manager-admin.php:475
 msgid "AppSheet Functions"
@@ -322,6 +322,9 @@ msgstr "Ejemplos de expresiones AppSheet"
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr "Ejemplos de las expresiones AppSheet"
+
+#~ msgid "Automatizations"
+#~ msgstr "Automatizaciones"
 
 #~ msgid "Settings"
 #~ msgstr "Ajustes"
