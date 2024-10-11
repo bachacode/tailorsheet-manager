@@ -382,9 +382,9 @@ class Tailorsheet_Manager_Admin
                     ),
                 ),
                 array(
-                    'id'          => 'automatizations',
+                    'id'          => 'functionality',
                     'type'        => 'editor',
-                    'title'       => __('Automatizations', 'tailorsheet-manager'),
+                    'title'       => __('Functionality', 'tailorsheet-manager'),
                     'attributes'    => array(
                         'rows'        => 10,
                         'cols'        => 5,
