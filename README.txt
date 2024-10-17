@@ -21,6 +21,12 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.3.0 =
+* Added new taxonomy "Sector de App"
+* Added new taxonomy "Funcionalidad de App"
+* Added new taxonomy "Integración de App"
+* Updated translations to replace "Ejemplo/s" with "App/s"
+
 = 2.2.1 =
 * Changed metadata "automatizations" to "functionality"
 
