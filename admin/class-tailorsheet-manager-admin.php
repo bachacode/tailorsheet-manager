@@ -179,6 +179,11 @@ class Tailorsheet_Manager_Admin
                 'menu_slug'         => 'edit-tags.php?taxonomy=sector-de-ejemplo',
             ),
             array(
+                'page_title'        => 'Funcionalidades de Ejemplo',
+                'menu_title'        => 'Funcionalidades de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=func-de-ejemplo',
+            ),
+            array(
                 'page_title'        => 'Etiquetas de Ejemplo',
                 'menu_title'        => 'Etiquetas de Ejemplo',
                 'menu_slug'         => 'edit-tags.php?taxonomy=etiqueta-de-ejemplo',
