@@ -184,6 +184,11 @@ class Tailorsheet_Manager_Admin
                 'menu_slug'         => 'edit-tags.php?taxonomy=func-de-ejemplo',
             ),
             array(
+                'page_title'        => 'Integraciones de Ejemplo',
+                'menu_title'        => 'Integraciones de Ejemplo',
+                'menu_slug'         => 'edit-tags.php?taxonomy=integracion-de-ejemplo',
+            ),
+            array(
                 'page_title'        => 'Etiquetas de Ejemplo',
                 'menu_title'        => 'Etiquetas de Ejemplo',
                 'menu_slug'         => 'edit-tags.php?taxonomy=etiqueta-de-ejemplo',
