@@ -29,7 +29,18 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 	$( document ).ready(function() {
-		var classes = ['post-type-expresiones-appsheet', 'post-type-ejemplos-appsheet', 'taxonomy-categoria-de-expresion', 'taxonomy-ejemplo-de-expresion', 'taxonomy-categoria-de-ejemplo', 'taxonomy-etiqueta-de-ejemplo', 'toplevel_page_tailorsheet-manager-admin'];
+		var classes = [
+			'post-type-expresiones-appsheet', 
+			'post-type-ejemplos-appsheet', 
+			'taxonomy-categoria-de-expresion', 
+			'taxonomy-ejemplo-de-expresion', 
+			'taxonomy-categoria-de-ejemplo', 
+			'taxonomy-sector-de-ejemplo', 
+			'taxonomy-func-de-ejemplo', 
+			'taxonomy-integracion-de-ejemplo', 
+			'taxonomy-etiqueta-de-ejemplo', 
+			'toplevel_page_tailorsheet-manager-admin'
+		];
 		var settings_parent = $('.ts-manager-settings-menu-title').closest('li');
 		console.log(settings_parent);
 		settings_parent.addClass('ts-manager-settings-option');
