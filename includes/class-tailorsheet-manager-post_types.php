@@ -375,6 +375,13 @@ class Tailorsheet_Manager_Post_Types
                         'public'            => false,
                     ),
                     array(
+                        'taxonomy'          => 'sector-de-ejemplo',
+                        'plural'            => __('Example Sectors', 'tailorsheet-manager'),
+                        'single'            => __('Example Sector', 'tailorsheet-manager'),
+                        'post_types'        => 'ejemplos-appsheet',
+                        'public'            => false,
+                    ),
+                    array(
                         'taxonomy'          => 'etiqueta-de-ejemplo',
                         'plural'            => __('Example Tags', 'tailorsheet-manager'),
                         'single'            => __('Example Tag', 'tailorsheet-manager'),
