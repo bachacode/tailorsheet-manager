@@ -351,16 +351,6 @@ class Tailorsheet_Manager_Admin
                     ),
                 ),
                 array(
-                    'id'          => 'whatsapp_message',
-                    'type'        => 'text',
-                    'title'       => __('WhatsApp message', 'tailorsheet-manager'),
-                    'attributes'    => array(
-                        'rows'        => 10,
-                        'cols'        => 5,
-                        'placeholder' => 'Introduce el mensaje que enviará el botón de la página.',
-                    ),
-                ),
-                array(
                     'id'          => 'iframe_code',
                     'type'        => 'text',
                     'title'       => __('Iframe code', 'tailorsheet-manager'),
