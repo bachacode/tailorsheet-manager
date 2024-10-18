@@ -21,6 +21,11 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.3.2 =
+* Changed taxonomy "Sector de App" Show in REST value to true
+* Changed taxonomy "Funcionalidad de App" Show in REST value to true
+* Changed taxonomy "Integración de App" Show in REST value to true
+
 = 2.3.1 =
 * Removed "Whatsapp Message" metadata field from "AppSheet Examples" CPT
 

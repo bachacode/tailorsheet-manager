@@ -373,6 +373,7 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Example Category', 'tailorsheet-manager'),
                         'post_types'        => 'ejemplos-appsheet',
                         'public'            => false,
+                        'show_in_rest'      => true
                     ),
                     array(
                         'taxonomy'          => 'sector-de-ejemplo',
@@ -380,6 +381,7 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Example Sector', 'tailorsheet-manager'),
                         'post_types'        => 'ejemplos-appsheet',
                         'public'            => false,
+                        'show_in_rest'      => true
                     ),
                     array(
                         'taxonomy'          => 'func-de-ejemplo',
@@ -387,6 +389,7 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Example Functionality', 'tailorsheet-manager'),
                         'post_types'        => 'ejemplos-appsheet',
                         'public'            => false,
+                        'show_in_rest'      => true
                     ),
                     array(
                         'taxonomy'          => 'integracion-de-ejemplo',
@@ -394,6 +397,7 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Example Integration', 'tailorsheet-manager'),
                         'post_types'        => 'ejemplos-appsheet',
                         'public'            => false,
+                        'show_in_rest'      => true
                     ),
                     array(
                         'taxonomy'          => 'etiqueta-de-ejemplo',
@@ -401,6 +405,7 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Example Tag', 'tailorsheet-manager'),
                         'post_types'        => 'ejemplos-appsheet',
                         'public'            => false,
+                        'show_in_rest'      => true
                     )
                 ),
             ),
