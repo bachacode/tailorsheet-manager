@@ -439,7 +439,7 @@ class Tailorsheet_Manager_Admin
         update_term_meta(
             $term_id,
             'fe_expected',
-            absint($_POST[ 'fe_expected' ])
+            sanitize_text_field($_POST[ 'fe_expected' ])
         );
 
     }
