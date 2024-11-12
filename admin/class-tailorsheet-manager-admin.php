@@ -439,7 +439,7 @@ class Tailorsheet_Manager_Admin
         update_term_meta(
             $term_id,
             'fe_expected',
-            esc_url_raw($_POST[ 'fe_expected' ])
+            htmlspecialchars($_POST[ 'fe_expected' ], ENT_QUOTES, 'UTF-8')
         );
 
     }
