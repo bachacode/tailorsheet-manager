@@ -331,7 +331,7 @@ class Tailorsheet_Manager_Admin
             'options'			=> 'simple',
             'priority'          => 'default',
             'title'             => __('Extra fields', 'tailorsheet-manager'),
-            'capability'        => 'edit_posts', 
+            'capability'        => 'edit_posts',
             'tabbed'            => true,
         );
 
@@ -439,7 +439,7 @@ class Tailorsheet_Manager_Admin
         update_term_meta(
             $term_id,
             'fe_expected',
-            sanitize_text_field($_POST[ 'fe_expected' ])
+            esc_url_raw($_POST[ 'fe_expected' ])
         );
 
     }

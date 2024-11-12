@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.3.4 =
+* Changed sanitize text field for esc_url_raw function for field fe_expected
+
 = 2.3.3 =
 * Changed absint function to fe_expected to sanitize string
 
