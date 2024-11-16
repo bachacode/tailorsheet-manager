@@ -118,26 +118,18 @@ class Tailorsheet_Manager_Admin
         );
 
         $fields_menu[] = array(
-            'name'   => 'first',
-            'title'  => 'First',
+            'name'   => 'expresiones-appsheet-options',
+            'title'  => 'Opciones de Expresiones AppSheet',
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
                 array(
-                    'id'          => 'text_1',
+                    'id'          => 'expresiones-appsheet-archive',
                     'type'        => 'text',
-                    'title'       => 'Text',
-                    'before'      => 'Text Before',
-                    'after'       => 'Text After',
-                    'class'       => 'text-class',
-                    'attributes'  => 'data-test="test"',
-                    'description' => 'Description',
-                    'default'     => 'Default Text',
+                    'title'       => 'Slug de archivo',
+                    'description' => 'Slug de la página de archivado de "Expresiones AppSheet"',
                     'attributes'    => array(
-                        'rows'        => 10,
-                        'cols'        => 5,
-                        'placeholder' => 'do stuff',
-                    ),
-                    'help'        => 'Help text',
+                    'placeholder' => 'e.g: lista-de-expresiones'
+                    )
                 ),
             ),
         );
