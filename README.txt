@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.4.0 =
+* Ejemplos Appsheet archive is now changeable
+* Expresiones Appsheet archive is now changeable
+
 = 2.3.5 =
 * Changed esc_url_raw for htmlspecialchars function for field fe_expected
 
