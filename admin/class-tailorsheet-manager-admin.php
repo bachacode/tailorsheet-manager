@@ -126,9 +126,26 @@ class Tailorsheet_Manager_Admin
                     'id'          => 'expresiones-appsheet-archive',
                     'type'        => 'text',
                     'title'       => 'Slug de archivo',
-                    'description' => 'Slug de la página de archivado de "Expresiones AppSheet"',
+                    'description' => 'Slug de la página de archivado de "Expresiones AppSheet", si se deja vacio se desactivara el archivado',
                     'attributes'    => array(
                     'placeholder' => 'e.g: lista-de-expresiones'
+                    )
+                ),
+            ),
+        );
+
+        $fields_menu[] = array(
+            'name'   => 'ejemplos-appsheet-options',
+            'title'  => 'Opciones de Ejemplos AppSheet',
+            'icon'   => 'dashicons-admin-generic',
+            'fields' => array(
+                array(
+                    'id'          => 'ejemplos-appsheet-archive',
+                    'type'        => 'text',
+                    'title'       => 'Slug de archivo',
+                    'description' => 'Slug de la página de archivado de "Ejemplos AppSheet", si se deja vacio se desactivara el archivado',
+                    'attributes'    => array(
+                    'placeholder' => 'e.g: lista-de-ejemplos'
                     )
                 ),
             ),

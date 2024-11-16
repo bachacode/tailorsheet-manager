@@ -271,11 +271,16 @@ class Tailorsheet_Manager_Post_Types
     public function create_custom_post_type()
     {
         $admin_options = get_option('tailorsheet-manager-admin')['es'];
+
         $expr_app_archive = false;
         if(isset($admin_options['expresiones-appsheet-archive']) && $admin_options['expresiones-appsheet-archive'] != "") {
             $expr_app_archive = $admin_options['expresiones-appsheet-archive'];
         }
-      
+
+        $ejmp_app_archive = false;
+        if(isset($admin_options['ejemplos-appsheet-archive']) && $admin_options['ejemplos-appsheet-archive'] != "") {
+            $ejmp_app_archive = $admin_options['ejemplos-appsheet-archive'];
+        }
         /**
          * This is not all the fields, only what I find important. Feel free to change this function ;)
          *
@@ -346,7 +351,7 @@ class Tailorsheet_Manager_Post_Types
                 'menu_name'             => __('Appsheet Examples', 'tailorsheet-manager'),
                 'show_in_menu'          => 'admin.php?page=tailorsheet-manager-admin',
                 'description'           => __('AppSheet Examples', 'tailorsheet-manager'),
-                'has_archive'           => true,
+                'has_archive'           => $ejmp_app_archive,
                 'hierarchical'          => false,
                 'rewrite' => array(
                     'slug'                  => 'ejemplos-appsheet',
