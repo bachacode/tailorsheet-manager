@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.4.1 =
+* Removed "categoria-de-ejemplo" taxonomy
+* Removed "etiqueta-de-ejemplo" taxonomy
+
 = 2.4.0 =
 * Ejemplos Appsheet archive is now changeable
 * Expresiones Appsheet archive is now changeable
