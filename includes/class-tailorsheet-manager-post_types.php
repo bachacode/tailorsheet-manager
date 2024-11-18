@@ -273,12 +273,12 @@ class Tailorsheet_Manager_Post_Types
         $admin_options = get_option('tailorsheet-manager-admin')['es'];
 
         $expr_app_archive = false;
-        if(isset($admin_options['expresiones-appsheet-archive']) && $admin_options['expresiones-appsheet-archive'] != "") {
+        if (isset($admin_options['expresiones-appsheet-archive']) && $admin_options['expresiones-appsheet-archive'] != "") {
             $expr_app_archive = $admin_options['expresiones-appsheet-archive'];
         }
 
         $ejmp_app_archive = false;
-        if(isset($admin_options['ejemplos-appsheet-archive']) && $admin_options['ejemplos-appsheet-archive'] != "") {
+        if (isset($admin_options['ejemplos-appsheet-archive']) && $admin_options['ejemplos-appsheet-archive'] != "") {
             $ejmp_app_archive = $admin_options['ejemplos-appsheet-archive'];
         }
         /**
@@ -409,14 +409,14 @@ class Tailorsheet_Manager_Post_Types
                         'public'            => false,
                         'show_in_rest'      => true
                     ),
-                    array(
-                        'taxonomy'          => 'etiqueta-de-ejemplo',
-                        'plural'            => __('Example Tags', 'tailorsheet-manager'),
-                        'single'            => __('Example Tag', 'tailorsheet-manager'),
-                        'post_types'        => 'ejemplos-appsheet',
-                        'public'            => false,
-                        'show_in_rest'      => true
-                    )
+                    // array(
+                    //     'taxonomy'          => 'etiqueta-de-ejemplo',
+                    //     'plural'            => __('Example Tags', 'tailorsheet-manager'),
+                    //     'single'            => __('Example Tag', 'tailorsheet-manager'),
+                    //     'post_types'        => 'ejemplos-appsheet',
+                    //     'public'            => false,
+                    //     'show_in_rest'      => true
+                    // )
                 ),
             ),
         );
