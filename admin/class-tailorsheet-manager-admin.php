@@ -177,11 +177,11 @@ class Tailorsheet_Manager_Admin
                 'menu_title'        => '<span class="ts-manager-settings-menu-title">Ejemplos AppSheet</span>',
                 'menu_slug'         => 'edit.php?post_type=ejemplos-appsheet',
             ),
-            array(
-                'page_title'        => 'Categorías de Ejemplo',
-                'menu_title'        => 'Categorías de Ejemplo',
-                'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-ejemplo',
-            ),
+            // array(
+            //     'page_title'        => 'Categorías de Ejemplo',
+            //     'menu_title'        => 'Categorías de Ejemplo',
+            //     'menu_slug'         => 'edit-tags.php?taxonomy=categoria-de-ejemplo',
+            // ),
             array(
                 'page_title'        => 'Sectores de Ejemplo',
                 'menu_title'        => 'Sectores de Ejemplo',

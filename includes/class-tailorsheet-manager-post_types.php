@@ -377,14 +377,14 @@ class Tailorsheet_Manager_Post_Types
                     'administrator',
                 ),
                 'taxonomies'            => array(
-                    array(
-                        'taxonomy'          => 'categoria-de-ejemplo',
-                        'plural'            => __('Example Categories', 'tailorsheet-manager'),
-                        'single'            => __('Example Category', 'tailorsheet-manager'),
-                        'post_types'        => 'ejemplos-appsheet',
-                        'public'            => false,
-                        'show_in_rest'      => true
-                    ),
+                    // array(
+                    //     'taxonomy'          => 'categoria-de-ejemplo',
+                    //     'plural'            => __('Example Categories', 'tailorsheet-manager'),
+                    //     'single'            => __('Example Category', 'tailorsheet-manager'),
+                    //     'post_types'        => 'ejemplos-appsheet',
+                    //     'public'            => false,
+                    //     'show_in_rest'      => true
+                    // ),
                     array(
                         'taxonomy'          => 'sector-de-ejemplo',
                         'plural'            => __('Example Sectors', 'tailorsheet-manager'),
