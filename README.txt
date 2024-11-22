@@ -1,6 +1,6 @@
 === AppSheet Functions ===
 Contributors: Bachacode
-Donate link: https://bachacode.com/
+Donate link: https://bachacode.com
 Tags: appsheet
 Requires at least: 3.0.1
 Tested up to: 6.6.1

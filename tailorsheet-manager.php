@@ -18,7 +18,7 @@
  * Description:       Custom plugin tailored for TailorSheet Website to manage AppSheet related features
  * Version:           2.4.1
  * Author:            Cristhian Flores
- * Author URI:        https://bachacode.com/
+ * Author URI:        https://bachacode.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       tailorsheet-manager
