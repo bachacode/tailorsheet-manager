@@ -404,6 +404,12 @@ class Tailorsheet_Manager_Admin
                         'cols'        => 5,
                     ),
                 ),
+
+                array(
+                    'id'          => 'app_gallery',
+                    'type'        => 'gallery',
+                    'title'       => __('Gallery', 'tailorsheet-manager'),
+                ),
             ),
         );
 
