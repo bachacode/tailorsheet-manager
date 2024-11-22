@@ -374,7 +374,7 @@ class Tailorsheet_Manager_Admin
 
         $fields[] = array(
             'name'   => 'second',
-            'title'  => __('Descriptive Tabs', 'tailorsheet-manager'),
+            'title'  => __('App Tabs', 'tailorsheet-manager'),
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
                 array(
