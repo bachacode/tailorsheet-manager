@@ -12,7 +12,6 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_gallery' ) ) {
 
 		public function __construct( $field, $value = '', $unique = '', $config = array(), $multilang ) {
 			parent::__construct( $field, $value, $unique, $config, $multilang );
-
 		}
 
 		public function output() {
@@ -20,15 +19,14 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_gallery' ) ) {
 			echo $this->element_before();
 
 			echo $this->element_prepend();
-
+			
 			$defaults = array(
 				'add_button' => esc_attr__( 'Add to gallery', 'exopite-sof' ),
 				'media_frame_title' => esc_attr__( 'Select images for gallery', 'exopite-sof' ),
 				'media_frame_button' => esc_attr__( 'Add', 'exopite-sof' ),
 				'media_type' => 'image',
 			);
-
-			$options = ( isset( $field['options'] ) && is_array( $field['options'] ) ) ? $field['options'] : array();
+			$options = ( isset( $this->field['options'] ) && is_array( $this->field['options'] ) ) ? $this->field['options'] : array();
 			$options = wp_parse_args( $options, $defaults );
 
 			$value = $this->element_value();
