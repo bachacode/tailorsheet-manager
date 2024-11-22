@@ -409,6 +409,10 @@ class Tailorsheet_Manager_Admin
                     'id'          => 'app_gallery',
                     'type'        => 'gallery',
                     'title'       => __('Gallery', 'tailorsheet-manager'),
+                    'options' => array(
+                        'add_button'  => esc_attr__( 'Add to gallery', 'tailorsheet-manager' ),
+                    )
+                    
                 ),
             ),
         );
