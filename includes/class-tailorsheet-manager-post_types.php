@@ -270,16 +270,20 @@ class Tailorsheet_Manager_Post_Types
      */
     public function create_custom_post_type()
     {
-        $admin_options = get_option('tailorsheet-manager-admin')['es'];
-
+        $ts_manager_admin = get_option('tailorsheet-manager-admin');
         $expr_app_archive = false;
-        if (isset($admin_options['expresiones-appsheet-archive']) && $admin_options['expresiones-appsheet-archive'] != "") {
-            $expr_app_archive = $admin_options['expresiones-appsheet-archive'];
-        }
-
         $ejmp_app_archive = false;
-        if (isset($admin_options['ejemplos-appsheet-archive']) && $admin_options['ejemplos-appsheet-archive'] != "") {
-            $ejmp_app_archive = $admin_options['ejemplos-appsheet-archive'];
+
+        if($ts_manager_admin) {
+            $admin_options = $ts_manager_admin['es'];
+            
+            if (isset($admin_options['expresiones-appsheet-archive']) && $admin_options['expresiones-appsheet-archive'] != "") {
+                $expr_app_archive = $admin_options['expresiones-appsheet-archive'];
+            }
+            
+            if (isset($admin_options['ejemplos-appsheet-archive']) && $admin_options['ejemplos-appsheet-archive'] != "") {
+                $ejmp_app_archive = $admin_options['ejemplos-appsheet-archive'];
+            }
         }
         /**
          * This is not all the fields, only what I find important. Feel free to change this function ;)
