@@ -21,6 +21,14 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.4.2 =
+* Fixed bad code that called undefined variable in post type file
+* Added app_gallery meta field to "ejemplos-appsheet"
+* Changed metabox "descriptive tabs" title to "app tabs"
+* Fixed exopite bug where gallery type field checked an always undefined variable
+* Made "add_button" translatable in metabox fields
+* Fixed issue where "create_menu" callback would always run even in public side
+
 = 2.4.1 =
 * Removed "categoria-de-ejemplo" taxonomy
 * Removed "etiqueta-de-ejemplo" taxonomy
