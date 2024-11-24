@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-"
 "manager\n"
-"POT-Creation-Date: 2024-10-17T02:32:01+02:00\n"
-"PO-Revision-Date: 2024-10-16 20:36-0400\n"
+"POT-Creation-Date: 2024-11-22T21:53:29+01:00\n"
+"PO-Revision-Date: 2024-11-22 16:55-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -16,19 +16,20 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: ../admin/exopite-simple-options\n"
 
 #. Plugin Name of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-plugin-playground/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 #: admin/class-tailorsheet-manager-admin.php:112
 #: admin/class-tailorsheet-manager-admin.php:113
 msgid "TailorSheet Manager"
 msgstr "Gestor TailorSheet"
 
 #. Plugin URI of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#. Author URI of the plugin
+#: D:/xampp/htdocs/wordpress-projects/wp-plugin-playground/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "https://bachacode.com"
 msgstr "https://bachacode.com"
 
 #. Description of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-plugin-playground/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid ""
 "Custom plugin tailored for TailorSheet Website to manage AppSheet related "
 "features"
@@ -37,79 +38,78 @@ msgstr ""
 "funciones relacionadas con AppSheet"
 
 #. Author of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
+#: D:/xampp/htdocs/wordpress-projects/wp-plugin-playground/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
 msgid "Cristhian Flores"
 msgstr "Cristhian Flores"
 
-#. Author URI of the plugin
-#: D:/xampp/htdocs/wordpress-projects/wp-masterstudy/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
-msgid "https://bachacode.com/"
-msgstr "https://bachacode.com/"
-
-#: admin/class-tailorsheet-manager-admin.php:235
-#: admin/class-tailorsheet-manager-admin.php:333
+#: admin/class-tailorsheet-manager-admin.php:244
+#: admin/class-tailorsheet-manager-admin.php:342
 msgid "Extra fields"
 msgstr "Campos extra"
 
-#: admin/class-tailorsheet-manager-admin.php:243
+#: admin/class-tailorsheet-manager-admin.php:252
 msgid "Appsheet Function fields"
 msgstr "Campos de Expresiones AppSheet"
 
-#: admin/class-tailorsheet-manager-admin.php:284
+#: admin/class-tailorsheet-manager-admin.php:293
 msgid "Example Syntax"
 msgstr "Ejemplo de uso"
 
-#: admin/class-tailorsheet-manager-admin.php:290
+#: admin/class-tailorsheet-manager-admin.php:299
 msgid "The syntax shown on the function description page"
 msgstr "La sintaxis mostrada en la página de descripción de la función"
 
-#: admin/class-tailorsheet-manager-admin.php:297
+#: admin/class-tailorsheet-manager-admin.php:306
 #: af_templates/af-admin-function-example-fields.php:12
 #: af_templates/af-admin-function-example-fields.php:24
 msgid "Expected Result"
 msgstr "Resultado esperado"
 
-#: admin/class-tailorsheet-manager-admin.php:303
+#: admin/class-tailorsheet-manager-admin.php:312
 msgid "The type of data that is returned by the function"
 msgstr "Tipo de datos devueltos por la expresión"
 
-#: admin/class-tailorsheet-manager-admin.php:309
+#: admin/class-tailorsheet-manager-admin.php:318
 msgid "Explanation"
 msgstr "Explicación"
 
-#: admin/class-tailorsheet-manager-admin.php:340
+#: admin/class-tailorsheet-manager-admin.php:349
 msgid "External Fields"
 msgstr "Campos externos"
 
-#: admin/class-tailorsheet-manager-admin.php:346
+#: admin/class-tailorsheet-manager-admin.php:355
 msgid "Presentation video"
 msgstr "Vídeo de presentación"
 
-#: admin/class-tailorsheet-manager-admin.php:356
-msgid "WhatsApp message"
-msgstr "Mensaje de WhatsApp"
-
-#: admin/class-tailorsheet-manager-admin.php:366
+#: admin/class-tailorsheet-manager-admin.php:365
 msgid "Iframe code"
 msgstr "Código iframe"
 
-#: admin/class-tailorsheet-manager-admin.php:378
-msgid "Descriptive Tabs"
-msgstr "Fichas descriptivas"
+#: admin/class-tailorsheet-manager-admin.php:377
+msgid "App Tabs"
+msgstr "Pestañas del ejemplo"
 
-#: admin/class-tailorsheet-manager-admin.php:384
+#: admin/class-tailorsheet-manager-admin.php:383
 msgid "App Information"
 msgstr "Información de la App"
 
-#: admin/class-tailorsheet-manager-admin.php:393
+#: admin/class-tailorsheet-manager-admin.php:392
 msgid "Sections"
 msgstr "Secciones"
 
-#: admin/class-tailorsheet-manager-admin.php:402
+#: admin/class-tailorsheet-manager-admin.php:401
 msgid "Functionality"
 msgstr "Funcionalidades"
 
-#: admin/class-tailorsheet-manager-admin.php:490
+#: admin/class-tailorsheet-manager-admin.php:411
+msgid "Gallery"
+msgstr "Galería del ejemplo"
+
+#: admin/class-tailorsheet-manager-admin.php:413
+msgid "Add to gallery"
+msgstr "Subir a galería"
+
+#: admin/class-tailorsheet-manager-admin.php:499
 msgid "AppSheet Functions"
 msgstr "Expresiones de AppSheet"
 
@@ -260,84 +260,68 @@ msgstr "Añadir o quitar %s"
 msgid "Choose from the most used %s"
 msgstr "Escoger de los %s mas usados"
 
-#: includes/class-tailorsheet-manager-post_types.php:289
+#: includes/class-tailorsheet-manager-post_types.php:303
 msgid "Appsheet Function"
 msgstr "Expresión AppSheet"
 
-#: includes/class-tailorsheet-manager-post_types.php:290
-#: includes/class-tailorsheet-manager-post_types.php:291
+#: includes/class-tailorsheet-manager-post_types.php:304
+#: includes/class-tailorsheet-manager-post_types.php:305
 #: widgets/appsheet-functions-main.php:12
 msgid "Appsheet Functions"
 msgstr "Expresiones de AppSheet"
 
-#: includes/class-tailorsheet-manager-post_types.php:320
+#: includes/class-tailorsheet-manager-post_types.php:334
 msgid "Function Categories"
 msgstr "Categorías de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:321
+#: includes/class-tailorsheet-manager-post_types.php:335
 msgid "Function Category"
 msgstr "Categoría de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:326
+#: includes/class-tailorsheet-manager-post_types.php:340
 msgid "Function Examples"
 msgstr "Ejemplos de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:327
+#: includes/class-tailorsheet-manager-post_types.php:341
 msgid "Function Example"
 msgstr "Ejemplo de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:339
+#: includes/class-tailorsheet-manager-post_types.php:353
 msgid "AppSheet Example"
 msgstr "Ejemplo de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:340
-#: includes/class-tailorsheet-manager-post_types.php:343
+#: includes/class-tailorsheet-manager-post_types.php:354
+#: includes/class-tailorsheet-manager-post_types.php:357
 msgid "AppSheet Examples"
 msgstr "Ejemplos de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:341
+#: includes/class-tailorsheet-manager-post_types.php:355
 msgid "Appsheet Examples"
 msgstr "Ejemplos de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:372
-msgid "Example Categories"
-msgstr "Categorías de App"
-
-#: includes/class-tailorsheet-manager-post_types.php:373
-msgid "Example Category"
-msgstr "Categoría de App"
-
-#: includes/class-tailorsheet-manager-post_types.php:379
+#: includes/class-tailorsheet-manager-post_types.php:394
 msgid "Example Sectors"
 msgstr "Sectores de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:380
+#: includes/class-tailorsheet-manager-post_types.php:395
 msgid "Example Sector"
 msgstr "Sector de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:386
+#: includes/class-tailorsheet-manager-post_types.php:402
 msgid "Example Functionalities"
 msgstr "Funcionalidades de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:387
+#: includes/class-tailorsheet-manager-post_types.php:403
 msgid "Example Functionality"
 msgstr "Funcionalidad de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:393
+#: includes/class-tailorsheet-manager-post_types.php:410
 msgid "Example Integrations"
 msgstr "Integraciones de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:394
+#: includes/class-tailorsheet-manager-post_types.php:411
 msgid "Example Integration"
 msgstr "Integración de App"
-
-#: includes/class-tailorsheet-manager-post_types.php:400
-msgid "Example Tags"
-msgstr "Etiquetas de App"
-
-#: includes/class-tailorsheet-manager-post_types.php:401
-msgid "Example Tag"
-msgstr "Etiqueta de App"
 
 #: widgets/appsheet-functions-examples.php:12
 msgid "Appsheet Functions Examples"
@@ -346,6 +330,27 @@ msgstr "Ejemplos de expresiones AppSheet"
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr "Ejemplos de las expresiones AppSheet"
+
+#~ msgid "https://bachacode.com/"
+#~ msgstr "https://bachacode.com/"
+
+#~ msgid "WhatsApp message"
+#~ msgstr "Mensaje de WhatsApp"
+
+#~ msgid "Descriptive Tabs"
+#~ msgstr "Fichas descriptivas"
+
+#~ msgid "Example Categories"
+#~ msgstr "Categorías de App"
+
+#~ msgid "Example Category"
+#~ msgstr "Categoría de App"
+
+#~ msgid "Example Tags"
+#~ msgstr "Etiquetas de App"
+
+#~ msgid "Example Tag"
+#~ msgstr "Etiqueta de App"
 
 #~ msgid "Automatizations"
 #~ msgstr "Automatizaciones"
