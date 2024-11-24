@@ -105,6 +105,11 @@ class Tailorsheet_Manager_Admin
 
     public function create_menu()
     {
+        // If we are not in admin area exit.
+			if ( ! is_admin() ) {
+				return;
+			}
+
         $config = array(
 
             'type'              => 'menu',
