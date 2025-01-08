@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-"
 "manager\n"
-"POT-Creation-Date: 2024-11-22T21:53:29+01:00\n"
-"PO-Revision-Date: 2024-11-22 16:55-0400\n"
+"POT-Creation-Date: 2025-01-08T22:05:16+01:00\n"
+"PO-Revision-Date: 2025-01-08 17:32-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -17,8 +17,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: D:/xampp/htdocs/wordpress-projects/wp-plugin-playground/wp-content/plugins/tailorsheet-manager/tailorsheet-manager.php
-#: admin/class-tailorsheet-manager-admin.php:112
-#: admin/class-tailorsheet-manager-admin.php:113
+#: admin/class-tailorsheet-manager-admin.php:117
+#: admin/class-tailorsheet-manager-admin.php:118
 msgid "TailorSheet Manager"
 msgstr "Gestor TailorSheet"
 
@@ -42,74 +42,74 @@ msgstr ""
 msgid "Cristhian Flores"
 msgstr "Cristhian Flores"
 
-#: admin/class-tailorsheet-manager-admin.php:244
-#: admin/class-tailorsheet-manager-admin.php:342
+#: admin/class-tailorsheet-manager-admin.php:254
+#: admin/class-tailorsheet-manager-admin.php:352
 msgid "Extra fields"
 msgstr "Campos extra"
 
-#: admin/class-tailorsheet-manager-admin.php:252
+#: admin/class-tailorsheet-manager-admin.php:262
 msgid "Appsheet Function fields"
 msgstr "Campos de Expresiones AppSheet"
 
-#: admin/class-tailorsheet-manager-admin.php:293
+#: admin/class-tailorsheet-manager-admin.php:303
 msgid "Example Syntax"
 msgstr "Ejemplo de uso"
 
-#: admin/class-tailorsheet-manager-admin.php:299
+#: admin/class-tailorsheet-manager-admin.php:309
 msgid "The syntax shown on the function description page"
 msgstr "La sintaxis mostrada en la página de descripción de la función"
 
-#: admin/class-tailorsheet-manager-admin.php:306
+#: admin/class-tailorsheet-manager-admin.php:316
 #: af_templates/af-admin-function-example-fields.php:12
 #: af_templates/af-admin-function-example-fields.php:24
 msgid "Expected Result"
 msgstr "Resultado esperado"
 
-#: admin/class-tailorsheet-manager-admin.php:312
+#: admin/class-tailorsheet-manager-admin.php:322
 msgid "The type of data that is returned by the function"
 msgstr "Tipo de datos devueltos por la expresión"
 
-#: admin/class-tailorsheet-manager-admin.php:318
+#: admin/class-tailorsheet-manager-admin.php:328
 msgid "Explanation"
 msgstr "Explicación"
 
-#: admin/class-tailorsheet-manager-admin.php:349
+#: admin/class-tailorsheet-manager-admin.php:359
 msgid "External Fields"
 msgstr "Campos externos"
 
-#: admin/class-tailorsheet-manager-admin.php:355
+#: admin/class-tailorsheet-manager-admin.php:365
 msgid "Presentation video"
 msgstr "Vídeo de presentación"
 
-#: admin/class-tailorsheet-manager-admin.php:365
+#: admin/class-tailorsheet-manager-admin.php:375
 msgid "Iframe code"
 msgstr "Código iframe"
 
-#: admin/class-tailorsheet-manager-admin.php:377
+#: admin/class-tailorsheet-manager-admin.php:387
 msgid "App Tabs"
 msgstr "Pestañas del ejemplo"
 
-#: admin/class-tailorsheet-manager-admin.php:383
+#: admin/class-tailorsheet-manager-admin.php:393
 msgid "App Information"
 msgstr "Información de la App"
 
-#: admin/class-tailorsheet-manager-admin.php:392
+#: admin/class-tailorsheet-manager-admin.php:402
 msgid "Sections"
 msgstr "Secciones"
 
-#: admin/class-tailorsheet-manager-admin.php:401
+#: admin/class-tailorsheet-manager-admin.php:411
 msgid "Functionality"
 msgstr "Funcionalidades"
 
-#: admin/class-tailorsheet-manager-admin.php:411
+#: admin/class-tailorsheet-manager-admin.php:421
 msgid "Gallery"
 msgstr "Galería del ejemplo"
 
-#: admin/class-tailorsheet-manager-admin.php:413
+#: admin/class-tailorsheet-manager-admin.php:423
 msgid "Add to gallery"
 msgstr "Subir a galería"
 
-#: admin/class-tailorsheet-manager-admin.php:499
+#: admin/class-tailorsheet-manager-admin.php:509
 msgid "AppSheet Functions"
 msgstr "Expresiones de AppSheet"
 
@@ -286,40 +286,48 @@ msgstr "Ejemplos de expresión"
 msgid "Function Example"
 msgstr "Ejemplo de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:353
+#: includes/class-tailorsheet-manager-post_types.php:347
+msgid "Related Functions"
+msgstr "Expresiones relacionadas"
+
+#: includes/class-tailorsheet-manager-post_types.php:348
+msgid "Related Function"
+msgstr "Expresión relacionada"
+
+#: includes/class-tailorsheet-manager-post_types.php:360
 msgid "AppSheet Example"
 msgstr "Ejemplo de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:354
-#: includes/class-tailorsheet-manager-post_types.php:357
+#: includes/class-tailorsheet-manager-post_types.php:361
+#: includes/class-tailorsheet-manager-post_types.php:364
 msgid "AppSheet Examples"
 msgstr "Ejemplos de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:355
+#: includes/class-tailorsheet-manager-post_types.php:362
 msgid "Appsheet Examples"
 msgstr "Ejemplos de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:394
+#: includes/class-tailorsheet-manager-post_types.php:401
 msgid "Example Sectors"
 msgstr "Sectores de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:395
+#: includes/class-tailorsheet-manager-post_types.php:402
 msgid "Example Sector"
 msgstr "Sector de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:402
+#: includes/class-tailorsheet-manager-post_types.php:409
 msgid "Example Functionalities"
 msgstr "Funcionalidades de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:403
+#: includes/class-tailorsheet-manager-post_types.php:410
 msgid "Example Functionality"
 msgstr "Funcionalidad de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:410
+#: includes/class-tailorsheet-manager-post_types.php:417
 msgid "Example Integrations"
 msgstr "Integraciones de App"
 
-#: includes/class-tailorsheet-manager-post_types.php:411
+#: includes/class-tailorsheet-manager-post_types.php:418
 msgid "Example Integration"
 msgstr "Integración de App"
 
