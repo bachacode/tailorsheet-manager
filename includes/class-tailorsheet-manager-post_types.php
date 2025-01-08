@@ -341,6 +341,13 @@ class Tailorsheet_Manager_Post_Types
                         'single'            => __('Function Example', 'tailorsheet-manager'),
                         'post_types'        => 'expresiones-appsheet',
                         'public'            => false
+                    ),
+                    array(
+                        'taxonomy'          => 'relacion-de-expresion',
+                        'plural'            => __('Related Functions', 'tailorsheet-manager'),
+                        'single'            => __('Related Function', 'tailorsheet-manager'),
+                        'post_types'        => 'expresiones-appsheet',
+                        'public'            => false
                     )
                 ),
             ),

@@ -34,6 +34,7 @@
 			'post-type-ejemplos-appsheet', 
 			'taxonomy-categoria-de-expresion', 
 			'taxonomy-ejemplo-de-expresion', 
+			'taxonomy-relacion-de-expresion', 
 			'taxonomy-categoria-de-ejemplo', 
 			'taxonomy-sector-de-ejemplo', 
 			'taxonomy-func-de-ejemplo', 

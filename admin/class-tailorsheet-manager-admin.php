@@ -178,6 +178,11 @@ class Tailorsheet_Manager_Admin
                 'menu_slug'         => 'edit-tags.php?taxonomy=ejemplo-de-expresion',
             ),
             array(
+                'page_title'        => 'Expresiones relacionadas',
+                'menu_title'        => 'Expresiones relacionadas',
+                'menu_slug'         => 'edit-tags.php?taxonomy=relacion-de-expresion',
+            ),
+            array(
                 'page_title'        => 'Ejemplos AppSheet',
                 'menu_title'        => '<span class="ts-manager-settings-menu-title">Ejemplos AppSheet</span>',
                 'menu_slug'         => 'edit.php?post_type=ejemplos-appsheet',
