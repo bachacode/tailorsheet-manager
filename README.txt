@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.4.3 =
+* Added a new taxonomy to "expresiones-appsheet" called "relacion-de-expresion".
+* Updated translations
+
 = 2.4.2 =
 * Fixed bad code that called undefined variable in post type file
 * Added app_gallery meta field to "ejemplos-appsheet"
