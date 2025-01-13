@@ -50,8 +50,8 @@
                     afContainer.html(response);
                 },
                 error: function( xhr, status, error ) {
-                    console.log( 'Status: ' + xhr.status );
-                    console.log( 'Error: ' + xhr.responseText );
+                    // console.log( 'Status: ' + xhr.status );
+                    // console.log( 'Error: ' + xhr.responseText );
                 },
                 complete: function() {
                     enableAll();
@@ -84,8 +84,8 @@
                     afContainer.html(response);
                 },
                 error: function( xhr, status, error ) {
-                    console.log( 'Status: ' + xhr.status );
-                    console.log( 'Error: ' + xhr.responseText );
+                    // console.log( 'Status: ' + xhr.status );
+                    // console.log( 'Error: ' + xhr.responseText );
                 },
                 complete: function() {
                     enableAll();
@@ -118,8 +118,8 @@
                     afContainer.html(response);
                 },
                 error: function( xhr, status, error ) {
-                    console.log( 'Status: ' + xhr.status );
-                    console.log( 'Error: ' + xhr.responseText );
+                    // console.log( 'Status: ' + xhr.status );
+                    // console.log( 'Error: ' + xhr.responseText );
                 },
                 complete: function() {
                     enableAll();
