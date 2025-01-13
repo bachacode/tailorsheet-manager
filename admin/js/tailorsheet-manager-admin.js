@@ -29,6 +29,11 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 	$( document ).ready(function() {
+		$('select[multiple]').select2({
+			placeholder: 'Selecciona una o mas expresiones...',
+			width: '100%',
+		});
+
 		var classes = [
 			'post-type-expresiones-appsheet', 
 			'post-type-ejemplos-appsheet', 
@@ -53,5 +58,6 @@
 			$('#toplevel_page_tailorsheet-manager-admin').addClass('wp-has-current-submenu wp-menu-open').removeClass('wp-not-current-submenu');
 			$('.toplevel_page_tailorsheet-manager-admin').addClass('wp-has-current-submenu').removeClass('wp-not-current-submenu');
 		  }
+
 	});
 })( jQuery );
