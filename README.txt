@@ -21,6 +21,10 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.4.4 =
+* Added a new metafield to "expresiones-appsheet" called "related_functions".
+* Updated translations
+
 = 2.4.3 =
 * Added a new taxonomy to "expresiones-appsheet" called "relacion-de-expresion".
 * Updated translations
