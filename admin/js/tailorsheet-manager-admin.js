@@ -43,7 +43,7 @@
 			'toplevel_page_tailorsheet-manager-admin'
 		];
 		var settings_parent = $('.ts-manager-settings-menu-title').closest('li');
-		console.log(settings_parent);
+		
 		settings_parent.addClass('ts-manager-settings-option');
 
 		if ($('body').is("." + classes.join(', .'))) {
