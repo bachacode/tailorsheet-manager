@@ -76,7 +76,7 @@ class Tailorsheet_Manager_Admin
          */
 
         wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-admin.css', array(), $this->version, 'all');
-
+        wp_enqueue_style('select2-css', plugin_dir_url(__FILE__) . 'css/select2.min.css', array(), '4.1.0', 'all');
     }
 
     /**
@@ -100,7 +100,7 @@ class Tailorsheet_Manager_Admin
          */
 
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-admin.js', array( 'jquery' ), $this->version, false);
-
+        wp_enqueue_script('select2-js', plugin_dir_url(__FILE__) . 'js/select2.min.js', array('jquery'), '4.1.0', true);
     }
 
     public function create_menu()
