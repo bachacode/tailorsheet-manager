@@ -331,6 +331,28 @@ class Tailorsheet_Manager_Admin
                         'cols'        => 5,
                     ),
                 ),
+
+                array(
+                    'id'          => 'related_functions',
+                    'type'        => 'select',
+                    'title'       => __('Related Functions', 'tailorsheet-manager'),
+                    'query'          => array(
+                        'type'          => 'posts', // Built-in type 'posts' to query custom post types.
+                        'args'          => array(
+                            'post_type'      => 'expresiones-appsheet', // Your custom post type.
+                            'posts_per_page' => -1, // Retrieve all posts.
+                            'orderby'        => 'title', // Order by title for better readability.
+                            'order'          => 'ASC', // Ascending order.
+                        ),
+                    ),
+                    'attributes'     => array(
+                        'multiple'       => true, // Makes the select a multiselect field.
+                        'rows'        => 10,
+                        'cols'        => 5,
+                    ),
+                    'default_option' => 'Select one or more...', // Optional default placeholder option.
+                
+                ),
             ),
         );
 
