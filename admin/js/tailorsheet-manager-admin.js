@@ -29,10 +29,14 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 	$( document ).ready(function() {
-		$('select[multiple]').select2({
-			placeholder: 'Selecciona una o mas expresiones...',
-			width: '100%',
-		});
+		var relatedSelect = $('select[multiple]');
+		
+		if(relatedSelect.length > 0) {
+			relatedSelect.select2({
+				placeholder: 'Selecciona una o mas expresiones...',
+				width: '100%',
+			});
+		}
 
 		var classes = [
 			'post-type-expresiones-appsheet', 
