@@ -379,7 +379,7 @@ class Tailorsheet_Manager_Admin
         $fields[] = array(
             'name'   => 'first',
             'title'  => __('External Fields', 'tailorsheet-manager'),
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-external',
             'fields' => array(
                 array(
                     'id'          => 'presentation_video',
@@ -407,7 +407,7 @@ class Tailorsheet_Manager_Admin
         $fields[] = array(
             'name'   => 'second',
             'title'  => __('App Tabs', 'tailorsheet-manager'),
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-editor-ul',
             'fields' => array(
                 array(
                     'id'          => 'app_information',
