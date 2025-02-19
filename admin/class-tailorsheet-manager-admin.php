@@ -373,7 +373,7 @@ class Tailorsheet_Manager_Admin
             'priority'          => 'default',
             'title'             => __('Extra fields', 'tailorsheet-manager'),
             'capability'        => 'edit_posts',
-            'tabbed'            => true,
+            'tabbed'            => false,
         );
 
         $fields[] = array(
