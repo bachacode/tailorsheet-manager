@@ -449,6 +449,56 @@ class Tailorsheet_Manager_Admin
             ),
         );
 
+        $fields[] = array(
+            'name'   => 'third',
+            'title'  => __('SEO Fields', 'tailorsheet-manager'),
+            'icon'   => 'dashicons-chart-bar',
+            'fields' => array(
+                array(
+                    'id'          => 'app_faq',
+                    'type'        => 'group',
+                    'title'       => __('FAQs', 'tailorsheet-manager'),
+                    'options'     => array(
+                        'repeater'      => true,
+                        'accordion'     => true,
+                        'sortable'      => true,
+                        'button_title'  => __('Add New Question', 'tailorsheet-manager'),
+                        'group_title'   => __('Frequently Asked Question', 'tailorsheet-manager'),
+                        'limit'         => 30,
+                    ),
+                    'fields' => array(
+                        array(
+                            'id'    => 'app_question_sortable_text',
+                            'type'  => 'text',
+                            'title' => __('Question', 'tailorsheet-manager'),
+                        ),
+                        array(
+                            'id'          => 'app_answer_sortable_editor',
+                            'type'        => 'editor',
+                            'title'       => __('Answer', 'tailorsheet-manager'),
+                        )
+                    )
+                ),
+                array(
+                    'id'          => 'app_structured_data_script',
+                    'type'        => 'ace_editor',
+                    'title'       => __('Structured Data', 'tailorsheet-manager'),
+                    'options' => array(
+                        'theme'                     => 'ace/theme/chrome', // Choose a theme
+                        'mode'                      => 'ace/mode/javascript', // Set mode to JavaScript for JSON-LD
+                        'showGutter'                => true, // Show line numbers
+                        'showPrintMargin'           => false, // Hide print margin
+                        'enableBasicAutocompletion' => false, // Enable autocompletion
+                        'enableSnippets'            => false,
+				        'enableLiveAutocompletion'  => false,
+                    ),
+                    'attributes' => array(
+                        'style' => 'height: 300px; max-width: 700px;', // Adjust size
+                    ),
+                ),
+            ),
+        );
+
         /**
          * instantiate your admin page
          */
