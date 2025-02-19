@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tailorsheet-"
 "manager\n"
-"POT-Creation-Date: 2025-01-13T15:18:56+01:00\n"
-"PO-Revision-Date: 2025-01-13 10:22-0400\n"
+"POT-Creation-Date: 2025-02-19T15:41:35+01:00\n"
+"PO-Revision-Date: 2025-02-19 10:47-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -74,7 +74,6 @@ msgid "Explanation"
 msgstr "Explicación"
 
 #: admin/class-tailorsheet-manager-admin.php:338
-#: includes/class-tailorsheet-manager-post_types.php:347
 msgid "Related Functions"
 msgstr "Expresiones relacionadas"
 
@@ -114,7 +113,35 @@ msgstr "Galería del ejemplo"
 msgid "Add to gallery"
 msgstr "Subir a galería"
 
-#: admin/class-tailorsheet-manager-admin.php:531
+#: admin/class-tailorsheet-manager-admin.php:454
+msgid "SEO Fields"
+msgstr "Campos de SEO"
+
+#: admin/class-tailorsheet-manager-admin.php:460
+msgid "FAQs"
+msgstr "Preguntas frecuentes"
+
+#: admin/class-tailorsheet-manager-admin.php:465
+msgid "Add New Question"
+msgstr "Añadir Nueva Pregunta"
+
+#: admin/class-tailorsheet-manager-admin.php:466
+msgid "Frequently Asked Question"
+msgstr "Preguntas frecuentes"
+
+#: admin/class-tailorsheet-manager-admin.php:473
+msgid "Question"
+msgstr "Pregunta"
+
+#: admin/class-tailorsheet-manager-admin.php:478
+msgid "Answer"
+msgstr "Respuesta"
+
+#: admin/class-tailorsheet-manager-admin.php:485
+msgid "Structured Data"
+msgstr "Datos estructurados"
+
+#: admin/class-tailorsheet-manager-admin.php:581
 msgid "AppSheet Functions"
 msgstr "Expresiones de AppSheet"
 
@@ -291,10 +318,6 @@ msgstr "Ejemplos de expresión"
 msgid "Function Example"
 msgstr "Ejemplo de expresión"
 
-#: includes/class-tailorsheet-manager-post_types.php:348
-msgid "Related Function"
-msgstr "Expresión relacionada"
-
 #: includes/class-tailorsheet-manager-post_types.php:360
 msgid "AppSheet Example"
 msgstr "Ejemplo de App"
@@ -339,6 +362,9 @@ msgstr "Ejemplos de expresiones AppSheet"
 #: widgets/appsheet-functions-explanation.php:12
 msgid "Appsheet Functions Explanation"
 msgstr "Ejemplos de las expresiones AppSheet"
+
+#~ msgid "Related Function"
+#~ msgstr "Expresión relacionada"
 
 #~ msgid "https://bachacode.com/"
 #~ msgstr "https://bachacode.com/"
