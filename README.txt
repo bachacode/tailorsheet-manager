@@ -21,6 +21,13 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.5.0 =
+* Added a new section of SEO fields to examples appsheet metabox
+* Examples appsheet metabox is now untabbed
+* Untabbed meta fields now have a custom background color
+* Changed icons for extra fields tabs
+* Check if relatedSelect existe before using method "select2"
+
 = 2.4.5 =
 * Removed taxonomy "relacion-de-expresion" from "expresiones-appsheet".
 
