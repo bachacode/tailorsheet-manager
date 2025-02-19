@@ -468,12 +468,12 @@ class Tailorsheet_Manager_Admin
                     ),
                     'fields' => array(
                         array(
-                            'id'    => 'app_question_sortable_text',
+                            'id'    => 'app_faq_question',
                             'type'  => 'text',
                             'title' => __('Question', 'tailorsheet-manager'),
                         ),
                         array(
-                            'id'          => 'app_answer_sortable_editor',
+                            'id'          => 'app_faq_answer',
                             'type'        => 'editor',
                             'title'       => __('Answer', 'tailorsheet-manager'),
                         )
