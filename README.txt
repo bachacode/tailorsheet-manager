@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.5.1 =
+* Reduced "app_faq" subfields id length
+
 = 2.5.0 =
 * Added a new section of SEO fields to examples appsheet metabox
 * Examples appsheet metabox is now untabbed
