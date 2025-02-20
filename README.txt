@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.5.3 =
+* Now FAQ widget passes down value with html attributes instead of localizing script
+
 = 2.5.2 =
 * Updated translations
 * Created and registered "Appsheet Functions Faq" Js and Css

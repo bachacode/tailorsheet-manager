@@ -79,7 +79,7 @@ class Tailorsheet_Manager_Public
 
         wp_enqueue_style($this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-main.css', array(), $this->version, 'all');
 
-        wp_register_style($this->plugin_name . '-faq', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-faq.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-faq', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-faq.css', array(), $this->version, 'all');
     }
 
     /**
@@ -106,7 +106,7 @@ class Tailorsheet_Manager_Public
         // Register searchbar JS Script
         wp_register_script( $this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-main.js', array( 'jquery' ), $this->version, false);
 
-        wp_register_script( $this->plugin_name . '-faq', plugin_dir_url( __FILE__ ) . 'js/tailorsheet-manager-faq.js', array('jquery'), $this->version, false );
+        wp_enqueue_script( $this->plugin_name . '-faq', plugin_dir_url( __FILE__ ) . 'js/tailorsheet-manager-faq.js', array('jquery'), $this->version, false );
     }
 
     public function query_tailorsheet_manager()

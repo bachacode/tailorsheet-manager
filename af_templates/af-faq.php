@@ -1,15 +1,4 @@
-<?php
-$handle = 'tailorsheet-manager-faq';
-
-wp_localize_script($handle, 'wp_ajax', array(
-    'faq_first_opened' => isset( $data->faq_first_opened ) ? $data->faq_first_opened : 'no',
-));
-
-wp_enqueue_script($handle);
-wp_enqueue_style($handle);
-?>
-
-<div class="tm-accordion-wrapper">
+<div class="tm-accordion-wrapper" data-first-opened="<?php echo esc_attr($data->faq_first_opened); ?>">
     <div class="tm-accordion-items">
         <?php foreach($data->faq_items as $item): ?>
         <div class="tm-accordion-item">

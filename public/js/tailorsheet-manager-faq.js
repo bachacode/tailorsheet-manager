@@ -1,10 +1,13 @@
 jQuery(document).ready(function($) {
-    // Initially hide all accordion content panels.
-    $('.tm-accordion-content-wrapper').hide();
+    var $accordionWrapper = $('.tm-accordion-wrapper');
+    var firstOpened = $accordionWrapper.data('first-opened');
 
-    // Check if the localized variable is set and if the first item should be opened.
-    if (typeof tmAccordionData !== 'undefined' && tmAccordionData.faq_first_opened === "yes") {
-        $('.tm-accordion-item:first')
+    // Hide all accordion content panels initially.
+    $accordionWrapper.find('.tm-accordion-content-wrapper').hide();
+
+    // If first item should be open, open it.
+    if ( firstOpened === 'yes' ) {
+        $accordionWrapper.find('.tm-accordion-item:first')
             .addClass('active')
             .find('.tm-accordion-content-wrapper')
             .show();
