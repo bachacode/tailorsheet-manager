@@ -376,6 +376,30 @@ class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'heading_color',
+            [
+                'label'     => esc_html__( 'Heading Color', 'tailorsheet-manager' ),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tm-accordion-heading-wrapper h3' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'heading_color_active',
+            [
+                'label'     => esc_html__( 'Heading Color (Active)', 'tailorsheet-manager' ),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tm-accordion-item.active .tm-accordion-heading-wrapper h3' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+
         $this->end_controls_section();
 
         // Content Style
@@ -425,6 +449,28 @@ class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
                 'name'     => 'content_typography',
                 'label'    => esc_html__( 'Typography', 'tailorsheet-manager' ),
                 'selector' => '{{WRAPPER}} .tm-accordion-content-wrapper span',
+            ]
+        );
+
+        $this->add_control(
+            'content_color',
+            [
+                'label'     => esc_html__( 'Content Color', 'tailorsheet-manager' ),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tm-accordion-content-wrapper span' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'content_color_active',
+            [
+                'label'     => esc_html__( 'Content Color (Active)', 'tailorsheet-manager' ),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tm-accordion-item.active .tm-accordion-content-wrapper span' => 'color: {{VALUE}};',
+                ],
             ]
         );
 

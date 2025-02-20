@@ -21,6 +21,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.5.4 =
+* Added font color options to heading and content of "Appsheet Functions FAQ"
+
 = 2.5.3 =
 * Now FAQ widget passes down value with html attributes instead of localizing script
 
