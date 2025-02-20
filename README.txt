@@ -21,6 +21,11 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.5.2 =
+* Updated translations
+* Created and registered "Appsheet Functions Faq" Js and Css
+* Created and registered a new widget "Appsheet Functions Faq"
+
 = 2.5.1 =
 * Reduced "app_faq" subfields id length
 
