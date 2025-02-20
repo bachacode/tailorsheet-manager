@@ -567,10 +567,12 @@ class Tailorsheet_Manager_Admin
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-examples.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-explanation.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-main.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-faq.php';
 
         $widgets_manager->register(new \Elementor_Appsheet_Functions_Examples());
         $widgets_manager->register(new \Elementor_Appsheet_Functions_Explanation());
         $widgets_manager->register(new \Elementor_Appsheet_Functions());
+        $widgets_manager->register(new \Elementor_Appsheet_Functions_Faq());
     }
 
     public function register_elementor_tailorsheet_manager_category($elements_manager)
