@@ -1,0 +1,27 @@
+.tm-accordion-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.tm-accordion-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Default state: inactive icon visible, active icon hidden */
+.tm-accordion-icon.active-icon {
+    display: none;
+}
+.tm-accordion-icon.inactive-icon {
+    display: block;
+}
+
+/* Active state: show active icon, hide inactive icon */
+.tm-accordion-item.active .tm-accordion-icon.active-icon {
+    display: block;
+}
+.tm-accordion-item.active .tm-accordion-icon.inactive-icon {
+    display: none;
+}
