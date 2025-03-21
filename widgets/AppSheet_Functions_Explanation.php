@@ -1,10 +1,12 @@
 <?php
 
-class Elementor_Appsheet_Functions_Explanation extends \Elementor\Widget_Base
+namespace TailorSheet_Manager\Widgets;
+
+class AppSheet_Functions_Explanation extends \Elementor\Widget_Base
 {
     public function get_name()
     {
-        return 'appsheet_functions_explanation';
+        return 'tsm_appsheet_functions_explanation';
     }
 
     public function get_title()

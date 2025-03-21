@@ -1,13 +1,15 @@
 <?php
 
-class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
+namespace TailorSheet_Manager\Widgets;
+
+class Accordion extends \Elementor\Widget_Base
 {
     public function get_name() {
-        return 'appsheet_functions_faq';
+        return 'tsm_accordion';
     }
 
     public function get_title() {
-        return esc_html__( 'Appsheet Functions Faq', 'tailorsheet-manager' );
+        return esc_html__( 'TSM Accordion', 'tailorsheet-manager' );
     }
 
     public function get_icon() {

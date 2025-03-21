@@ -1,15 +1,17 @@
 <?php
 
-class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
+namespace TailorSheet_Manager\Widgets;
+
+class AppSheet_Functions_List extends \Elementor\Widget_Base
 {
     public function get_name()
     {
-        return 'appsheet_functions';
+        return 'tsm_appsheet_functions_list';
     }
 
     public function get_title()
     {
-        return esc_html__('Appsheet Functions', 'tailorsheet-manager');
+        return esc_html__('Appsheet Functions List', 'tailorsheet-manager');
     }
 
     public function get_icon()
@@ -45,7 +47,7 @@ class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
 			'post_status' => 'publish'
 		);
 	
-		$loop = new WP_Query( $args );
+		$loop = new \WP_Query( $args );
 	
 		while( $loop->have_posts() ): $loop->the_post();
             $post_data = array (
