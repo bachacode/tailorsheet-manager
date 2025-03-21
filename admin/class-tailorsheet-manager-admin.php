@@ -563,24 +563,21 @@ class Tailorsheet_Manager_Admin
 
     public function register_elementor_widgets($widgets_manager)
     {
-
-        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-examples.php';
-        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-explanation.php';
-        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-main.php';
-        require_once plugin_dir_path(dirname(__FILE__)) . 'widgets/appsheet-functions-faq.php';
-
-        $widgets_manager->register(new \Elementor_Appsheet_Functions_Examples());
-        $widgets_manager->register(new \Elementor_Appsheet_Functions_Explanation());
-        $widgets_manager->register(new \Elementor_Appsheet_Functions());
-        $widgets_manager->register(new \Elementor_Appsheet_Functions_Faq());
+        $registered_widgets = require_once plugin_dir_path(dirname(__FILE__)) . 'config/widgets.php';
+        
+        foreach($registered_widgets as $widget) {
+            if($widget['published']) {
+                $widgets_manager->register(new $widget['class']);
+            }
+        }  
     }
 
     public function register_elementor_tailorsheet_manager_category($elements_manager)
     {
         $elements_manager->add_category(
-            'appsheet-functions',
+            'tailorsheet-manager',
             [
-                'title' => esc_html__('AppSheet Functions', 'tailorsheet-manager'),
+                'title' => esc_html__('TailorSheet Manager', 'tailorsheet-manager'),
             ]
         );
     }
