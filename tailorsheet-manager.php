@@ -56,6 +56,13 @@ define('TAILORSHEET_MANAGER_BASE_URL', plugin_dir_url(__FILE__));
 define('TAILORSHEET_MANAGER_NAME_SLUG', 'tailorsheet-manager');
 
 /**
+ * Including composer autoloader globally.
+ *
+ * @since 2.5.4
+ */
+require_once TAILORSHEET_MANAGER_BASE_DIR . 'autoload.php';
+
+/**
  * Initialize custom templater
  */
 if (! class_exists('Custom_Template_Loader')) {
