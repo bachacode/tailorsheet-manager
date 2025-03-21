@@ -1,5 +1,7 @@
 <?php
 
+use TailorSheet_Manager\Libraries\Custom_Template_Loader;
+
 function af_load_template($template_name, $data = array ())
 {
     $templates = new Custom_Template_Loader;
@@ -15,4 +17,9 @@ function af_load_template($template_name, $data = array ())
 function af_show_template($template_name, $data = array())
 {
     echo af_load_template($template_name, $data);
+}
+
+function admin_assets($dir) 
+{
+    return TAILORSHEET_MANAGER_BASE_DIR . 'assets/admin/' . $dir;
 }

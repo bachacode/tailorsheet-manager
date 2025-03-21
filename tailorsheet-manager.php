@@ -63,13 +63,6 @@ define('TAILORSHEET_MANAGER_NAME_SLUG', 'tailorsheet-manager');
 require_once TAILORSHEET_MANAGER_BASE_DIR . 'autoload.php';
 
 /**
- * Initialize custom templater
- */
-if (! class_exists('Custom_Template_Loader')) {
-    require_once plugin_dir_path(__FILE__) . 'includes/libraries/class-tailorsheet-manager-template-loader.php';
-}
-
-/**
  * Helper functions for elementor templating
  */
 require_once plugin_dir_path(__FILE__) . 'includes/elementor.php';

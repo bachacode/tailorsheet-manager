@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Core;
 
+use TailorSheet_Manager\Admin\Admin_Bootstrap;
+
 class Bootstrap
 {
     /**
@@ -76,11 +78,6 @@ class Bootstrap
     private function load_dependencies()
     {
         /**
-         * The class responsible for defining all actions that occur in the admin area.
-         */
-        require_once TAILORSHEET_MANAGER_BASE_DIR . 'admin/class-tailorsheet-manager-admin.php';
-
-        /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
@@ -92,7 +89,7 @@ class Bootstrap
          * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
          * @author Joe Szalai
          */
-        require_once TAILORSHEET_MANAGER_BASE_DIR . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
+        require_once TAILORSHEET_MANAGER_BASE_DIR . 'vendor/exopite-simple-options/exopite-simple-options-framework-class.php';
 
 
         $this->loader = new Loader();
@@ -127,7 +124,7 @@ class Bootstrap
     private function define_admin_hooks()
     {
 
-        $plugin_admin = new \Tailorsheet_Manager_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new Admin_Bootstrap($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');

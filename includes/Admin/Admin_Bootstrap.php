@@ -1,26 +1,8 @@
 <?php
 
-/**
- * The admin-specific functionality of the plugin.
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/admin
- */
+namespace TailorSheet_Manager\Admin;
 
-/**
- * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/admin
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Tailorsheet_Manager_Admin
+class Admin_Bootstrap
 {
     /**
      * The ID of this plugin.
@@ -74,9 +56,9 @@ class Tailorsheet_Manager_Admin
          * between the defined hooks and the functions defined in this
          * class.
          */
-
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-admin.css', array(), $this->version, 'all');
-        wp_enqueue_style('select2-css', plugin_dir_url(__FILE__) . 'css/select2.min.css', array(), '4.1.0', 'all');
+        
+        wp_enqueue_style($this->plugin_name, admin_assets('css/tailorsheet-manager-admin.css'), array(), $this->version, 'all');
+        wp_enqueue_style('select2-css', admin_assets('css/select2-min.css'), array(), '4.1.0', 'all');
     }
 
     /**
@@ -99,8 +81,8 @@ class Tailorsheet_Manager_Admin
          * class.
          */
 
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-admin.js', array( 'jquery' ), $this->version, false);
-        wp_enqueue_script('select2-js', plugin_dir_url(__FILE__) . 'js/select2.min.js', array('jquery'), '4.1.0', true);
+        wp_enqueue_script($this->plugin_name, admin_assets('js/tailorsheet-manager-admin.js'), array( 'jquery' ), $this->version, false);
+        wp_enqueue_script('select2-js', admin_assets('js/select2-min.js'), array('jquery'), '4.1.0', true);
     }
 
     public function create_menu()
@@ -159,7 +141,7 @@ class Tailorsheet_Manager_Admin
         /**
          * instantiate your admin page
          */
-        (new Exopite_Simple_Options_Framework($config, $fields_menu));
+        (new \Exopite_Simple_Options_Framework($config, $fields_menu));
 
         $submenu_options = array(
             array(
@@ -359,7 +341,7 @@ class Tailorsheet_Manager_Admin
         /**
          * instantiate your admin page
          */
-        (new Exopite_Simple_Options_Framework($config_metabox, $fields));
+        (new \Exopite_Simple_Options_Framework($config_metabox, $fields));
     }
 
     public function create_metaboxes_examples_appsheet()
@@ -502,7 +484,7 @@ class Tailorsheet_Manager_Admin
         /**
          * instantiate your admin page
          */
-        (new Exopite_Simple_Options_Framework($config_metabox, $fields));
+        (new \Exopite_Simple_Options_Framework($config_metabox, $fields));
     }
 
     public function fe_add_fields()
@@ -563,7 +545,7 @@ class Tailorsheet_Manager_Admin
 
     public function register_elementor_widgets($widgets_manager)
     {
-        $registered_widgets = require_once plugin_dir_path(dirname(__FILE__)) . 'config/widgets.php';
+        $registered_widgets = require_once TAILORSHEET_MANAGER_BASE_DIR . 'config/widgets.php';
         
         foreach($registered_widgets as $widget) {
             if($widget['published']) {

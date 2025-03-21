@@ -1,8 +1,6 @@
 <?php
 
-if (! class_exists('Gamajo_Template_Loader')) {
-    require plugin_dir_path(__FILE__) . 'class-gamajo-template-loader.php';
-}
+namespace TailorSheet_Manager\Libraries;
 
 /**
  * Template loader for PW Sample Plugin.
