@@ -21,5 +21,10 @@ function af_show_template($template_name, $data = array())
 
 function admin_assets($dir) 
 {
-    return TAILORSHEET_MANAGER_BASE_DIR . 'assets/admin/' . $dir;
+    return TAILORSHEET_MANAGER_BASE_URL . 'assets/admin/' . $dir;
+}
+
+function public_assets($dir) 
+{
+    return TAILORSHEET_MANAGER_BASE_URL . 'assets/public/' . $dir;
 }
