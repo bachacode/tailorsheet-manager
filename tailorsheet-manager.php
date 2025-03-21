@@ -107,8 +107,7 @@ if (is_admin()) {
  */
 function activate_tailorsheet_manager()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager-activator.php';
-    Tailorsheet_Manager_Activator::activate();
+    \TailorSheet_Manager\Core\Activator::activate();
 }
 
 /**
@@ -117,18 +116,11 @@ function activate_tailorsheet_manager()
  */
 function deactivate_tailorsheet_manager()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager-deactivator.php';
-    Tailorsheet_Manager_Deactivator::deactivate();
+    \TailorSheet_Manager\Core\Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_tailorsheet_manager');
 register_deactivation_hook(__FILE__, 'deactivate_tailorsheet_manager');
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager.php';
 
 /**
  * Begins execution of the plugin.
@@ -141,7 +133,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager.php';
  */
 function run_tailorsheet_manager()
 {
-    $plugin = new Tailorsheet_Manager();
+    $plugin = new \TailorSheet_Manager\Core\Bootstrap();
     $plugin->run();
 }
 run_tailorsheet_manager();

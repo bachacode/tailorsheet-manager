@@ -1,32 +1,15 @@
 <?php
 
-/**
- * Fired during plugin activation
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- */
+namespace TailorSheet_Manager\Core;
 
-/**
- * Fired during plugin activation.
- *
- * This class defines all code necessary to run during the plugin's activation.
- *
- * @since      1.0.0
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Tailorsheet_Manager_Activator
+class Activator
 {
     /**
      * Short Description. (use period)
      *
      * Long Description.
-     *
+     * 
+     * @return void
      * @since    1.0.0
      */
     public static function activate()
@@ -36,8 +19,7 @@ class Tailorsheet_Manager_Activator
         /**
          * Custom Post Types
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-post_types.php';
-        $plugin_post_types = new Tailorsheet_Manager_Post_Types();
+        $plugin_post_types = new Post_Types();
 
         /**
          * The problem with the initial activation code is that when the activation hook runs, it's after the init hook has run,

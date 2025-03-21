@@ -1,20 +1,13 @@
 <?php
 
-/**
- * Register custom post type
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- */
+namespace TailorSheet_Manager\Core;
 
-class Tailorsheet_Manager_Post_Types
+class Post_Types
 {
     /**
     * Register custom post type
-    *
+    * @param array $fields
+    * @return void
     * @link https://codex.wordpress.org/Function_Reference/register_post_type
     */
     private function register_single_post_type($fields)
@@ -174,6 +167,10 @@ class Tailorsheet_Manager_Post_Types
 
     }
 
+    /**
+     * @param array $tax_fields
+     * @return void
+     */
     private function register_single_post_type_taxnonomy($tax_fields)
     {
 
@@ -246,7 +243,6 @@ class Tailorsheet_Manager_Post_Types
      */
     public function assign_capabilities($caps_map, $users)
     {
-
         foreach ($users as $user) {
 
             $user_role = get_role($user);
@@ -258,12 +254,7 @@ class Tailorsheet_Manager_Post_Types
             }
 
         }
-
     }
-
-    /**
-     * CUSTOMIZE CUSTOM POST TYPE AS YOU WISH.
-     */
 
     /**
      * Create post types
