@@ -3,9 +3,7 @@
 namespace TailorSheet_Manager\Widgets;
 
 class Accordion extends TSM_Widget_Base
-{
-    protected static bool $isPublished = true;
-    
+{    
     public function get_name() {
         return 'tsm_accordion';
     }

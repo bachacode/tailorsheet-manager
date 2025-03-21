@@ -4,8 +4,6 @@ namespace TailorSheet_Manager\Widgets;
 
 class AppSheet_Functions_Explanation extends TSM_Widget_Base
 {
-    protected static bool $isPublished = true;
-
     public function get_name()
     {
         return 'tsm_appsheet_functions_explanation';
@@ -23,7 +21,7 @@ class AppSheet_Functions_Explanation extends TSM_Widget_Base
 
     public function get_keywords()
     {
-        return [ 'appsheet', 'functions', 'explanation' ];
+        return [ 'tailorsheet', 'appsheet', 'functions', 'explanation' ];
     }
 
     protected function render()
