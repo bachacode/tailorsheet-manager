@@ -2,7 +2,7 @@
 
 namespace TailorSheet_Manager\Admin;
 
-class Admin_Bootstrap
+class Admin_Handler
 {
     /**
      * The ID of this plugin.

@@ -2,27 +2,7 @@
 
 namespace TailorSheet_Manager\Public;
 
-/**
- * The public-facing functionality of the plugin.
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/public
- */
-
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/public
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Public_Bootstrap
+class Public_Handler
 {
     /**
      * The ID of this plugin.

@@ -2,8 +2,8 @@
 
 namespace TailorSheet_Manager\Core;
 
-use TailorSheet_Manager\Admin\Admin_Bootstrap;
-use TailorSheet_Manager\Public\Public_Bootstrap;
+use TailorSheet_Manager\Admin\Admin_Handler;
+use TailorSheet_Manager\Public\Public_Handler;
 
 class Bootstrap
 {
@@ -13,7 +13,7 @@ class Bootstrap
      *
      * @since    1.0.0
      * @access   protected
-     * @var      Tailorsheet_Manager_Loader    $loader    Maintains and registers all hooks for the plugin.
+     * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -51,7 +51,7 @@ class Bootstrap
         } else {
             $this->version = '1.0.0';
         }
-        $this->plugin_name = 'tailorsheet-manager';
+        $this->plugin_name = TAILORSHEET_MANAGER_NAME_SLUG;
 
         $this->load_dependencies();
         $this->set_locale();
@@ -118,7 +118,7 @@ class Bootstrap
     private function define_admin_hooks()
     {
 
-        $plugin_admin = new Admin_Bootstrap($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new Admin_Handler($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
@@ -180,7 +180,7 @@ class Bootstrap
     private function define_public_hooks()
     {
 
-        $plugin_public = new Public_BOotstrap($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new Public_Handler($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
