@@ -1,5 +1,7 @@
 <?php
 
+namespace TailorSheet_Manager\Public;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -20,7 +22,7 @@
  * @subpackage Tailorsheet_Manager/public
  * @author     Cristhian Flores <bachacode@gmail.com>
  */
-class Tailorsheet_Manager_Public
+class Public_Bootstrap
 {
     /**
      * The ID of this plugin.
@@ -75,11 +77,11 @@ class Tailorsheet_Manager_Public
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-public.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, public_assets('css/tailorsheet-manager-public.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-main.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-main', public_assets('css/tailorsheet-manager-main.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-faq', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-faq.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-faq', public_assets('css/tailorsheet-manager-faq.css'), array(), $this->version, 'all');
     }
 
     /**
@@ -102,11 +104,11 @@ class Tailorsheet_Manager_Public
          * class.
          */
 
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-public.js', array( 'jquery' ), $this->version, false);
+        wp_enqueue_script( $this->plugin_name, public_assets('js/tailorsheet-manager-public.js'), array( 'jquery' ), $this->version, false);
         // Register searchbar JS Script
-        wp_register_script( $this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-main.js', array( 'jquery' ), $this->version, false);
+        wp_register_script( $this->plugin_name . '-main', public_assets('js/tailorsheet-manager-main.js'), array( 'jquery' ), $this->version, false);
 
-        wp_enqueue_script( $this->plugin_name . '-faq', plugin_dir_url( __FILE__ ) . 'js/tailorsheet-manager-faq.js', array('jquery'), $this->version, false );
+        wp_enqueue_script( $this->plugin_name . '-faq', public_assets('js/tailorsheet-manager-faq.js'), array('jquery'), $this->version, false );
     }
 
     public function query_tailorsheet_manager()
@@ -134,7 +136,7 @@ class Tailorsheet_Manager_Public
             '_name__like' => '*'.$search_query.'*'
         );
 
-        $loop = new WP_Query($args);
+        $loop = new \WP_Query($args);
 
         while($loop->have_posts()): $loop->the_post();
             $post_data = array(
@@ -191,7 +193,7 @@ class Tailorsheet_Manager_Public
                 );
         }
 
-        $loop = new WP_Query($args);
+        $loop = new \WP_Query($args);
 
         while($loop->have_posts()): $loop->the_post();
             $post_data = array(

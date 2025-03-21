@@ -3,6 +3,7 @@
 namespace TailorSheet_Manager\Core;
 
 use TailorSheet_Manager\Admin\Admin_Bootstrap;
+use TailorSheet_Manager\Public\Public_Bootstrap;
 
 class Bootstrap
 {
@@ -78,19 +79,12 @@ class Bootstrap
     private function load_dependencies()
     {
         /**
-         * The class responsible for defining all actions that occur in the public-facing
-         * side of the site.
-         */
-        require_once TAILORSHEET_MANAGER_BASE_DIR . 'public/class-tailorsheet-manager-public.php';
-
-        /**
          * Exopite Simple Options Framework
          *
          * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
          * @author Joe Szalai
          */
         require_once TAILORSHEET_MANAGER_BASE_DIR . 'vendor/exopite-simple-options/exopite-simple-options-framework-class.php';
-
 
         $this->loader = new Loader();
 
@@ -186,7 +180,7 @@ class Bootstrap
     private function define_public_hooks()
     {
 
-        $plugin_public = new \Tailorsheet_Manager_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new Public_BOotstrap($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
