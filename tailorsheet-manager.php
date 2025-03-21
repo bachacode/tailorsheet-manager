@@ -62,11 +62,6 @@ define('TAILORSHEET_MANAGER_NAME_SLUG', 'tailorsheet-manager');
  */
 require_once TAILORSHEET_MANAGER_BASE_DIR . 'autoload.php';
 
-/**
- * Helper functions for elementor templating
- */
-require_once plugin_dir_path(__FILE__) . 'includes/elementor.php';
-
 if (! class_exists('\YahnisElsts\PluginUpdateChecker\v5\Puc_v4_Factory')) {
     require_once plugin_dir_path(__FILE__) . 'vendor/plugin-update-checker/plugin-update-checker.php';
 }

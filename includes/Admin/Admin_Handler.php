@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Admin;
 
+use TailorSheet_Manager\Helpers;
+
 class Admin_Handler
 {
     /**
@@ -57,8 +59,8 @@ class Admin_Handler
          * class.
          */
         
-        wp_enqueue_style($this->plugin_name, admin_assets('css/tailorsheet-manager-admin.css'), array(), $this->version, 'all');
-        wp_enqueue_style('select2-css', admin_assets('css/select2-min.css'), array(), '4.1.0', 'all');
+        wp_enqueue_style($this->plugin_name, Helpers::admin_assets('css/tailorsheet-manager-admin.css'), array(), $this->version, 'all');
+        wp_enqueue_style('select2-css', Helpers::admin_assets('css/select2-min.css'), array(), '4.1.0', 'all');
     }
 
     /**
@@ -81,8 +83,8 @@ class Admin_Handler
          * class.
          */
 
-        wp_enqueue_script($this->plugin_name, admin_assets('js/tailorsheet-manager-admin.js'), array( 'jquery' ), $this->version, false);
-        wp_enqueue_script('select2-js', admin_assets('js/select2-min.js'), array('jquery'), '4.1.0', true);
+        wp_enqueue_script($this->plugin_name, Helpers::admin_assets('js/tailorsheet-manager-admin.js'), array( 'jquery' ), $this->version, false);
+        wp_enqueue_script('select2-js', Helpers::admin_assets('js/select2-min.js'), array('jquery'), '4.1.0', true);
     }
 
     public function create_menu()
@@ -489,23 +491,15 @@ class Admin_Handler
 
     public function fe_add_fields()
     {
-        if (!function_exists('af_show_template')) {
-            return;
-        }
-
-        af_show_template('af-admin-function-example-fields');
+        Helpers::render_template('af-admin-function-example-fields');
     }
 
     public function fe_edit_fields($term, $taxonomy)
     {
-        if (!function_exists('af_show_template')) {
-            return;
-        }
-
         $syntax = get_term_meta($term->term_id, 'fe_syntax', true);
         $expected = get_term_meta($term->term_id, 'fe_expected', true);
 
-        af_show_template('af-admin-function-example-fields', array(
+        Helpers::render_template('af-admin-function-example-fields', array(
             'syntax' => $syntax,
             'expected' => $expected
         ));
@@ -513,7 +507,6 @@ class Admin_Handler
 
     public function fe_save_term_fields($term_id)
     {
-
         update_term_meta(
             $term_id,
             'fe_syntax',

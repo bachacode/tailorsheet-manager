@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Public;
 
+use TailorSheet_Manager\Helpers;
+
 class Public_Handler
 {
     /**
@@ -57,11 +59,11 @@ class Public_Handler
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, public_assets('css/tailorsheet-manager-public.css') , array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, Helpers::public_assets('css/tailorsheet-manager-public.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-main', public_assets('css/tailorsheet-manager-main.css') , array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-main', Helpers::public_assets('css/tailorsheet-manager-main.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-faq', public_assets('css/tailorsheet-manager-faq.css'), array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-faq', Helpers::public_assets('css/tailorsheet-manager-faq.css'), array(), $this->version, 'all');
     }
 
     /**
@@ -84,11 +86,11 @@ class Public_Handler
          * class.
          */
 
-        wp_enqueue_script( $this->plugin_name, public_assets('js/tailorsheet-manager-public.js'), array( 'jquery' ), $this->version, false);
+        wp_enqueue_script( $this->plugin_name, Helpers::public_assets('js/tailorsheet-manager-public.js'), array( 'jquery' ), $this->version, false);
         // Register searchbar JS Script
-        wp_register_script( $this->plugin_name . '-main', public_assets('js/tailorsheet-manager-main.js'), array( 'jquery' ), $this->version, false);
+        wp_register_script( $this->plugin_name . '-main', Helpers::public_assets('js/tailorsheet-manager-main.js'), array( 'jquery' ), $this->version, false);
 
-        wp_enqueue_script( $this->plugin_name . '-faq', public_assets('js/tailorsheet-manager-faq.js'), array('jquery'), $this->version, false );
+        wp_enqueue_script( $this->plugin_name . '-faq', Helpers::public_assets('js/tailorsheet-manager-faq.js'), array('jquery'), $this->version, false );
     }
 
     public function query_tailorsheet_manager()
@@ -127,8 +129,8 @@ class Public_Handler
             );
             array_push($ret, $post_data);
         endwhile;
-
-        $template = af_load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
+        
+        $template = Helpers::load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
 
         wp_reset_query();
 
@@ -185,7 +187,7 @@ class Public_Handler
             array_push($ret, $post_data);
         endwhile;
 
-        $template = af_load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
+        $template = Helpers::load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
 
         wp_reset_query();
 
