@@ -2,8 +2,10 @@
 
 namespace TailorSheet_Manager\Widgets;
 
-class AppSheet_Functions_Explanation extends \Elementor\Widget_Base
+class AppSheet_Functions_Explanation extends TSM_Widget_Base
 {
+    protected static bool $isPublished = true;
+
     public function get_name()
     {
         return 'tsm_appsheet_functions_explanation';
@@ -17,11 +19,6 @@ class AppSheet_Functions_Explanation extends \Elementor\Widget_Base
     public function get_icon()
     {
         return 'eicon-text';
-    }
-
-    public function get_categories()
-    {
-        return [ 'appsheet-functions' ];
     }
 
     public function get_keywords()

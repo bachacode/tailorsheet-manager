@@ -2,8 +2,10 @@
 
 namespace TailorSheet_Manager\Widgets;
 
-class Accordion extends \Elementor\Widget_Base
+class Accordion extends TSM_Widget_Base
 {
+    protected static bool $isPublished = true;
+    
     public function get_name() {
         return 'tsm_accordion';
     }
@@ -16,12 +18,15 @@ class Accordion extends \Elementor\Widget_Base
         return 'eicon-accordion';
     }
 
-    public function get_categories() {
-        return [ 'appsheet-functions' ];
-    }
-
     public function get_keywords() {
-        return [ 'appsheet', 'functions', 'faq', 'question', 'answer', 'frequently asked questions' ];
+        return [ 
+            'tailorsheet',
+            'faq', 
+            'question', 
+            'answer', 
+            'frequently asked questions', 
+            'accordion' 
+        ];
     }
 
     protected function _register_controls() {
