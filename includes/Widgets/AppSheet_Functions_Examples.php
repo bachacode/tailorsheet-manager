@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Widgets;
 
+use TailorSheet_Manager\Helpers;
+
 class AppSheet_Functions_Examples extends TSM_Widget_Base
 {
     public function get_name()
@@ -25,19 +27,15 @@ class AppSheet_Functions_Examples extends TSM_Widget_Base
     }
 
     protected function render()
-    {
-        if ( !function_exists( 'af_show_template' ) ) {
-            return;
-        }
-        
+    {   
         $queried_object = get_queried_object();
         if ( $queried_object ) {
             $post_id = $queried_object->ID;
             $terms = get_the_terms($post_id, 'ejemplo-de-expresion');
             if ($terms && !is_wp_error($terms)) {
-                af_show_template( 'af-examples-list', [ 'terms' => $terms ] );
+                Helpers::render_template( 'af-examples-list', [ 'terms' => $terms ] );
              } else { 
-                af_show_template( 'af-examples-error');
+                Helpers::render_template( 'af-examples-error');
              }
         }
     }

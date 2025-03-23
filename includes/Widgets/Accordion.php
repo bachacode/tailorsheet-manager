@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Widgets;
 
+use TailorSheet_Manager\Helpers;
+
 class Accordion extends TSM_Widget_Base
 {    
     public function get_name() {
@@ -546,10 +548,6 @@ class Accordion extends TSM_Widget_Base
         $faq_first_opened = $settings['faq_first_opened'];
         $faq_items = array ( );
 
-        if ( ! function_exists( 'af_show_template' ) ) {
-            return;
-        }
-
         if ( 'elements' === $settings['faq_source'] ) {
             if ( empty( $settings['faq_items'] ) ) {
                 return;
@@ -578,7 +576,7 @@ class Accordion extends TSM_Widget_Base
             }            
         }
 
-        af_show_template( 'af-faq', [ 'faq_items' => $faq_items, 'faq_icons' => $faq_icons, 'faq_first_opened' => $faq_first_opened ] );
+        Helpers::render_template( 'af-faq', [ 'faq_items' => $faq_items, 'faq_icons' => $faq_icons, 'faq_first_opened' => $faq_first_opened ] );
     }
 }
 

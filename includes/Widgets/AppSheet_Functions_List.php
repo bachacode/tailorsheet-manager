@@ -2,6 +2,8 @@
 
 namespace TailorSheet_Manager\Widgets;
 
+use TailorSheet_Manager\Helpers;
+
 class AppSheet_Functions_List extends TSM_Widget_Base
 {
     public function get_name()
@@ -26,10 +28,6 @@ class AppSheet_Functions_List extends TSM_Widget_Base
 
     protected function render()
     {
-        if ( !function_exists( 'af_show_template' ) ) {
-            return;
-        }
-
         $categories = get_terms(array (
             'taxonomy'      => 'categoria-de-expresion',
             'hide_empty'    => false
@@ -53,12 +51,12 @@ class AppSheet_Functions_List extends TSM_Widget_Base
             );
 			array_push($posts, $post_data);
 		endwhile;
-
-		$template = af_load_template('af-appsheet-functions-list', array ( 'posts' => $posts ));
+        
+		$template = Helpers::load_template('af-appsheet-functions-list', array ( 'posts' => $posts ));
         
 		wp_reset_query();
 
-		af_show_template( 'af-appsheet-functions-main', array ( 'posts' => $template, 'categories' => $categories ) );
+		Helpers::render_template( 'af-appsheet-functions-main', array ( 'posts' => $template, 'categories' => $categories ) );
 
     }
 
