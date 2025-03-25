@@ -21,6 +21,21 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 
 == Changelog ==
 
+= 2.6.0 =
+* Changed file, class, and widget name
+* Created a parent class for elementor widgets
+* Added new autoloader for classes inside "includes" folder
+* Moved widgets inside includes folder
+* Refactor how widgets are registered
+* Added new namespace for core classes in includes folder
+* Created a namespace and moved admin related classes inside includes folder
+* Changed constant in assets route helper from BASE_DIR to BASE_URL
+* Created a namespace and moved public related classes inside includes folder
+* Changed class name of Admin and Public Bootstrap to Handler
+* Converted helper functions to static functions of a new Helpers class
+* Replaced previous helper template loader function with new static function from Helpers class
+* Updated translations
+
 = 2.5.4 =
 * Added font color options to heading and content of "Appsheet Functions FAQ"
 
