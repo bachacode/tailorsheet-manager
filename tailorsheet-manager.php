@@ -16,7 +16,7 @@
  * Plugin Name:       TailorSheet Manager
  * Plugin URI:        https://bachacode.com
  * Description:       Custom plugin tailored for TailorSheet Website to manage AppSheet related features
- * Version:           2.5.4
+ * Version:           2.6.0
  * Author:            Cristhian Flores
  * Author URI:        https://bachacode.com
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if (! defined('WPINC')) {
 /**
  * Currently plugin version.
  */
-define('TAILORSHEET_MANAGER_VERSION', '2.5.4');
+define('TAILORSHEET_MANAGER_VERSION', '2.6.0');
 
 /**
  * Store plugin base dir, for easier access later from other classes.
@@ -56,16 +56,11 @@ define('TAILORSHEET_MANAGER_BASE_URL', plugin_dir_url(__FILE__));
 define('TAILORSHEET_MANAGER_NAME_SLUG', 'tailorsheet-manager');
 
 /**
- * Initialize custom templater
+ * Including composer autoloader globally.
+ *
+ * @since 2.5.4
  */
-if (! class_exists('Custom_Template_Loader')) {
-    require_once plugin_dir_path(__FILE__) . 'includes/libraries/class-tailorsheet-manager-template-loader.php';
-}
-
-/**
- * Helper functions for elementor templating
- */
-require_once plugin_dir_path(__FILE__) . 'includes/elementor.php';
+require_once TAILORSHEET_MANAGER_BASE_DIR . 'autoload.php';
 
 if (! class_exists('\YahnisElsts\PluginUpdateChecker\v5\Puc_v4_Factory')) {
     require_once plugin_dir_path(__FILE__) . 'vendor/plugin-update-checker/plugin-update-checker.php';
@@ -100,8 +95,7 @@ if (is_admin()) {
  */
 function activate_tailorsheet_manager()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager-activator.php';
-    Tailorsheet_Manager_Activator::activate();
+    \TailorSheet_Manager\Core\Activator::activate();
 }
 
 /**
@@ -110,18 +104,11 @@ function activate_tailorsheet_manager()
  */
 function deactivate_tailorsheet_manager()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager-deactivator.php';
-    Tailorsheet_Manager_Deactivator::deactivate();
+    \TailorSheet_Manager\Core\Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_tailorsheet_manager');
 register_deactivation_hook(__FILE__, 'deactivate_tailorsheet_manager');
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager.php';
 
 /**
  * Begins execution of the plugin.
@@ -134,7 +121,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-tailorsheet-manager.php';
  */
 function run_tailorsheet_manager()
 {
-    $plugin = new Tailorsheet_Manager();
+    $plugin = new \TailorSheet_Manager\Core\Bootstrap();
     $plugin->run();
 }
 run_tailorsheet_manager();

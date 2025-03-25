@@ -1,26 +1,10 @@
 <?php
 
-/**
- * The public-facing functionality of the plugin.
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/public
- */
+namespace TailorSheet_Manager\Public;
 
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/public
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Tailorsheet_Manager_Public
+use TailorSheet_Manager\Helpers;
+
+class Public_Handler
 {
     /**
      * The ID of this plugin.
@@ -75,11 +59,11 @@ class Tailorsheet_Manager_Public
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-public.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, Helpers::public_assets('css/tailorsheet-manager-public.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-main.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-main', Helpers::public_assets('css/tailorsheet-manager-main.css') , array(), $this->version, 'all');
 
-        wp_enqueue_style($this->plugin_name . '-faq', plugin_dir_url(__FILE__) . 'css/tailorsheet-manager-faq.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-faq', Helpers::public_assets('css/tailorsheet-manager-faq.css'), array(), $this->version, 'all');
     }
 
     /**
@@ -102,11 +86,11 @@ class Tailorsheet_Manager_Public
          * class.
          */
 
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-public.js', array( 'jquery' ), $this->version, false);
+        wp_enqueue_script( $this->plugin_name, Helpers::public_assets('js/tailorsheet-manager-public.js'), array( 'jquery' ), $this->version, false);
         // Register searchbar JS Script
-        wp_register_script( $this->plugin_name . '-main', plugin_dir_url(__FILE__) . 'js/tailorsheet-manager-main.js', array( 'jquery' ), $this->version, false);
+        wp_register_script( $this->plugin_name . '-main', Helpers::public_assets('js/tailorsheet-manager-main.js'), array( 'jquery' ), $this->version, false);
 
-        wp_enqueue_script( $this->plugin_name . '-faq', plugin_dir_url( __FILE__ ) . 'js/tailorsheet-manager-faq.js', array('jquery'), $this->version, false );
+        wp_enqueue_script( $this->plugin_name . '-faq', Helpers::public_assets('js/tailorsheet-manager-faq.js'), array('jquery'), $this->version, false );
     }
 
     public function query_tailorsheet_manager()
@@ -134,7 +118,7 @@ class Tailorsheet_Manager_Public
             '_name__like' => '*'.$search_query.'*'
         );
 
-        $loop = new WP_Query($args);
+        $loop = new \WP_Query($args);
 
         while($loop->have_posts()): $loop->the_post();
             $post_data = array(
@@ -145,8 +129,8 @@ class Tailorsheet_Manager_Public
             );
             array_push($ret, $post_data);
         endwhile;
-
-        $template = af_load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
+        
+        $template = Helpers::load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
 
         wp_reset_query();
 
@@ -191,7 +175,7 @@ class Tailorsheet_Manager_Public
                 );
         }
 
-        $loop = new WP_Query($args);
+        $loop = new \WP_Query($args);
 
         while($loop->have_posts()): $loop->the_post();
             $post_data = array(
@@ -203,7 +187,7 @@ class Tailorsheet_Manager_Public
             array_push($ret, $post_data);
         endwhile;
 
-        $template = af_load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
+        $template = Helpers::load_template('af-appsheet-functions-list', array( 'posts' => $ret ));
 
         wp_reset_query();
 

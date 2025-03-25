@@ -1,4 +1,7 @@
 <?php
+
+namespace TailorSheet_Manager\Libraries;
+
 /**
  * Template Loader for Plugins.
  *

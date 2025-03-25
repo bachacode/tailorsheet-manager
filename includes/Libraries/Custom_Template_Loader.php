@@ -1,8 +1,6 @@
 <?php
 
-if (! class_exists('Gamajo_Template_Loader')) {
-    require plugin_dir_path(__FILE__) . 'class-gamajo-template-loader.php';
-}
+namespace TailorSheet_Manager\Libraries;
 
 /**
  * Template loader for PW Sample Plugin.
@@ -18,7 +16,7 @@ class Custom_Template_Loader extends Gamajo_Template_Loader
      * @since 1.0.0
      * @type string
      */
-    protected $filter_prefix = 'af';
+    protected $filter_prefix = 'tsm';
 
     /**
      * Directory name where custom templates for this plugin should be found in the theme.
@@ -26,9 +24,9 @@ class Custom_Template_Loader extends Gamajo_Template_Loader
      * @since 1.0.0
      * @type string
      */
-    protected $theme_template_directory = 'af_templates';
+    protected $theme_template_directory = 'tsm_templates';
 
-    protected $plugin_template_directory = 'af_templates';
+    protected $plugin_template_directory = 'tsm_templates';
 
     /**
      * Reference to the root directory path of this plugin.

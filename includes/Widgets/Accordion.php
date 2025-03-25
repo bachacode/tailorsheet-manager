@@ -1,25 +1,32 @@
 <?php
 
-class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
-{
+namespace TailorSheet_Manager\Widgets;
+
+use TailorSheet_Manager\Helpers;
+
+class Accordion extends TSM_Widget_Base
+{    
     public function get_name() {
-        return 'appsheet_functions_faq';
+        return 'tsm_accordion';
     }
 
     public function get_title() {
-        return esc_html__( 'Appsheet Functions Faq', 'tailorsheet-manager' );
+        return esc_html__( 'TSM Accordion', 'tailorsheet-manager' );
     }
 
     public function get_icon() {
         return 'eicon-accordion';
     }
 
-    public function get_categories() {
-        return [ 'appsheet-functions' ];
-    }
-
     public function get_keywords() {
-        return [ 'appsheet', 'functions', 'faq', 'question', 'answer', 'frequently asked questions' ];
+        return [ 
+            'tailorsheet',
+            'faq', 
+            'question', 
+            'answer', 
+            'frequently asked questions', 
+            'accordion' 
+        ];
     }
 
     protected function _register_controls() {
@@ -541,10 +548,6 @@ class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
         $faq_first_opened = $settings['faq_first_opened'];
         $faq_items = array ( );
 
-        if ( ! function_exists( 'af_show_template' ) ) {
-            return;
-        }
-
         if ( 'elements' === $settings['faq_source'] ) {
             if ( empty( $settings['faq_items'] ) ) {
                 return;
@@ -573,7 +576,7 @@ class Elementor_Appsheet_Functions_Faq extends \Elementor\Widget_Base
             }            
         }
 
-        af_show_template( 'af-faq', [ 'faq_items' => $faq_items, 'faq_icons' => $faq_icons, 'faq_first_opened' => $faq_first_opened ] );
+        Helpers::render_template( 'af-faq', [ 'faq_items' => $faq_items, 'faq_icons' => $faq_icons, 'faq_first_opened' => $faq_first_opened ] );
     }
 }
 

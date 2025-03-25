@@ -1,27 +1,8 @@
 <?php
 
-/**
- * Register all actions and filters for the plugin
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- */
+namespace TailorSheet_Manager\Core;
 
-/**
- * Register all actions and filters for the plugin.
- *
- * Maintain a list of all hooks that are registered throughout
- * the plugin, and register them with the WordPress API. Call the
- * run function to execute the list of actions and filters.
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Tailorsheet_Manager_Loader
+class Loader
 {
     /**
      * The array of actions registered with WordPress.

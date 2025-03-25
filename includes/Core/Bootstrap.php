@@ -1,33 +1,11 @@
 <?php
 
-/**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the admin area.
- *
- * @link       https://bachacode.com
- * @since      1.0.0
- *
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- */
+namespace TailorSheet_Manager\Core;
 
-/**
- * The core plugin class.
- *
- * This is used to define internationalization, admin-specific hooks, and
- * public-facing site hooks.
- *
- * Also maintains the unique identifier of this plugin as well as the current
- * version of the plugin.
- *
- * @since      1.0.0
- * @package    Tailorsheet_Manager
- * @subpackage Tailorsheet_Manager/includes
- * @author     Cristhian Flores <bachacode@gmail.com>
- */
-class Tailorsheet_Manager
+use TailorSheet_Manager\Admin\Admin_Handler;
+use TailorSheet_Manager\Public\Public_Handler;
+
+class Bootstrap
 {
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +13,7 @@ class Tailorsheet_Manager
      *
      * @since    1.0.0
      * @access   protected
-     * @var      Tailorsheet_Manager_Loader    $loader    Maintains and registers all hooks for the plugin.
+     * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -73,7 +51,7 @@ class Tailorsheet_Manager
         } else {
             $this->version = '1.0.0';
         }
-        $this->plugin_name = 'tailorsheet-manager';
+        $this->plugin_name = TAILORSHEET_MANAGER_NAME_SLUG;
 
         $this->load_dependencies();
         $this->set_locale();
@@ -100,46 +78,15 @@ class Tailorsheet_Manager
      */
     private function load_dependencies()
     {
-
-        /**
-         * The class responsible for orchestrating the actions and filters of the
-         * core plugin.
-         */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-loader.php';
-
-        /**
-         * The class responsible for defining internationalization functionality
-         * of the plugin.
-         */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-i18n.php';
-
-        /**
-         * The class responsible for defining all actions that occur in the admin area.
-         */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-tailorsheet-manager-admin.php';
-
-        /**
-         * The class responsible for defining all actions that occur in the public-facing
-         * side of the site.
-         */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-tailorsheet-manager-public.php';
-
-        /**
-         * Appsheet Functions custom post types
-         * Functions and examples of them
-         */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tailorsheet-manager-post_types.php';
-
         /**
          * Exopite Simple Options Framework
          *
          * @link https://github.com/JoeSz/Exopite-Simple-Options-Framework
          * @author Joe Szalai
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
+        require_once TAILORSHEET_MANAGER_BASE_DIR . 'vendor/exopite-simple-options/exopite-simple-options-framework-class.php';
 
-
-        $this->loader = new Tailorsheet_Manager_Loader();
+        $this->loader = new Loader();
 
     }
 
@@ -155,7 +102,7 @@ class Tailorsheet_Manager
     private function set_locale()
     {
 
-        $plugin_i18n = new Tailorsheet_Manager_i18n();
+        $plugin_i18n = new i18n();
 
         $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
 
@@ -171,7 +118,7 @@ class Tailorsheet_Manager
     private function define_admin_hooks()
     {
 
-        $plugin_admin = new Tailorsheet_Manager_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new Admin_Handler($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
@@ -193,7 +140,7 @@ class Tailorsheet_Manager
         // Search posts by name using like wildcard syntax
         $this->loader->add_filter('posts_where', $plugin_admin, 'search_posts_by_name_like', 10, 2);
 
-        $plugin_post_types = new Tailorsheet_Manager_Post_Types();
+        $plugin_post_types = new Post_Types();
 
         /**
          * The problem with the initial activation code is that when the activation hook runs, it's after the init hook has run,
@@ -233,7 +180,7 @@ class Tailorsheet_Manager
     private function define_public_hooks()
     {
 
-        $plugin_public = new Tailorsheet_Manager_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new Public_Handler($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');

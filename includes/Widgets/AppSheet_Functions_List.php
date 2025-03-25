@@ -1,15 +1,19 @@
 <?php
 
-class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
+namespace TailorSheet_Manager\Widgets;
+
+use TailorSheet_Manager\Helpers;
+
+class AppSheet_Functions_List extends TSM_Widget_Base
 {
     public function get_name()
     {
-        return 'appsheet_functions';
+        return 'tsm_appsheet_functions_list';
     }
 
     public function get_title()
     {
-        return esc_html__('Appsheet Functions', 'tailorsheet-manager');
+        return esc_html__('Appsheet Functions List', 'tailorsheet-manager');
     }
 
     public function get_icon()
@@ -17,22 +21,13 @@ class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
         return 'eicon-editor-code';
     }
 
-    public function get_categories()
-    {
-        return [ 'appsheet-functions' ];
-    }
-
     public function get_keywords()
     {
-        return [ 'appsheet', 'functions', 'list' ];
+        return [ 'tailorsheet', 'appsheet', 'functions', 'list' ];
     }
 
     protected function render()
     {
-        if ( !function_exists( 'af_show_template' ) ) {
-            return;
-        }
-
         $categories = get_terms(array (
             'taxonomy'      => 'categoria-de-expresion',
             'hide_empty'    => false
@@ -45,7 +40,7 @@ class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
 			'post_status' => 'publish'
 		);
 	
-		$loop = new WP_Query( $args );
+		$loop = new \WP_Query( $args );
 	
 		while( $loop->have_posts() ): $loop->the_post();
             $post_data = array (
@@ -56,12 +51,12 @@ class Elementor_Appsheet_Functions extends \Elementor\Widget_Base
             );
 			array_push($posts, $post_data);
 		endwhile;
-
-		$template = af_load_template('af-appsheet-functions-list', array ( 'posts' => $posts ));
+        
+		$template = Helpers::load_template('af-appsheet-functions-list', array ( 'posts' => $posts ));
         
 		wp_reset_query();
 
-		af_show_template( 'af-appsheet-functions-main', array ( 'posts' => $template, 'categories' => $categories ) );
+		Helpers::render_template( 'af-appsheet-functions-main', array ( 'posts' => $template, 'categories' => $categories ) );
 
     }
 
