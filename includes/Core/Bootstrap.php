@@ -3,7 +3,7 @@
 namespace TailorSheet_Manager\Core;
 
 use TailorSheet_Manager\Admin\Admin_Handler;
-use TailorSheet_Manager\Public\Public_Handler;
+use TailorSheet_Manager\Frontend\Frontend_Handler;
 
 class Bootstrap
 {
@@ -180,16 +180,16 @@ class Bootstrap
     private function define_public_hooks()
     {
 
-        $plugin_public = new Public_Handler($this->get_plugin_name(), $this->get_version());
+        $plugin_frontend = new Frontend_Handler($this->get_plugin_name(), $this->get_version());
 
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+        $this->loader->add_action('wp_enqueue_scripts', $plugin_frontend, 'enqueue_styles');
+        $this->loader->add_action('wp_enqueue_scripts', $plugin_frontend, 'enqueue_scripts');
 
-        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager', $plugin_public, 'query_tailorsheet_manager');
-        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager', $plugin_public, 'query_tailorsheet_manager');
+        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager', $plugin_frontend, 'query_tailorsheet_manager');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager', $plugin_frontend, 'query_tailorsheet_manager');
 
-        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager_by_category', $plugin_public, 'query_tailorsheet_manager_by_category');
-        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager_by_category', $plugin_public, 'query_tailorsheet_manager_by_category');
+        $this->loader->add_action('wp_ajax_prefix_query_tailorsheet_manager_by_category', $plugin_frontend, 'query_tailorsheet_manager_by_category');
+        $this->loader->add_action('wp_ajax_nopriv_prefix_query_tailorsheet_manager_by_category', $plugin_frontend, 'query_tailorsheet_manager_by_category');
 
     }
 

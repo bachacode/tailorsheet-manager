@@ -1,10 +1,10 @@
 <?php
 
-namespace TailorSheet_Manager\Public;
+namespace TailorSheet_Manager\Frontend;
 
 use TailorSheet_Manager\Helpers;
 
-class Public_Handler
+class Frontend_Handler
 {
     /**
      * The ID of this plugin.

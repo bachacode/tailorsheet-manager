@@ -22,6 +22,9 @@ Custom Elementor Widgets handmade to display AppSheet Functions and their exampl
 == Changelog ==
 
 = 2.6.0 =
+* Changed naming from Public to Frontend
+
+= 2.6.0 =
 * Changed file, class, and widget name
 * Created a parent class for elementor widgets
 * Added new autoloader for classes inside "includes" folder
